@@ -132,7 +132,8 @@
                 );
                 
                 window.fetchBlogPosts('#blog-posts', 'default', function() { setTimeout(function() { window.setWidgetCentered(document.querySelector('#column-window-blog')); }, 100); });
-                window.fetchBlogPosts('#popular-posts', 'popular');
+                window.fetchBlogPosts('#popular-posts', 'popular', function() { setTimeout(function() { window.setWidgetCentered(document.querySelector('#column-window-blog')); }, 100); });
+                window.fetchBlogPosts('#random-posts', 'random', function() { setTimeout(function() { window.setWidgetCentered(document.querySelector('#column-window-blog')); }, 100); });
                 window.updateAudioIndicator('#taskbar-audio-icon', '#taskbar-audio-label');
                 window.updateDateTime('#update-current-time');
 

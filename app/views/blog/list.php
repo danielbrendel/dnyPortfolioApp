@@ -37,6 +37,20 @@
 				</table>
 			</div>
 
+			<p class="has-spacing-sm"><i class="fas fa-shuffle"></i>&nbsp;Random blog posts</p>
+
+            <div class="sunken-panel sunken-panel-blog ">
+				<table class="interactive">
+					<thead>
+						<tr>
+							<th class="is-stretched">Title</th>
+							<th>Published</th>
+						</tr>
+					</thead>
+					<tbody id="random-posts" data-limit="5"></tobdy>
+				</table>
+			</div>
+
 			<p><a class="btn btn-fixed-padding" href="javascript:void(0);" onclick="window.closeWidget('#column-window-blog');">Close</a></p>
 		</div>
 	</div>
