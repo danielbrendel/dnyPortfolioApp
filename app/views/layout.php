@@ -131,7 +131,7 @@
                     }
                 );
                 
-                window.fetchBlogPosts('#blog-posts');
+                window.fetchBlogPosts('#blog-posts', 'default', function() { setTimeout(function() { window.setWidgetCentered(document.querySelector('#column-window-blog')); }, 100); });
                 window.fetchBlogPosts('#popular-posts', 'popular');
                 window.updateAudioIndicator('#taskbar-audio-icon', '#taskbar-audio-label');
                 window.updateDateTime('#update-current-time');
