@@ -8,16 +8,17 @@
 class Blog extends \Asatru\Database\Model {
     /**
      * @param $limit
+     * @param $paginate
      * @return mixed
      * @throws \Exception
      */
-    public static function fetch($limit = 0)
+    public static function fetch($limit = 20, $paginate = null)
     {
         try {
-            if ($limit > 0) {
-                return static::raw('SELECT * FROM `@THIS` WHERE active = 1 AND created_at <= NOW() ORDER BY created_at DESC LIMIT ' . $limit);
+            if (($paginate) && (is_numeric($paginate))) {
+                return static::raw('SELECT * FROM `@THIS` WHERE active = 1 AND created_at <= NOW() AND id < ? ORDER BY id DESC LIMIT ' . $limit, [$paginate]);
             } else {
-                return static::raw('SELECT * FROM `@THIS` WHERE active = 1 AND created_at <= NOW() ORDER BY created_at DESC');
+                return static::raw('SELECT * FROM `@THIS` WHERE active = 1 AND created_at <= NOW() ORDER BY id DESC LIMIT ' . $limit);
             }
         } catch (\Exception $e) {
             throw $e;

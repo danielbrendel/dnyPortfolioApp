@@ -121,6 +121,16 @@
 
                 window.switchProjectTab(1);
 
+                window.addInfiniteScrollEvent(
+                    'blogscrolldefault', 
+                    document.getElementsByClassName('sunken-panel-blog')[0],
+                    function(target, ident) {
+                        window.fetchBlogPosts('#blog-posts', 'default', function() {
+                            window.infiniteScrollItems[ident] = false;
+                        });
+                    }
+                );
+                
                 window.fetchBlogPosts('#blog-posts');
                 window.fetchBlogPosts('#popular-posts', 'popular');
                 window.updateAudioIndicator('#taskbar-audio-icon', '#taskbar-audio-label');

@@ -34,11 +34,12 @@ class BlogController extends BaseController {
 		try {
 			$limit = (int)$request->params()->query('limit', 0);
 			$type = $request->params()->query('type', 'default');
+			$paginate = $request->params()->query('paginate');
 
 			$blogposts = null;
 
 			if ($type === 'default') {
-				$blogposts = Blog::fetch($limit)?->asArray();
+				$blogposts = Blog::fetch($limit, $paginate)?->asArray();
 			} else if ($type === 'popular') {
 				$blogposts = Utils::getPopularBlogPosts($limit);
 			} else if ($type === 'random') {

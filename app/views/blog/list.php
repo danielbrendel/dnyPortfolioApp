@@ -11,7 +11,7 @@
 		<div class="window-body">
             <p><i class="far fa-list-alt"></i>&nbsp;List of my personal blog postings.</p>
 
-            <div class="sunken-panel sunken-panel-blog ">
+            <div class="sunken-panel sunken-panel-blog">
 				<table class="interactive">
 					<thead>
 						<tr>
@@ -19,7 +19,7 @@
 							<th>Published</th>
 						</tr>
 					</thead>
-					<tbody id="blog-posts" data-limit="0"></tobdy>
+					<tbody id="blog-posts" data-limit="35"></tobdy>
 				</table>
 			</div>
 

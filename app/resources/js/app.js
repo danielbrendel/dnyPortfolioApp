@@ -24,6 +24,9 @@ window.defaultSettings = {
     sound_enable: null
 };
 
+window.blogPostsPagination = {};
+window.infiniteScrollItems = {};
+
 window.ajaxRequest = function (method, url, data = {}, successfunc = function(data){}, finalfunc = function(){}, config = {})
 {
     let func = window.axios.get;
@@ -453,23 +456,31 @@ window.updateDateTime = function(target) {
     }
 };
 
-window.fetchBlogPosts = function(target, type = 'default') {
+window.fetchBlogPosts = function(target, type = 'default', finishfunc = function() {}) {
     let elem = document.querySelector(target);
     if (elem) {
-        window.ajaxRequest('get', window.location.origin + '/blog/posts/fetch?limit=' + elem.dataset.limit + '&type=' + type, {}, function(response) {
+        if (!(type in window.blogPostsPagination)) {
+            window.blogPostsPagination[type] = null;
+        }
+
+        window.ajaxRequest('post', window.location.origin + '/blog/posts/fetch', { limit: elem.dataset.limit, type: type, paginate: window.blogPostsPagination[type] }, function(response) {
             if (response.code == 200) {
-                elem.innerHTML = '';
+                if (response.data.length > 0) {
+                    response.data.forEach(function(post, index) {
+                        let tableEntry = `
+                            <tr>
+                                <td><a href="` + window.location.origin + '/blog/' + post.slug + `">` + post.title + `</a></td>
+                                <td>` + post.created_at + `</td>
+                            </tr>
+                        `;
 
-                response.data.forEach(function(post, index) {
-                    let tableEntry = `
-                        <tr>
-                            <td><a href="` + window.location.origin + '/blog/' + post.slug + `">` + post.title + `</a></td>
-                            <td>` + post.created_at + `</td>
-                        </tr>
-                    `;
+                        elem.innerHTML += tableEntry;
+                    });
 
-                    elem.innerHTML += tableEntry;
-                });
+                    window.blogPostsPagination[type] = response.data[response.data.length - 1].id;
+                }
+
+                finishfunc();
             }
         });
     }
@@ -621,6 +632,22 @@ window.playAudio = function(soundfile) {
     audio.onloadeddata = function() {
         audio.play();
     };
+};
+
+window.addInfiniteScrollEvent = function(ident, target, callback) {
+    if (!(ident in window.infiniteScrollItems)) {
+        window.infiniteScrollItems[ident] = false;
+    }
+
+    target.addEventListener('scroll', function() {
+        if (window.infiniteScrollItems[ident] === false) {
+            if (target.scrollTop + target.clientHeight >= target.scrollHeight - 5) {
+                window.infiniteScrollItems[ident] = true;
+
+                callback(target, ident);
+            }
+        }
+    });
 };
 
 window.echo = function(...args) {
