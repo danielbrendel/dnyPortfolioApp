@@ -1,5 +1,10 @@
 <?php 
 
+/**
+ * Class MakeManifestCommand
+ * 
+ * Command handler implementation
+ */
 class MakeManifestCommand implements Asatru\Commands\Command  {
     /**
      * @param $args

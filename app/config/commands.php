@@ -14,5 +14,6 @@
 */
 
 return [
-    array('make:manifest', 'Create manifest from environment data', 'MakeManifestCommand'),
+    array('settings:initialize', 'Initialize app settings', 'InitSettingsCommand'),
+    array('make:manifest', 'Create manifest from environment data', 'MakeManifestCommand')
 ];

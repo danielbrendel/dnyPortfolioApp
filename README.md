@@ -38,8 +38,9 @@ You can install the project by following these steps:
 3. Copy the `.env.example` to `.env` and adjust all necessary settings.
 4. Run `composer install` in order to install all dependencies.
 5. Run `php asatru migrate:fresh` to perform database migrations.
-6. Fill in the database tables depending on your needs.
-7. Launch the app via `php asatru serve`. The app will then be available via http://localhost:8000.
+6. Run `php asatru settings:initialize` to initialize the app settings
+7. Fill in the database tables depending on your needs.
+8. Launch the app via `php asatru serve`. The app will then be available via http://localhost:8000.
 
 Alternatively, you can also use the `launch.dnys` script if you have [AquaShell](https://github.com/danielbrendel/dnyAquaShell) installed.
 
