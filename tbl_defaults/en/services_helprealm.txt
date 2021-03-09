@@ -1,0 +1,56 @@
+HelpRealm is a lightweight SaaS support ticket system suited for freelancers and small teams.<br/><br/>
+It comes without almost any paid plans and even without ads. It is made with love and provided with love<br/><br/>
+It works in the way that you get a personal support contact form which you send to your customers, by
+e.g. linking to it on your website or embedding it in an iframe. Your customers can then use that form
+to create support requests. If you don't want to use the predefined form you can also create your own
+and use the API (you need to buy access) to create tickets.<br/><br/>
+I am using HelpRealm myself for certain products, but also wanted others to be able to use it.<br/><br/>
+If you are a blogger, influencer, freelancer and have an own website or other channel you can use
+HelpRealm to manage your customer support requests.<br/><br/>
+It is very easy and intuitive to use. Also you can manage your agents if you work together with a team.<br/><br/>
+<br/>
+<img src="/gfx/screens/helprealm.png" alt="HelpRealm screen"/>
+<br/>
+
+It covers the following features:<br/>
+<ul>
+	<li>Tickets
+		<ul>
+			<li>Create tickets</li>
+			<li>List tickets</li>
+			<li>Manage tickets</li>
+			<li>Different types and priorities</li>
+			<li>Different ticket status</li>
+			<li>Ticket notes</li>
+			<li>Ticket attachments</li>
+		</ul>
+	</li>
+	<li>Groups
+		<ul>
+			<li>Manage groups</li>
+			<li>Route tickets through groups</li>
+		</ul>
+	</li>
+	<li>Agents
+		<ul>
+			<li>Manage agents</li>
+			<li>Manage superadmins</li>
+		</ul>
+	</li>
+	<li>Customer infos</li>
+	<li>Dashboard</li>
+	<li>FAQ</li>
+	<li>Multi-language</li>
+	<li>Login management</li>
+	<li>Gravatar support</li>
+	<li>E-Mail notifications</li>
+	<li>E-Mail replies</li>
+	<li>Friendly installer</li>
+	<li>Security (Protection against XSS, SQL Injection, CSRF, Spam)</li>
+	<li>Responsive layout</li>
+	<li>SaaS solution</li>
+	<li>API Endpoint</li>
+	<li>Endpoint for client apps</li>
+	<li>Ajax requests</li>
+	<li>Documentation</li>
+</ul>

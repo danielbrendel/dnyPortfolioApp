@@ -1,0 +1,58 @@
+HelpRealm ist ein leichtgewichtiges SaaS Support Ticket System geeignet für Freelancer und kleinen Teams.<br/><br/>
+Es hat fast keine Kosten. Es ist mit Liebe gemacht und wird auch mit
+Liebe angeboten.<br/><br/>
+Es funktioniert so, dass man ein persönliches Kontaktformular bekommt, welches man seinen Kunden schickt, z. B. indem
+man auf seiner Webseite darauf verlinkt oder es in einem iframe einbettet. Kunden können dann über das Formular
+Supportanfragen stellen. Falls Sie das vordefinierte, aber einstellbare Formular nicht benutzen möchten, können 
+Sie auch ein eigenes in Ihrem Frontend nutzen und dann Tickets über die API (Zugang einmalig kostenpflichtig) erstellen.<br/><br/>
+Ich selbst nutze HelpRealm auch für eigene Projekte, möchte es aber auch gerne anderen zur Verfügung stellen.<br/><br/>
+Falls Sie also Blogger, Influencer oder selbstständig sind oder ein kleines Team haben, dann können Sie HelpRealm 
+benutzen, um ihre Supportanfragen zu verwalten.<br/><br/>
+Es ist sehr einfach und intuitiv zu benutzen. Für Ihr Team können Sie auch mehrere Agent-Accounts auf Ihrem Workspace
+erstellen.<br/><br/>
+<br/>
+<img src="/gfx/screens/helprealm.png" alt="HelpRealm screen"/>
+<br/>
+
+Derzeit hat es folgende Features:<br/>
+<ul>
+	<li>Tickets
+		<ul>
+			<li>Create tickets</li>
+			<li>List tickets</li>
+			<li>Manage tickets</li>
+			<li>Different types and priorities</li>
+			<li>Different ticket status</li>
+			<li>Ticket notes</li>
+			<li>Ticket attachments</li>
+		</ul>
+	</li>
+	<li>Groups
+		<ul>
+			<li>Manage groups</li>
+			<li>Route tickets through groups</li>
+		</ul>
+	</li>
+	<li>Agents
+		<ul>
+			<li>Manage agents</li>
+			<li>Manage superadmins</li>
+		</ul>
+	</li>
+	<li>Customer infos</li>
+	<li>Dashboard</li>
+	<li>FAQ</li>
+	<li>Multi-language</li>
+	<li>Login management</li>
+	<li>Gravatar support</li>
+	<li>E-Mail notifications</li>
+	<li>E-Mail replies</li>
+	<li>Friendly installer</li>
+	<li>Security (Protection against XSS, SQL Injection, CSRF, Spam)</li>
+	<li>Responsive layout</li>
+	<li>SaaS solution</li>
+	<li>API Endpoint</li>
+	<li>Endpoint for client apps</li>
+	<li>Ajax requests</li>
+	<li>Documentation</li>
+</ul>

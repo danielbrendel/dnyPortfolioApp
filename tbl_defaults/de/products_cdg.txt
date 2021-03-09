@@ -1,0 +1,23 @@
+In den frühen 2000er gab es eine Art Spiel oder Tool, welches vor allem die jüngere Generation begeisterte: 
+Den Desktop Destroyer. Damit konnte man quasi seinen Desktop "zerstören", in dem man ein Maschinengewehr,
+einen Laser oder einen Flammenwerfer benutzen konnte! Auch konnte man Termiten auf den Bildschirm absetzen,
+die dann den Screen "gefressen" haben. <br/><br/>
+Auch heute gibt es noch eine kleine, aber feine Fangruppe, die das Spiel liebt. Da ich es früher selbst sehr
+gerne gespielt habe, habe ich die Idee eines fanbasierten Remakes gehabt.<br/><br/>
+Casual Desktop Game ward geboren!<br/><br/>
+Bei meinem Remake sollte man aber eigene Tools, Waffen oder autonome Entitäten erstellen können, indem man
+diese per Skripts implementiert (Als Skriptsprache habe ich mich für AngelScript entschieden). Auf diese Art und Weise
+können Nutzer ihre eigenen Kreationen teilen. Das Spielprinzip ist aber natürlich das gleiche.<br/><br/>
+Die ersten Versionen waren noch eine Standalone Variante, welche aber nicht viele Leute erreichte. Deshalb habe ich mich entschieden 
+das Spiel auf Steam zu veröffentlichen - DIE Plattform für das Vertreiben von Spielen. Und es zeigte sich, dass viele von 
+den früheren Spielern auch auf Steam aktiv sind. Selbstverständlich habe ich auch den Steam-Workshop integriert, damit
+Spieler ihre eigenen Tools mit der Community teilen können. <br/><br/>
+Mittlerweile wurde Casual Desktop Game über 30.000 mal ausprobiert und wurde als "sehr positiv" gewertet!<br/><br/>
+Das Spiel bringt momentan 28 Tools mit (das Original hatte 9) welche reichen von Maschinengewehr, Raketenwerfer,
+Flammenwerfer bis zu Panzer, Laser-Mechs, Flugzeuge und Atomraketen und auch Fan-Kreationen wie Headcrabs
+oder die heilige Handgranate!<br/><br/>
+<button type="button" class="button button-steam" onclick="window.open('https://store.steampowered.com/app/1001860/Casual_Desktop_Game/')">Auf Steam spielen</button><br/><br/>
+<img src="/gfx/screens/cdg.png" alt="CDG screen"/>
+<br/><br/>
+Casual Desktop Game ist gratis und hat keine bezahlten Inhalte. Also falls Sie die alte Zeit in neuem Stil erleben
+möchten, dann ist dieses Spiel genau das richtige für Sie!<br/>

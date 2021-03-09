@@ -1,0 +1,5 @@
+Hey there! Welcome to my website. I am a web and C++ developer and founder of several projects.<br/><br/>
+In modern age our life is very much supported by information technology systems. My goal is to make
+a change in the world by creating awesome systems and services that make a change!<br/><br/>
+On this website I want to showcase some of my projects and also post news from time to time.<br/><br/>
+Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile for viewing my repositories.<br/><br/>

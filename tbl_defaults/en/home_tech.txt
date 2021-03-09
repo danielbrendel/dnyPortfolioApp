@@ -1,0 +1,34 @@
+<div class="tabs">
+	<ul>
+		<li id="tbWeb" class="is-active"><a href="javascript:void(0);" onclick="document.getElementById('tbWeb').classList.add('is-active'); document.getElementById('tbCpp').classList.remove('is-active'); document.getElementById('expWeb').classList.remove('is-hidden'); document.getElementById('expCpp').classList.add('is-hidden');">Web development</a></li>
+		<li id="tbCpp"><a href="javascript:void(0);" onclick="document.getElementById('tbWeb').classList.remove('is-active'); document.getElementById('tbCpp').classList.add('is-active'); document.getElementById('expWeb').classList.add('is-hidden'); document.getElementById('expCpp').classList.remove('is-hidden');">C++ development</a></li>
+	</ul>
+</div>
+<div id="expWeb" class="tab-item">
+	<ul>
+		<li>PHP 7</li>
+		<li>Laravel</li>
+		<li>Zend Framework</li>
+		<li>Composer</li>
+		<li>Vue.js</li>
+		<li>jQuery</li>
+		<li>MetroUI</li>
+		<li>MySQL</li>
+		<li>Bulma CSS</li>
+		<li>HTML5</li>
+		<li>NPM</li>
+		<li>Git</li>
+		<li>VS Code</li>
+		<li>PhpStorm</li>
+		<li>Xdebug</li>
+	</ul>
+</div>
+<div id="expCpp" class="tab-item is-hidden">
+	<ul>
+		<li>C++ on Windows</li>
+		<li>WinAPI</li>
+		<li>DirectX 9</li>
+		<li>Visual Studio Community 2019</li>
+		<li>Git</li>
+	</ul>
+</div>

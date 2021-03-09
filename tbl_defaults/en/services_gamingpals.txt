@@ -1,0 +1,11 @@
+GamingPals.org is an international platform where gamers can find other gaming buddies.<br/><br/>
+Therfore they can create adverts to specify certain criteria that possible interests shall met.
+You can specify a title, a description, the game and the country. Also you can limit the
+amount of possible buddies and also restrict the advert to a specific gender only.<br/><br/>
+Other gamers can mark themselves as interested or set them as an actual participant. There is a thread-like
+messaging system where users can talk to each other in an advert. Also you can specify tags to refine an advert
+which users can search for via the advert feed.<br/><br/>
+At the startpage you have a feed which lists all active adverts. You can filter the results by game, location,
+date and tags.<br/><br/>
+You can also send private messages. Notifications are served on various events allowing you to stay updated.<br/><br/>
+<img src="/gfx/screens/gamingpals.png" alt="gamingpals.org"/><br/>

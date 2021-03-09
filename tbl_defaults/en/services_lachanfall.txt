@@ -1,0 +1,12 @@
+Lachanfall.co is a german platform where user-generated content in form of funny images, jokes, memes, gifs
+and videos are provided.<br/><br/>
+Users can lookup the latest content, the best rated content or the content of the users they are 
+following.<br/><br/>
+The platform is meant to be a social network, which grants users to interact with each others in various ways.
+For instance you can send private messages, there is a profile and geo search, as well as a forum for 
+exchange.<br/><br/>
+The content is categorised via hashtags, so users have a significant impact on how the content is made 
+available.<br/><br/>
+Users are informed about specific events via various notifications. There are also much more functions 
+available.<br/><br/>
+<img src="/gfx/screens/lachanfall.png" alt="lachanfall"/><br/>

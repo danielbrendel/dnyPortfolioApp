@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', 'MainController@index');
+Route::get('/news', 'MainController@news');
+Route::get('/tech', 'MainController@tech');
+Route::get('/imprint', 'MainController@imprint');
+
+Route::get('/products/asatruphp', 'ProductsController@asatruphp');
+Route::get('/products/dnys', 'ProductsController@dnys');
+Route::get('/products/danigram', 'ProductsController@danigram');
+Route::get('/products/actifisys', 'ProductsController@actifisys');
+Route::get('/products/cdg', 'ProductsController@cdg');
+
+Route::get('/services/helprealm', 'ServicesController@helprealm');
+Route::get('/services/lachanfall', 'ServicesController@lachanfall');
+Route::get('/services/gamingpals', 'ServicesController@gamingpals');

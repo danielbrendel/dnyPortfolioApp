@@ -1,0 +1,23 @@
+Back in the early 2000s one game or tool, whatever you may want to call it, spread around and
+was targetting especially the younger generation: The Desktop Destroyer. There you could "destroy"
+your Desktop with various tools, such as machine gun, laser gun, flame thrower and more! Also you
+could spawn some insects which were "eating" the screen. <br/><br/>
+Still today there is quite a small fan group of that early game. Since I played it myself back in the
+days and liked it a lot, I decided to create a fan remake of it.<br/><br/>
+Casual Desktop Game was born!<br/><br/>
+This time I wanted to have it more related to the modern age which means I implemented a scripting system
+using the scripting language AngelScript. This way users can create own tools, weapons, entities, etc
+which can be used in the game then. The game style however remains the same.<br/><br/>
+At first I developed a standalone version which did not really reach many people. That's why I decided to
+integrate it with Steam - THE platform for game distribution. And it turned out that many of the early
+players of the original game were using Steam. Of course I integrated the Steam Workshop so users can
+share their created tools with other players. <br/><br/>
+Today Casual Desktop Game has been tried out by over 30.000 players and is rated very positive!<br/><br/>
+By default you are provided with currently 28 tools (original game had 9 tools) which goes from machine gun,
+laser gun to nuclear missile and tanks, mechs, soldiers and some fan tools like headcrabs and the
+holy handgrenade!<br/><br/>
+<button type="button" class="button button-steam" onclick="window.open('https://store.steampowered.com/app/1001860/Casual_Desktop_Game/')">Get on Steam</button><br/><br/>
+<img src="/gfx/screens/cdg.png" alt="CDG screen"/>
+<br/><br/>
+Casual Desktop Game is free to play without any payments or costs! So if you want to relive the old nostalgia
+you should really check it out!<br/>
