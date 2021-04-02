@@ -13,7 +13,7 @@ integrate it with Steam - THE platform for game distribution. And it turned out 
 players of the original game were using Steam. Of course I integrated the Steam Workshop so users can
 share their created tools with other players. <br/><br/>
 Today Casual Desktop Game has been tried out by over 30.000 players and is rated very positive!<br/><br/>
-By default you are provided with currently 28 tools (original game had 9 tools) which goes from machine gun,
+By default you are provided with currently 30 tools (original game had 9 tools) which goes from machine gun,
 laser gun to nuclear missile and tanks, mechs, soldiers and some fan tools like headcrabs and the
 holy handgrenade!<br/><br/>
 <button type="button" class="button button-steam" onclick="window.open('https://store.steampowered.com/app/1001860/Casual_Desktop_Game/')">Get on Steam</button><br/><br/>
