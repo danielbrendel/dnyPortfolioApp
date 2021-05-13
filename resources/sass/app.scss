@@ -20,8 +20,8 @@ html, body {
     height: 590px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    @media screen and (max-width: 909px) {
-        display: none;
+    @media screen and (max-width: 558px) {
+        height: 450px;
     }
 }
 
@@ -33,10 +33,12 @@ html, body {
 
 .banner-content {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-20%, -58%);
+    text-align: center;
+    padding: 10px;
     color: white;
+    @media screen and (max-width: 558px) {
+        vertical-align: middle;
+    }
 }
 
 .banner-content-headline {
@@ -46,7 +48,6 @@ html, body {
 .banner-content-subline {
     font-size: 1.9em;
     margin-top: 30px;
-    margin-left: 75px;
 }
 
 .home-banner-image img {
@@ -70,13 +71,18 @@ html, body {
     margin-top: 72px;
     width: 100%;
     overflow-x: auto;
+    @media screen and (max-width: 558px) {
+        display: none;
+    }
 }
 
 .banner-content-products-nav {
     position: relative;
     display: inline-block;
     width: 100%;
-    margin-left: 215px;
+    @media screen and (max-width: 558px) {
+        display: none;
+    }
 }
 
 .preview-item {

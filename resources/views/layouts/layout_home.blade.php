@@ -16,136 +16,144 @@
 </head>
 <body>
     <div id="app">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item navbar-item-brand" href="{{ url('/') }}">
+                    {{ __('app.website_title') }}
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{{ url('/') }}">
+                        {{ __('app.home') }}
+                    </a>
+
+                    @if (env('TWITTER_HANDLE') !== null)
+                    <a class="navbar-item" href="{{ url('/news') }}">
+                        {{ __('app.news') }}
+                    </a>
+                    @endif
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            {{ __('app.products') }}
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{{ url('/products/asatruphp') }}">
+                                Asatru PHP
+                            </a>
+                            <a class="navbar-item" href="{{ url('/products/dnys') }}">
+                                dnyScript
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="{{ url('/products/danigram') }}">
+                                Danigram
+                            </a>
+                            <a class="navbar-item" href="{{ url('/products/actifisys') }}">
+                                Actifisys
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="{{ url('/products/cdg') }}">
+                                Casual Desktop Game
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            {{ __('app.services') }}
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{{ url('/services/lachanfall') }}">
+                                lachanfall.co
+                            </a>
+                            <a class="navbar-item" href="{{ url('/services/gamingpals') }}">
+                                gamingpals.org
+                            </a>
+                            <a class="navbar-item" href="{{ url('/services/helprealm') }}">
+                                HelpRealm
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="navbar-item" href="{{ url('/tech') }}">
+                        {{ __('app.tech') }}
+                    </a>
+
+                    @if (env('HELPREALM_WORKSPACE') !== null)
+                    <a class="navbar-item" href="https://helprealm.io/{{ env('HELPREALM_WORKSPACE') }}" target="_blank">
+                        {{ __('app.contact') }}
+                    </a>
+                    @endif
+
+                    <a class="navbar-item" href="{{ url('/imprint') }}">
+                        {{ __('app.imprint') }}
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <a class="navbar-item" href="javascript:void(0);" onclick="window.setLangCookie('de'); location.reload();">
+                        <img src="{{ asset('gfx/flags/german.png') }}" alt="German"/>
+                        <span class="mobile-only">{{ __('app.change_german') }}</span>
+                    </a>
+
+                    <a class="navbar-item" href="javascript:void(0);" onclick="window.setLangCookie('en'); location.reload();">
+                        <img src="{{ asset('gfx/flags/english.png') }}" alt="English"/>
+                        <span class="mobile-only">{{ __('app.change_english') }}</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
         <div class="banner" style="background-image: url('{{ asset('gfx/banner.jpg') }}')">
             <div class="banner-overlay">
-                <nav class="navbar" role="navigation" aria-label="main navigation">
-                    <div class="navbar-brand">
-                        <a class="navbar-item navbar-item-brand" href="{{ url('/') }}">
-                            {{ __('app.website_title') }}
-                        </a>
+                <div class="columns">
+                    <div class="column is-2"></div>
 
-                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                        </a>
-                    </div>
+                    <div class="column is-8">
+                        <div class="banner-content">
+                            <div class="banner-content-headline">
+                                <div class="is-inline-block home-banner-image">
+                                    <img src="{{ asset('gfx/me.png') }}" alt="Daniel Brendel">
+                                </div>
 
-                    <div id="navbarBasicExample" class="navbar-menu">
-                        <div class="navbar-start">
-                            <a class="navbar-item" href="{{ url('/') }}">
-                                {{ __('app.home') }}
-                            </a>
-
-                            @if (env('TWITTER_HANDLE') !== null)
-                            <a class="navbar-item" href="{{ url('/news') }}">
-                                {{ __('app.news') }}
-                            </a>
-                            @endif
-
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link">
-                                    {{ __('app.products') }}
-                                </a>
-
-                                <div class="navbar-dropdown">
-                                    <a class="navbar-item" href="{{ url('/products/asatruphp') }}">
-                                        Asatru PHP
-                                    </a>
-                                    <a class="navbar-item" href="{{ url('/products/dnys') }}">
-                                        dnyScript
-                                    </a>
-                                    <hr class="navbar-divider">
-                                    <a class="navbar-item" href="{{ url('/products/danigram') }}">
-                                        Danigram
-                                    </a>
-                                    <a class="navbar-item" href="{{ url('/products/actifisys') }}">
-                                        Actifisys
-                                    </a>
-                                    <hr class="navbar-divider">
-                                    <a class="navbar-item" href="{{ url('/products/cdg') }}">
-                                        Casual Desktop Game
-                                    </a>
+                                <div class="is-inline-block home-banner-text">
+                                    {{ __('app.home_welcometext') }}
                                 </div>
                             </div>
 
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link">
-                                    {{ __('app.services') }}
-                                </a>
+                            <div class="banner-content-subline">{{ __('app.home_sublinetext') }}</div>
 
-                                <div class="navbar-dropdown">
-                                    <a class="navbar-item" href="{{ url('/services/lachanfall') }}">
-                                        lachanfall.co
-                                    </a>
-                                    <a class="navbar-item" href="{{ url('/services/gamingpals') }}">
-                                        gamingpals.org
-                                    </a>
-                                    <a class="navbar-item" href="{{ url('/services/helprealm') }}">
-                                        HelpRealm
-                                    </a>
-                                </div>
+                            <div class="banner-content-products">
+                                <div class="preview-chevron"><i class="fas fa-chevron-left fa-10x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
+
+                                @foreach (app('config')->get('previews') as $key => $item)
+                                    <div class="preview-item is-hidden" id="preview-item-{{ $key }}">
+                                        <img src="{{ asset('gfx/screens/' . $item['img']) }}" alt="preview-image"/>
+                                    </div>
+                                @endforeach
+
+                                <div class="preview-chevron"><i class="fas fa-chevron-right fa-10x is-pointer" onclick="window.productsNavGoRight();"></i></div>
                             </div>
 
-                            <a class="navbar-item" href="{{ url('/tech') }}">
-                                {{ __('app.tech') }}
-                            </a>
-
-                            @if (env('HELPREALM_WORKSPACE') !== null)
-                            <a class="navbar-item" href="https://helprealm.io/{{ env('HELPREALM_WORKSPACE') }}" target="_blank">
-                                {{ __('app.contact') }}
-                            </a>
-                            @endif
-
-                            <a class="navbar-item" href="{{ url('/imprint') }}">
-                                {{ __('app.imprint') }}
-                            </a>
-                        </div>
-
-                        <div class="navbar-end">
-                            <a class="navbar-item" href="javascript:void(0);" onclick="window.setLangCookie('de'); location.reload();">
-                                <img src="{{ asset('gfx/flags/german.png') }}" alt="German"/>
-                                <span class="mobile-only">{{ __('app.change_german') }}</span>
-                            </a>
-
-                            <a class="navbar-item" href="javascript:void(0);" onclick="window.setLangCookie('en'); location.reload();">
-                                <img src="{{ asset('gfx/flags/english.png') }}" alt="English"/>
-                                <span class="mobile-only">{{ __('app.change_english') }}</span>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-
-                <div class="banner-content">
-                    <div class="banner-content-headline">
-                        <div class="is-inline-block home-banner-image">
-                            <img src="{{ asset('gfx/me.png') }}" alt="Daniel Brendel">
-                        </div>
-
-                        <div class="is-inline-block home-banner-text">
-                            {{ __('app.home_welcometext') }}
-                        </div>
-                    </div>
-
-                    <div class="banner-content-subline">{{ __('app.home_sublinetext') }}</div>
-
-                    <div class="banner-content-products">
-                        <div class="preview-chevron"><i class="fas fa-chevron-left fa-10x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
-
-                        @foreach (app('config')->get('previews') as $key => $item)
-                            <div class="preview-item is-hidden" id="preview-item-{{ $key }}">
-                                <img src="{{ asset('gfx/screens/' . $item['img']) }}" alt="preview-image"/>
+                            <div class="banner-content-products-nav">
+                                @for ($i = 0; $i < count(app('config')->get('previews')); $i++)
+                                    <span class="is-pointer" id="products-nav-{{ $i }}" onclick="window.selectProductsEntry({{ $i }});"><i id="products-nav-icon-{{ $i }}" class="far fa-circle"></i></span>
+                                @endfor
                             </div>
-                        @endforeach
-
-                        <div class="preview-chevron"><i class="fas fa-chevron-right fa-10x is-pointer" onclick="window.productsNavGoRight();"></i></div>
+                        </div>
                     </div>
 
-                    <div class="banner-content-products-nav">
-                        @for ($i = 0; $i < count(app('config')->get('previews')); $i++)
-                            <span class="is-pointer" id="products-nav-{{ $i }}" onclick="window.selectProductsEntry({{ $i }});"><i id="products-nav-icon-{{ $i }}" class="far fa-circle"></i></span>
-                        @endfor
-                    </div>
+                    <div class="column is-2"></div>
                 </div>
             </div>
         </div>
