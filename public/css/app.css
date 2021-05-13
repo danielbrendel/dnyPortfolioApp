@@ -16,7 +16,7 @@ body {
 
 .banner {
   width: 100%;
-  height: 298px;
+  height: 590px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -27,12 +27,28 @@ body {
   }
 }
 
+.banner-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .banner-content {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-20%, -98%);
+  transform: translate(-20%, -58%);
   color: white;
+}
+
+.banner-content-headline {
+  font-size: 2.2em;
+}
+
+.banner-content-subline {
+  font-size: 1.9em;
+  margin-top: 30px;
+  margin-left: 75px;
 }
 
 .home-banner-image img {
@@ -44,8 +60,52 @@ body {
 }
 
 .home-banner-text {
+  position: relative;
+  top: 10px;
   font-size: 1.3em;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", sans-serif;
+}
+
+.banner-content-products {
+  position: relative;
+  display: inline-block;
+  margin-top: 72px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.banner-content-products-nav {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-left: 215px;
+}
+
+.preview-item {
+  width: 300px;
+  height: 200px;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.preview-chevron {
+  display: inline-block;
+}
+
+.preview-chevron i {
+  position: relative;
+  top: -39px;
+  color: #969696;
+}
+
+.is-pointer {
+  cursor: pointer;
+}
+
+.preview-item img {
+  width: 300px;
+  height: 200px;
 }
 
 @media screen and (min-width: 1088px) {

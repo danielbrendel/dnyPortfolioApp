@@ -2,6 +2,7 @@
 
 return [
     'home_welcometext' => 'Daniel Brendel IT Systeme',
+    'home_sublinetext' => 'Geeky software for geeky people',
     'website_title' => 'Daniel Brendel IT Systeme',
     'home' => 'Home',
     'news' => 'News',
