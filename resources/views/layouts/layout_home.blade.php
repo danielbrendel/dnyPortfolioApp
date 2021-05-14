@@ -159,6 +159,7 @@
         </div>
 
         <div class="container">
+            <a name="content"></a>
             <div class="columns">
                 @yield('content')
             </div>
@@ -285,6 +286,15 @@
             window.initialLangCookie();
 
             selectProductsEntry(0);
+
+            window.nonIndex = ['/imprint', '/news', '/tech', '/services/', '/products/'];
+            let url = '{{ Request::url() }}';
+            for (let i = 0; i < window.nonIndex.length; i++) {
+                if (url.indexOf(window.nonIndex[i]) !== -1) {
+                    location.href = '{{ Request::url() }}#content';
+                    break;
+                }
+            }
         });
     </script>
 </body>
