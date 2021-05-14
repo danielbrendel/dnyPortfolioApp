@@ -48,4 +48,4 @@ Folgende Features werden derzeit vom Framework unterstützt:<br/>
 	<li>mail() wrapper</li>
 	<li>SMTP mailing</li>
 </ul>
-Schauen Sie sich die <a href="/doc/asatruphp.pdf">Dokumentation</a> für weitere Details an.<br/>
+Schauen Sie sich die <a href="https://www.asatru-php.org/doc/1.0/installation">Dokumentation</a> für weitere Details an.<br/>

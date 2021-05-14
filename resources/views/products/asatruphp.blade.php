@@ -11,7 +11,7 @@
                     <img src="{{ asset('gfx/logos/asatruphp.png') }}" alt="Asatru PHP Framework"/>
 
                     <div class="header-top">{!! __('app.asatruphp_top') !!}</div>
-                    <div class="header-sub">{{ __('app.asatruphp_sub') }}</div>
+                    <div class="header-sub">{!! __('app.asatruphp_sub') !!}</div>
                 </div>
                 <div class="header-box-right">&nbsp;</div>
             </div>

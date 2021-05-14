@@ -12,6 +12,16 @@ return [
     ],
 
     [
+        'img' => 'lachanfall.png',
+        'text' => 'Lachanfall.co'
+    ],
+
+    [
+        'img' => 'astarlove.png',
+        'text' => 'Astarlove'
+    ],
+
+    [
         'img' => 'gamingpals.png',
         'text' => 'GamingPals'
     ],
@@ -19,10 +29,5 @@ return [
     [
         'img' => 'helprealm.png',
         'text' => 'HelpRealm Ticket System'
-    ],
-
-    [
-        'img' => 'lachanfall.png',
-        'text' => 'Lachanfall.co'
     ],
 ];

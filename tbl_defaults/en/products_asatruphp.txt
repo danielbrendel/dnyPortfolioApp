@@ -46,4 +46,4 @@ Currently it has the following features:<br/>
 	<li>mail() wrapper</li>
 	<li>SMTP mailing</li>
 </ul>
-Refer to the <a href="/doc/asatruphp.pdf">documentation</a> for more details<br/>
+Refer to the <a href="https://www.asatru-php.org/doc/1.0/installation">documentation</a> for more details<br/>
