@@ -140,7 +140,11 @@
                                 <div class="preview-chevron"><i class="fas fa-chevron-left fa-10x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
 
                                 @foreach (app('config')->get('previews') as $key => $item)
-                                    <div class="preview-item is-hidden" id="preview-item-{{ $key }}">
+                                    <div class="preview-item is-hidden" id="preview-item-{{ $key }}" onmouseover="document.getElementById('preview-item-hover-{{ $key }}').classList.remove('is-hidden');" onmouseout="document.getElementById('preview-item-hover-{{ $key }}').classList.add('is-hidden');">
+                                        <div class="preview-item-hover is-pointer is-hidden" id="preview-item-hover-{{ $key }}" onclick="location.href = '{{ $item['url'] }}';">
+                                            <div class="preview-item-hover-text">{{ $item['text'] }}</div>
+                                        </div>
+                                        
                                         <img src="{{ asset('gfx/screens/' . $item['img']) }}" alt="preview-image"/>
                                     </div>
                                 @endforeach
@@ -243,7 +247,23 @@
                 }
             }
             
+            window.fadeIn(document.getElementById('preview-item-' + index).children[0]);
         };
+
+        window.fadeIn = function(elem) {
+            elem.style.opacity = '0';
+
+            var fade = function() {
+                let newVal = parseFloat(elem.style.opacity) + 0.1;
+                elem.style.opacity = newVal;
+                if (newVal < 1.0) {
+                    setTimeout(fade, 100);
+                }
+            }
+
+            fade();
+        };
+
         window.productsNavGoRight = function() {
             window.productsIndex++;
             if (window.productsIndex >= window.productsCount) {
@@ -252,6 +272,7 @@
 
             window.selectProductsEntry(window.productsIndex);
         };
+
         window.productsNavGoLeft = function() {
             window.productsIndex--;
             if (window.productsIndex < 0) {
