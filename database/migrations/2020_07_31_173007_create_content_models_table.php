@@ -24,9 +24,10 @@ class CreateContentModelsTable extends Migration
             $table->text("product_danigram");
             $table->text("product_actifisys");
             $table->text("product_cdg");
-            $table->text("services_helprealm");
             $table->text("services_lachanfall");
+            $table->text('services_astarlove');
             $table->text('services_gamingpals');
+            $table->text("services_helprealm");
             $table->timestamps();
         });
     }

@@ -76,11 +76,14 @@
                             <a class="navbar-item" href="{{ url('/services/lachanfall') }}">
                                 lachanfall.co
                             </a>
+                            <a class="navbar-item" href="{{ url('/services/astarlove') }}">
+                                astarlove.com
+                            </a>
                             <a class="navbar-item" href="{{ url('/services/gamingpals') }}">
                                 gamingpals.org
                             </a>
                             <a class="navbar-item" href="{{ url('/services/helprealm') }}">
-                                HelpRealm
+                                helprealm.io
                             </a>
                         </div>
                     </div>

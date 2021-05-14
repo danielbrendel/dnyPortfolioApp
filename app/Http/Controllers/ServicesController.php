@@ -21,6 +21,13 @@ class ServicesController extends Controller
         ]);
     }
 
+    public function astarlove()
+    {
+        return view('services.astarlove', [
+            'content' => ContentModel::queryContent('services_astarlove', \App::getLocale())
+        ]);
+    }
+
     public function gamingpals()
     {
         return view('services.gamingpals', [

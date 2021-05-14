@@ -1,0 +1,10 @@
+Astarlove ist eine Dating Plattform für Metal, Gothic & Alternative Singles. Es ist gratis und hat so gut wie keine Limitierungen.<br/><br/>
+Benutzer können private Nachrichten ohne Begrenzung und Kosten austauschen. Die einzige Bedingung ist, dass man sich vorher gegenseitig
+ein Like gibt. Dies stellt sicher, dass man keine unerwünschten Nachrichten bekommt.<br/><br/>
+Mitglieder können Profile in ihrer Nähe im Suchbereich finden. Diese Suche kann noch mit Filteroptionen verfeinert werden.
+Wenn man dann jemanden interessanten findet, kann man ein Like dalassen. Wenn das Gegenüber einen dann auch interessant findet,
+kann ein Like zurückgegeben werden. Von da an kann man dann eine Unterhaltung starten.<br/><br/>
+Die Plattform erlaubt es, viele Profilinformationen einzustellen, damit man ein sehr detailliertes Profil hat. Zuzüglich zu einem
+Avatar kann man auch noch drei weitere Fotos hochladen.<br/><br/>
+Fotos müssen von der Administration freigeschaltet werden. Dies stellt sicher, dass Mitglieder nur angemessene Bilder sehen.<br/><br/>
+<img src="/gfx/screens/astarlove.png" alt="astarlove"/>
