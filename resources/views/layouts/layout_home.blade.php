@@ -141,7 +141,7 @@
 
                                 @foreach (app('config')->get('previews') as $key => $item)
                                     <div class="preview-item is-hidden" id="preview-item-{{ $key }}" onmouseover="document.getElementById('preview-item-hover-{{ $key }}').classList.remove('is-hidden');" onmouseout="document.getElementById('preview-item-hover-{{ $key }}').classList.add('is-hidden');">
-                                        <div class="preview-item-hover is-pointer is-hidden" id="preview-item-hover-{{ $key }}" onclick="location.href = '{{ $item['url'] }}';">
+                                        <div class="preview-item-hover is-pointer is-hidden" id="preview-item-hover-{{ $key }}" onclick="location.href = '{{ url($item['route']) }}';">
                                             <div class="preview-item-hover-text">{{ $item['text'] }}</div>
                                         </div>
                                         
