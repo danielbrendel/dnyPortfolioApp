@@ -6,9 +6,8 @@
 </div>
 <div id="expWeb" class="tab-item">
 	<ul>
-		<li>PHP 7</li>
+		<li>PHP 7/8</li>
 		<li>Laravel</li>
-		<li>Zend Framework</li>
 		<li>Composer</li>
 		<li>Vue.js</li>
 		<li>jQuery</li>
