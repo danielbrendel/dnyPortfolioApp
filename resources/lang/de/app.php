@@ -40,7 +40,7 @@ return [
     'actifisys_sub' => 'Seit 2020',
     'actifisys_title' => 'Nützlich, um einen eigenen Aktivitäten-Finder Service zu erstellen',
     'dnys_top' => 'Einbettbare Skript-Sprache für C++',
-    'dnys_sub' => 'Seit 2017 &#x25CF; <a href="https://github.com/danielbrendel/dnyScriptParser">Engine</a> &#x25CF; <a href="https://github.com/danielbrendel/dnyAquaShell">Shell</a>',
+    'dnys_sub' => 'Seit 2017 &#x25CF; <a href="https://github.com/danielbrendel/dnyScriptInterpreter">Engine</a> &#x25CF; <a href="https://github.com/danielbrendel/dnyAquaShell">Shell</a>',
     'dnys_title' => 'Nützlich, um Aufgaben einer Anwendung in Skripte auszulagern',
     'cdg_top' => 'The Desktop Destroyer revolution',
     'cdg_sub' => 'Seit 2018 &#x25CF; <a href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/">Auf Steam spielen</a>',
