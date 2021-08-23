@@ -13,7 +13,7 @@ das Spiel auf Steam zu veröffentlichen - DIE Plattform für das Vertreiben von 
 den früheren Spielern auch auf Steam aktiv sind. Selbstverständlich habe ich auch den Steam-Workshop integriert, damit
 Spieler ihre eigenen Tools mit der Community teilen können. <br/><br/>
 Mittlerweile wurde Casual Desktop Game über 30.000 mal ausprobiert und wurde als "sehr positiv" gewertet!<br/><br/>
-Das Spiel bringt momentan 30 Tools mit (das Original hatte 9) welche reichen von Maschinengewehr, Raketenwerfer,
+Das Spiel bringt momentan 32 Tools mit (das Original hatte 9) welche reichen von Maschinengewehr, Raketenwerfer,
 Flammenwerfer bis zu Panzer, Laser-Mechs, Flugzeuge und Atomraketen und auch Fan-Kreationen wie Headcrabs
 oder die heilige Handgranate!<br/><br/>
 <button type="button" class="button button-steam" onclick="window.open('https://store.steampowered.com/app/1001860/Casual_Desktop_Game/')">Auf Steam spielen</button><br/><br/>
