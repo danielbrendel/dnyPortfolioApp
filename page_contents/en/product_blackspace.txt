@@ -1,0 +1,8 @@
+Black Space is a 2D singleplayer top-down space shooter game as arena style.<br/><br/>
+It is meant for quick time wasting. It is fast paced and a match is intented to run short means
+this game is especially suited for some small wait time or when you are bored. Just quickly launch
+the game, open a match and shoot up your opponents.<br/><br/>
+The game supports dynamic game modes implementing them in AngelScript.<br/><br/>
+<button type="button" class="button button-steam" onclick="window.open('https://store.steampowered.com/app/1653360/Black_Space/')">Play on Steam</button><br/><br/>
+<img src="/gfx/screens/blackspace.png" alt="Black Space screen"/>
+<br/><br/>

@@ -1,0 +1,7 @@
+Casual Game Engine is a 2D singleplayer top-down shooter engine which you can use to create your own 2D top-down shooter games.<br/><br/>
+Therefore your game behavior and entities are implemented via AngelScript. You can define a main game and also mods of your game.<br/><br/>
+The engine supports connection to Steam, however this is not a requirement. When connecting with Steam you can utilize the Workshop and
+Steam Achievement feature.<br/><br/>
+<button type="button" class="button button-steam" onclick="window.open('https://store.steampowered.com/app/1725730/Casual_Game_Engine/')">Get on Steam</button><br/><br/>
+<img src="/gfx/screens/cge.png" alt="CGE screen"/>
+<br/><br/>
