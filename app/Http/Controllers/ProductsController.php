@@ -35,10 +35,31 @@ class ProductsController extends Controller
         ]);
     }
 
+    public function astarlove()
+    {
+        return view('products.astarlove', [
+            'content' => ContentModel::queryContent('product_astarlove', \App::getLocale())
+        ]);
+    }
+
     public function cdg()
     {
         return view('products.cdg', [
             'content' => ContentModel::queryContent('product_cdg', \App::getLocale())
+        ]);
+    }
+
+    public function cge()
+    {
+        return view('products.cge', [
+            'content' => ContentModel::queryContent('product_cge', \App::getLocale())
+        ]);
+    }
+
+    public function blackspace()
+    {
+        return view('products.blackspace', [
+            'content' => ContentModel::queryContent('product_blackspace', \App::getLocale())
         ]);
     }
 }

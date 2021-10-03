@@ -60,9 +60,18 @@
                             <a class="navbar-item" href="{{ url('/products/actifisys') }}">
                                 Actifisys
                             </a>
+                            <a class="navbar-item" href="{{ url('/products/astarlove') }}">
+                                Astarlove
+                            </a>
                             <hr class="navbar-divider">
                             <a class="navbar-item" href="{{ url('/products/cdg') }}">
                                 Casual Desktop Game
+                            </a>
+                            <a class="navbar-item" href="{{ url('/products/cge') }}">
+                                Casual Game Engine
+                            </a>
+                            <a class="navbar-item" href="{{ url('/products/blackspace') }}">
+                                Black Space
                             </a>
                         </div>
                     </div>

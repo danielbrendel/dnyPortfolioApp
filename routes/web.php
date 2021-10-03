@@ -22,7 +22,10 @@ Route::get('/products/asatruphp', 'ProductsController@asatruphp');
 Route::get('/products/dnys', 'ProductsController@dnys');
 Route::get('/products/danigram', 'ProductsController@danigram');
 Route::get('/products/actifisys', 'ProductsController@actifisys');
+Route::get('/products/astarlove', 'ProductsController@astarlove');
 Route::get('/products/cdg', 'ProductsController@cdg');
+Route::get('/products/cge', 'ProductsController@cge');
+Route::get('/products/blackspace', 'ProductsController@blackspace');
 
 Route::get('/services/lachanfall', 'ServicesController@lachanfall');
 Route::get('/services/astarlove', 'ServicesController@astarlove');
