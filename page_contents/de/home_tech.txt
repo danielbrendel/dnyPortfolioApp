@@ -26,6 +26,7 @@
 	<ul>
 		<li>C++ on Windows</li>
 		<li>WinAPI</li>
+		<li>AngelScript</li>
 		<li>DirectX 9</li>
 		<li>Visual Studio Community 2019</li>
 		<li>Git</li>
