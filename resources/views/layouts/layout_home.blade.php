@@ -6,7 +6,7 @@
 
     <title>{{ __('app.website_title') }}</title>
 
-	<link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset('gfx/logo.png') }}">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bulma.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
@@ -135,7 +135,7 @@
                         <div class="banner-content">
                             <div class="banner-content-headline">
                                 <div class="is-inline-block home-banner-image">
-                                    <img src="{{ asset('gfx/me.png') }}" alt="Daniel Brendel">
+                                    <img src="{{ asset('gfx/logo.png') }}" alt="Daniel Brendel">
                                 </div>
 
                                 <div class="is-inline-block home-banner-text">

@@ -8,7 +8,7 @@
             <div class="header-box">
                 <div class="header-box-left">&nbsp;</div>
                 <div class="header-box-middle">
-                    <img src="{{ asset('gfx/me.png') }}" alt="Daniel Brendel"/>
+                    <img src="{{ asset('gfx/logo.png') }}" alt="Daniel Brendel"/>
 
                     <div class="header-top">{!! __('app.slogan_top') !!}</div>
                     <div class="header-sub">{{ __('app.slogan_sub') }}</div>
