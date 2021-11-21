@@ -17,7 +17,7 @@
             </div>
 
             <div class="page-title">
-                <h1>{{ __('app.home_title') }}</h1>
+                <h1>{{ __('app.news_title') }}</h1>
             </div>
 
             <div class="page-content">

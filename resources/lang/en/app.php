@@ -17,6 +17,7 @@ return [
     'tech_sub' => 'Progress is key',
     'tech_title' => 'I am using the following technology stack',
     'home_title' => 'Welcome to the official website of Daniel Brendel IT Systems',
+	'news_title' => 'Latest news',
     'imprint_title' => 'Imprint',
     'helprealm_top' => 'The free SaaS support ticket system',
     'helprealm_sub' => 'Since 2020 - no ads, almost no costs &#x25CF; <a href="https://helprealm.io">helprealm.io</a>',

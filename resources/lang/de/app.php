@@ -17,6 +17,7 @@ return [
     'tech_sub' => 'Progress is key',
     'tech_title' => 'Ich benutze folgenden Technologie-Stack',
     'imprint_title' => 'Impressum',
+	'news_title' => 'Neuigkeiten',
     'home_title' => 'Willkommen auf der offiziellen Seite von Daniel Brendel IT Systeme',
     'helprealm_top' => 'Das freie SaaS Support Ticket System',
     'helprealm_sub' => 'Seit 2020 - keine Werbung, fast keine Kosten &#x25CF; <a href="https://helprealm.io">helprealm.io</a>',

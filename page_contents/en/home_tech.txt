@@ -10,7 +10,6 @@
 		<li>Laravel</li>
 		<li>Composer</li>
 		<li>Vue.js</li>
-		<li>jQuery</li>
 		<li>MetroUI</li>
 		<li>MySQL</li>
 		<li>Bulma CSS</li>

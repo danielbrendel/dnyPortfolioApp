@@ -5,4 +5,6 @@ Copyright &copy; 2020 - 2021 by Daniel Brendel<br/><br/>
 <a href="mailto:info@danielbrendel.de">Contact by e-mail</a><br/>
 <a href="https://github.com/danielbrendel">GitHub profile</a><br/>
 <a href="https://twitter.com/dbrendel_dev">Follow on Twitter</a><br/>
-<a href="https://play.google.com/store/apps/dev?id=8955015533201204727">Play Developer Profile</a><br/><br/>
+<a href="https://store.steampowered.com/developer/danielbrendel">Steam Developer Profile</a><br/>
+<a href="https://danielbrendel.itch.io/">itch.io Developer Profile</a><br/>
+<a href="https://play.google.com/store/apps/dev?id=8955015533201204727">Google Play Developer Profile</a><br/><br/>
