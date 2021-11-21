@@ -4,5 +4,5 @@ Copyright &copy; 2020 - 2021 Daniel Brendel<br/><br/>
 <strong>Kontakt</strong><br/>
 <a href="mailto:info@danielbrendel.de">Per E-Mail</a><br/>
 <a href="https://github.com/danielbrendel">GitHub Profil</a><br/>
-<a href="https://twitter.com/dbrendel1988">Auf Twitter folgen</a><br/>
+<a href="https://twitter.com/dbrendel_dev">Auf Twitter folgen</a><br/>
 <a href="https://play.google.com/store/apps/dev?id=8955015533201204727">Play Developer Profil</a><br/><br/>
