@@ -40,14 +40,14 @@ class ContentModel extends Model
     /**
      * @param string $field
      * @param string $lang
-     * @return string
+     * @return mixed
      */
     private static function queryContentFile(string $field, string $lang)
     {
-        if (!file_exists(base_path() . '/page_contents/' . $lang . '/' . $field . '.txt')) {
+        if (!file_exists(base_path() . '/resources/pages/' . $lang . '/' . $field . '.txt')) {
             return null;
         }
 
-        return file_get_contents(base_path() . '/page_contents/' . $lang . '/' . $field . '.txt');
+        return file_get_contents(base_path() . '/resources/pages/' . $lang . '/' . $field . '.txt');
     }
 }
