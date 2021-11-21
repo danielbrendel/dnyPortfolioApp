@@ -1,0 +1,9 @@
+Geekflash is a free content provider platform for geeky images, GIFs & videos.<br/><br/>
+
+On Geekflash you can view content about geeky topics, cute animals, cosplaying, comics, otaku content (anime/manga) and many more content.<br/><br/>
+
+Users can share content and browse the public feed. The public feed can be sorted by new and top posts. Also you have a follower feed that shows
+content of users you are following in a chronological order. Posts can be sorted by categories and additionally with hashtags. You can browse other 
+users to find likeminded people and also discuss on the forum.<br/><br/>
+
+The usage is free and currently without ads.<br/><br/>

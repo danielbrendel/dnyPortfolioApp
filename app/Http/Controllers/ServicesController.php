@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
+    public function geekflash()
+    {
+        return view('services.geekflash', [
+            'content' => ContentModel::queryContent('services_geekflash', \App::getLocale())
+        ]);
+    }
+
     public function helprealm()
     {
         return view('services.helprealm', [

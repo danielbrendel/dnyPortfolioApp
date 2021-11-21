@@ -56,6 +56,13 @@ class ProductsController extends Controller
         ]);
     }
 
+    public function cpw()
+    {
+        return view('products.cpw', [
+            'content' => ContentModel::queryContent('product_cpw', \App::getLocale())
+        ]);
+    }
+
     public function blackspace()
     {
         return view('products.blackspace', [

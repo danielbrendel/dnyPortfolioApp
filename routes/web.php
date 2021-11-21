@@ -25,8 +25,10 @@ Route::get('/products/actifisys', 'ProductsController@actifisys');
 Route::get('/products/astarlove', 'ProductsController@astarlove');
 Route::get('/products/cdg', 'ProductsController@cdg');
 Route::get('/products/cge', 'ProductsController@cge');
+Route::get('/products/cpw', 'ProductsController@cpw');
 Route::get('/products/blackspace', 'ProductsController@blackspace');
 
+Route::get('/services/geekflash', 'ServicesController@geekflash');
 Route::get('/services/lachanfall', 'ServicesController@lachanfall');
 Route::get('/services/astarlove', 'ServicesController@astarlove');
 Route::get('/services/gamingpals', 'ServicesController@gamingpals');

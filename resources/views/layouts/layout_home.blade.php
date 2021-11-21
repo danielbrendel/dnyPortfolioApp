@@ -70,6 +70,9 @@
                             <a class="navbar-item" href="{{ url('/products/cge') }}">
                                 Casual Game Engine
                             </a>
+                            <a class="navbar-item" href="{{ url('/products/cpw') }}">
+                                Casual Pixel Warrior
+                            </a>
                             <a class="navbar-item" href="{{ url('/products/blackspace') }}">
                                 Black Space
                             </a>
@@ -82,6 +85,9 @@
                         </a>
 
                         <div class="navbar-dropdown">
+                            <a class="navbar-item" href="{{ url('/services/geekflash') }}">
+                                geekflash.net
+                            </a>
                             <a class="navbar-item" href="{{ url('/services/lachanfall') }}">
                                 lachanfall.co
                             </a>
