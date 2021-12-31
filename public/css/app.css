@@ -408,3 +408,7 @@ code {
   top: -29px;
 }
 
+.is-abandoned {
+  color: #961e00;
+}
+

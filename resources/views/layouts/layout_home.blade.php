@@ -76,6 +76,9 @@
                             <a class="navbar-item" href="{{ url('/products/blackspace') }}">
                                 Black Space
                             </a>
+                            <a class="navbar-item" href="{{ url('/products/solitarius') }}">
+                                Solitarius
+                            </a>
                         </div>
                     </div>
 

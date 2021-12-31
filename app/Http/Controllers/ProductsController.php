@@ -69,4 +69,11 @@ class ProductsController extends Controller
             'content' => ContentModel::queryContent('product_blackspace', \App::getLocale())
         ]);
     }
+
+    public function solitarius()
+    {
+        return view('products.solitarius', [
+            'content' => ContentModel::queryContent('product_solitarius', \App::getLocale())
+        ]);
+    }
 }
