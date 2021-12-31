@@ -4,4 +4,6 @@ Ausserirdische sind gekommen und haben alles auf der Erde zerstört. Jetzt liegt
 
 Kämpfe gegen unterschiedliche Gegner, sammele Gegenstände ein, nutze unterschiedliche Waffen und gewinne am Ende gegen den Boss.<br/><br/>
 
-Viel Erfolg, Pilot! <br/>
+Viel Erfolg, Pilot!<br/><br/>
+
+<img src="/gfx/screens/solitarius.png" alt="Solitarius"/><br/>

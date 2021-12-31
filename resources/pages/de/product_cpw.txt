@@ -7,4 +7,6 @@ Du bist ein Einzelkämpfer-Soldat, der in einer fremden Welt während eines Port
 Scheint wohl, dass du allein gegen alle bist - aber fürchte dich nicht! Ausgestattet mit schweren Waffen und diesem nützlichen Bionic-Implantaten, wirst du bestimmt eine Chance haben, diesem Chaos zu entkommen.
 <br/><br/>
 
-Viel Glück, Soldat!<br/>
+Viel Glück, Soldat!<br/><br/>
+
+<img src="/gfx/screens/cpw.png" alt="Casual Pixel Warrior"/><br/>

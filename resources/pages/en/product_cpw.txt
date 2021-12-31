@@ -7,4 +7,6 @@ You are a solitude warrior who stranded on a foreign planet via a portal experie
 Seems like you are one against all - but fear not! Equipped with heavy weaponry and that nice bionic implanted technology, you will surely have a chance to get out of this mess healthy and well.
 <br/><br/>
 
-Good luck, sir!<br/>
+Good luck, sir!<br/><br/>
+
+<img src="/gfx/screens/cpw.png" alt="Casual Pixel Warrior"/><br/>
