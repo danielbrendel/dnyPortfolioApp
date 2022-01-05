@@ -12,7 +12,7 @@ return [
     'contact' => 'Kontakt',
     'imprint' => 'Impressum',
     'slogan_top' => '&laquo; Making a change through software &raquo;',
-    'slogan_sub' => 'Seit 2017',
+    'slogan_sub' => 'Indie Softwareentwicklung',
     'tech_top' => '&laquo; Modern solutions require modern technology &raquo;',
     'tech_sub' => 'Progress is key',
     'tech_title' => 'Ich benutze folgenden Technologie-Stack',

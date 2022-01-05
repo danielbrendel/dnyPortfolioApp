@@ -12,7 +12,7 @@ return [
     'contact' => 'Contact',
     'imprint' => 'Imprint',
     'slogan_top' => '&laquo; Making a change through software &raquo;',
-    'slogan_sub' => 'Since 2017',
+    'slogan_sub' => 'Indie software development',
     'tech_top' => '&laquo; Modern solutions require modern technology &raquo;',
     'tech_sub' => 'Progress is key',
     'tech_title' => 'I am using the following technology stack',
