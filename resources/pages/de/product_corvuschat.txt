@@ -1,0 +1,12 @@
+CorvusChat ist ein client-server basiertes Chatsystem, um sich privat oder in Chaträumen zu unterhalten. Benutzer können sich
+auf Chatserver verbinden, welche dynamisch durch die Administratoren konfiguriert werden können. Der Chatserver unterstützt das 
+dynamische Laden von Plugins, um die Funktionalität des Servers zu erweitern. Ausserdem gibt es ein RCON-System, über das Administratoren
+ihren Server verwalten können, ohne sich direkt als Chatclient zu verbinden. Des Weiteren gibt es ein Masterserver-System, über das Benutzer
+sich eine dynamische Serverliste holen können, um alle verfügbaren Chatserver anzuzeigen und sich zu verbinden.<br/><br/>
+
+Chaträume können benutzerdefiniert gestaltet werden. So kann man z. B. ein Chatraum Thema setzen und den Chatraum mit einem
+Passwort schützen.<br/><br/>
+
+Standardmäßig ist ein C++ SDK enthalten, um DLL Plugins zu schreiben, welche dynamisch die Serverfunktionalität erweitern kann.<br/><br/>
+
+<img src="/gfx/screens/corvuschat.png"/>
