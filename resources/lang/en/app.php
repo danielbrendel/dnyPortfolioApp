@@ -35,7 +35,7 @@ return [
     'gamingpals_sub' => 'Find gaming buddies, find casual players, or found a clan &#x25CF; <a href="https://www.gamingpals.org/">gamingpals.org</a> &#x25CF; <span class="is-abandoned">abandoned</span>',
     'gamingpals_title' => 'An international gaming buddy search platform',
     'asatruphp_top' => 'Lightweight PHP framework for rapid development',
-    'asatruphp_sub' => 'Since 2019 &#x25CF; <a href="https://www.asatru-php.org/">asatru-php.org</a>',
+    'asatruphp_sub' => 'Since 2019 &#x25CF; <a href="https://github.com/danielbrendel/dnyAsatruPHP-App">App skeleton</a> &#x25CF; <a href="https://github.com/danielbrendel/dnyAsatruPHP-Framework">Framework</a>',
     'asatruphp_title' => 'The Asatru PHP framework is easy to use',
     'danigram_top' => 'Image sharing and community platform system',
     'danigram_sub' => 'Since 2020 &#x25CF; <a href="https://github.com/danielbrendel/dnyDanigram">View on GitHub</a>',

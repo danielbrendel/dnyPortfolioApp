@@ -35,7 +35,7 @@ return [
     'gamingpals_sub' => 'Finde neue Spielerfreunde, Gelegenheitsspieler oder gründe einen Clan &#x25CF; <a href="https://www.gamingpals.org/">gamingpals.org</a> &#x25CF; <span class="is-abandoned">eingestellt</span>',
     'gamingpals_title' => 'Eine international ausgelegte Plattform',
     'asatruphp_top' => 'Leichtgewichtiges PHP Framework für schnelles Entwickeln von Applikationen',
-    'asatruphp_sub' => 'Seit 2019 &#x25CF; <a href="https://www.asatru-php.org/">asatru-php.org</a>',
+    'asatruphp_sub' => 'Seit 2019 &#x25CF; <a href="https://github.com/danielbrendel/dnyAsatruPHP-App">App skeleton</a> &#x25CF; <a href="https://github.com/danielbrendel/dnyAsatruPHP-Framework">Framework</a>',
     'asatruphp_title' => 'Das Asatru PHP Framework ist leicht zu benutzen',
     'danigram_top' => 'Platform zum Teilen von Bildern',
     'danigram_sub' => 'Seit 2020 &#x25CF; <a href="https://github.com/danielbrendel/dnyDanigram">Auf GitHub einsehen</a>',
