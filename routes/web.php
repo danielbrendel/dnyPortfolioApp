@@ -28,6 +28,8 @@ Route::get('/products/cge', 'ProductsController@cge');
 Route::get('/products/cpw', 'ProductsController@cpw');
 Route::get('/products/blackspace', 'ProductsController@blackspace');
 Route::get('/products/solitarius', 'ProductsController@solitarius');
+Route::get('/products/corvuschat', 'ProductsController@corvuschat');
+Route::get('/products/ufw', 'ProductsController@ufw');
 
 Route::get('/services/geekflash', 'ServicesController@geekflash');
 Route::get('/services/lachanfall', 'ServicesController@lachanfall');

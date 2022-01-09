@@ -76,4 +76,18 @@ class ProductsController extends Controller
             'content' => ContentModel::queryContent('product_solitarius', \App::getLocale())
         ]);
     }
+
+    public function corvuschat()
+    {
+        return view('products.corvuschat', [
+            'content' => ContentModel::queryContent('product_corvuschat', \App::getLocale())
+        ]);
+    }
+
+    public function ufw()
+    {
+        return view('products.ufw', [
+            'content' => ContentModel::queryContent('product_ufw', \App::getLocale())
+        ]);
+    }
 }

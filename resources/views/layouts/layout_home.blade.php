@@ -79,6 +79,13 @@
                             <a class="navbar-item" href="{{ url('/products/solitarius') }}">
                                 Solitarius
                             </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="{{ url('/products/corvuschat') }}">
+                                CorvusChat
+                            </a>
+                            <a class="navbar-item" href="{{ url('/products/ufw') }}">
+                                UniFont Writer
+                            </a>
                         </div>
                     </div>
 
