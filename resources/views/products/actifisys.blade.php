@@ -11,7 +11,7 @@
                     <img src="{{ asset('gfx/logos/actifisys.png') }}" alt="ComAct"/>
 
                     <div class="header-top">{!! __('app.actifisys_top') !!}</div>
-                    <div class="header-sub">{{ __('app.actifisys_sub') }}</div>
+                    <div class="header-sub">{!! __('app.actifisys_sub') !!}</div>
                 </div>
                 <div class="header-box-right">&nbsp;</div>
             </div>

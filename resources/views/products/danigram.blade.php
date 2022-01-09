@@ -11,7 +11,7 @@
                     <img src="{{ asset('gfx/logos/danigram.png') }}" alt="Danigram"/>
 
                     <div class="header-top">{!! __('app.danigram_top') !!}</div>
-                    <div class="header-sub">{{ __('app.danigram_sub') }}</div>
+                    <div class="header-sub">{!! __('app.danigram_sub') !!}</div>
                 </div>
                 <div class="header-box-right">&nbsp;</div>
             </div>
