@@ -408,6 +408,10 @@ code {
   top: -29px;
 }
 
+.is-online {
+  color: #3faf23;
+}
+
 .is-abandoned {
   color: #961e00;
 }
