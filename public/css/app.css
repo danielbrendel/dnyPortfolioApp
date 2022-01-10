@@ -412,3 +412,9 @@ code {
   color: #961e00;
 }
 
+.is-font-ink-free {
+  font-family: "Ink Free", Verdana, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+

@@ -18,7 +18,7 @@
     <div id="app">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item navbar-item-brand" href="{{ url('/') }}">
+                <a class="navbar-item navbar-item-brand is-font-ink-free" href="{{ url('/') }}">
                     {{ __('app.website_title') }}
                 </a>
 
