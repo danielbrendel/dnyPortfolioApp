@@ -41,4 +41,11 @@ class ServicesController extends Controller
             'content' => ContentModel::queryContent('services_gamingpals', \App::getLocale())
         ]);
     }
+
+    public function webframeworkdb()
+    {
+        return view('services.webframeworkdb', [
+            'content' => ContentModel::queryContent('services_webframeworkdb', \App::getLocale())
+        ]);
+    }
 }

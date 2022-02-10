@@ -36,3 +36,4 @@ Route::get('/services/lachanfall', 'ServicesController@lachanfall');
 Route::get('/services/astarlove', 'ServicesController@astarlove');
 Route::get('/services/gamingpals', 'ServicesController@gamingpals');
 Route::get('/services/helprealm', 'ServicesController@helprealm');
+Route::get('/services/webframeworkdb', 'ServicesController@webframeworkdb');
