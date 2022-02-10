@@ -20,9 +20,9 @@ return [
     ],
 
     [
-        'img' => 'cpw.png',
-        'text' => 'Casual Pixel Warrior',
-        'route' => '/products/cpw'
+        'img' => 'blackspace.png',
+        'text' => 'Black Space',
+        'route' => '/products/blackspace'
     ],
 
     [
@@ -32,8 +32,8 @@ return [
     ],
 
     [
-        'img' => 'blackspace.png',
-        'text' => 'Black Space',
-        'route' => '/products/blackspace'
+        'img' => 'webframeworkdb.png',
+        'text' => 'WebframeworkDB',
+        'route' => '/services/webframeworkdb'
     ],
 ];
