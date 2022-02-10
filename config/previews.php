@@ -14,15 +14,15 @@ return [
     ],
 
     [
-        'img' => 'lachanfall.png',
-        'text' => 'Lachanfall.co',
-        'route' => '/services/lachanfall'
+        'img' => 'cge.png',
+        'text' => 'Casual Game Engine',
+        'route' => '/products/cge'
     ],
 
     [
-        'img' => 'astarlove.png',
-        'text' => 'Astarlove',
-        'route' => '/services/astarlove'
+        'img' => 'cpw.png',
+        'text' => 'Casual Pixel Warrior',
+        'route' => '/products/cpw'
     ],
 
     [
@@ -32,8 +32,8 @@ return [
     ],
 
     [
-        'img' => 'helprealm.png',
-        'text' => 'HelpRealm Ticket System',
-        'route' => '/services/helprealm'
+        'img' => 'blackspace.png',
+        'text' => 'Black Space',
+        'route' => '/products/blackspace'
     ],
 ];
