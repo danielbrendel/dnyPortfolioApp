@@ -1,0 +1,7 @@
+<p>Mittelalter Events is a german platform where you can get information on upcoming medieval markets and other related events. 
+It's not just a calendar, rather it is a community focused platform where you can comment, follow and participate on events as well
+as chat with other members. This way you can not only view upcoming events, but also get to know other people from the medieval market
+scene and make new friends.</p>
+
+<br/><br/>
+<img src="/gfx/screens/mittelalterevents.png" alt="Mittelalter Events"/><br/>

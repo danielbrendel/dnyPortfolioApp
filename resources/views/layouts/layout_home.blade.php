@@ -113,6 +113,9 @@
                             <a class="navbar-item" href="{{ url('/services/webframeworkdb') }}">
                                 webframeworkdb.com
                             </a>
+                            <a class="navbar-item" href="{{ url('/services/mittelalterevents') }}">
+                                mittelalter-events.net
+                            </a>
                         </div>
                     </div>
 

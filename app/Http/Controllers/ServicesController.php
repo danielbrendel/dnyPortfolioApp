@@ -48,4 +48,11 @@ class ServicesController extends Controller
             'content' => ContentModel::queryContent('services_webframeworkdb', \App::getLocale())
         ]);
     }
+
+    public function mittelalterevents()
+    {
+        return view('services.mittelalterevents', [
+            'content' => ContentModel::queryContent('services_mittelalterevents', \App::getLocale())
+        ]);
+    }
 }
