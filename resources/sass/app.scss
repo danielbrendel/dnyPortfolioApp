@@ -5,6 +5,15 @@ html, body {
     overflow-x: hidden;
 }
 
+a {
+    color: rgb(50, 115, 220);
+}
+
+a:hover {
+    color: rgb(50, 115, 220);
+    text-decoration: underline;
+}
+
 #app {
     width: 100%;
     height: 100%;
