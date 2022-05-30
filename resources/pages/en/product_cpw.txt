@@ -1,11 +1,11 @@
-This game is a singleplayer top-down wave shooter in 2D where instead of surviving as long as possible, you actually have to make it through the levels.
-Fight against military, alien and monster enemies, collect items and reach the level portal in order to escape to the next level.<br/><br/>
+Survive the waves! Buy weapons and ammo! Unlock new stages! Casual Pixel Warrior is a wave shooter where your endurance to last an infinite fight depends on your skill and unlocked weapons and ammo.<br/><br/>
 
-You are a solitude warrior who stranded on a foreign planet via a portal experiement. There you have to fight the aliens who previously have taken your family for unethical experiements. Also you have to fight monsters which are trained by the aliens in order to fight their enemies. Since your own goverment wants to keep the portal system as a secret, they want to eliminate anyone who knows of that scientific technology. So in conclusion they want to defeat you, too.
-<br/><br/>
+You are a solitude warrior who invented a portal to travel to other worlds. Your goal is to collect coins to invest them in upgrades of your weapons and 
+ammo as well as unlocking access to new worlds. The only way to do this is to fight against hostile entities who will drop coins upon defeat.<br/><br/>
 
-Seems like you are one against all - but fear not! Equipped with heavy weaponry and that nice bionic implanted technology, you will surely have a chance to get out of this mess healthy and well.
-<br/><br/>
+How long can you survive hostile, infinite waves?<br/><br/>
+
+It's one against all - but fear not! Equipped with heavy weaponry and that nice bionic implanted technology, you will surely have a chance to defy the masses - well, as long as possible.<br/><br/>
 
 Good luck, sir!<br/><br/>
 

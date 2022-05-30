@@ -1,11 +1,13 @@
-Dieses Spiel ist ein 2D Top-Down Wave-Shooter, in dem man anstatt solange wie möglich überleben muss, es tatsächlich durch die Level schaffen muss.
-Kämpfe gegen Monster-, Militär- und Alien- Gegner, sammle Gegenstände und schaffe es zu überleben, bis du durch das Portal in das nächste Level gelangen kannst.<br/><br/>
+Überlebe Gegner-Wellen! Kaufe dir Waffen und Munition! Schalte neue Welten frei! Casual Pixel Warrior ist ein Wave-Shooter, in dem das Durchhalten in einem endlosen Kampf von Skill,
+freigeschalteten Waffen und gekaufter Munition abhängig ist.<br/><br/>
 
-Du bist ein Einzelkämpfer-Soldat, der in einer fremden Welt während eines Portal-Experiments gestranded ist. Hier musst du gegen die Aliens kämpfen, die vorher deine Familie gekiddnappt haben, um sie für unethische Experimente zu gebrauchen. Auch musst du dich gegen Monster behaupten, die von den Aliens abgerichtet wurden, Eindringlinge zu bekämpfen. Da deine Regierung die Portal-Technologie geheimhalten wollen, versuchen sie alle zu eliminieren, die von der Technologie Kenntnis haben. Also sind auch sie dein Feind.
-<br/><br/>
+Du bist ein Einzelkämpfer, welcher ein Portal erfunden hat, mit dem man in andere Welten reisen kann. Dein Ziel ist es, Münzen einzusammeln und diese in Upgrades zu investieren. Diese Upgrades
+bestehen aus Waffen, Munition und neue Welten. Die einzige Möglichkeit, Münzen zu verdienen, ist es gegen endlose Horden von Gegnern zu kämpfen.<br/><br/>
 
-Scheint wohl, dass du allein gegen alle bist - aber fürchte dich nicht! Ausgestattet mit schweren Waffen und diesem nützlichen Bionic-Implantaten, wirst du bestimmt eine Chance haben, diesem Chaos zu entkommen.
-<br/><br/>
+Wie lange kannst du endlosen, feindlichen Gegnerhorden trotzden?<br/><br/>
+
+Es ist einer gegen alle - aber fürchte dich nicht! Ausgerüstet mit schweren Waffen und diese nette bionische implantierte Technologie hast du bestimmt eine Chance den Massen zu trotzden - 
+zumindest so lange es geht!<br/><br/>
 
 Viel Glück, Soldat!<br/><br/>
 
