@@ -11,6 +11,7 @@ class MainController extends Controller
     public function index()
     {
         return view('home', [
+            'header_banner' => true,
             'content' => ContentModel::queryContent('home_index', \App::getLocale())
         ]);
     }

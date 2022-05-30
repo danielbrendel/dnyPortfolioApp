@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item navbar-item-brand is-font-ink-free" href="{{ url('/') }}">
                     {{ __('app.website_title') }}
@@ -31,7 +31,7 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="{{ url('/#content') }}">
+                    <a class="navbar-item" href="{{ url('/') }}">
                         {{ __('app.home') }}
                     </a>
 
@@ -148,6 +148,7 @@
             </div>
         </nav>
 
+        @if ((isset($header_banner)) && ($header_banner == true))
         <div class="banner" style="background-image: url('{{ asset('gfx/banner.jpg') }}')">
             <div class="banner-overlay">
                 <div class="columns">
@@ -195,6 +196,7 @@
                 </div>
             </div>
         </div>
+        @endif
 
         <div class="container">
             <a name="content"></a>
