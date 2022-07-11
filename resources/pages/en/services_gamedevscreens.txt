@@ -1,0 +1,7 @@
+<p>gamedevscreens.com is home of the <a href="https://www.reddit.com/r/gamedevscreens/">r/gamedevscreens</a> Twitter bot. 
+It posts hot content from that subreddit to Twitter a few times per day. It is capable of posting images, GIFs and 
+small sized videos. It is useful if you are interested in media from other indie game developers and have them right into 
+your Twitter feed. </p>
+
+<br/><br/>
+<img src="/gfx/screens/gamedevscreens.png" alt="gamedevscreens.com"/><br/>

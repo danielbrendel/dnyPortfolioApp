@@ -26,6 +26,7 @@ Hier eine Feature-Liste:<br/>
 	<li>Favorites system</li>
 	<li>Notification system</li>
 	<li>Messaging system</li>
+	<li>Forum system</li>
 	<li>E-Mail system</li>
 	<li>Administration</li>
 	<li>Maintainer system</li>

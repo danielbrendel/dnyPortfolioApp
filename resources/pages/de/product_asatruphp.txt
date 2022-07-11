@@ -39,6 +39,7 @@ Folgende Features werden derzeit vom Framework unterstützt:<br/>
 	<li>Validators</li>
 	<li>Helpers</li>
 	<li>Autoloading</li>
+	<li>Config management</li>
 	<li>Security</li>
 	<li>Flash messages</li>
 	<li>Authentication</li>
@@ -47,5 +48,9 @@ Folgende Features werden derzeit vom Framework unterstützt:<br/>
 	<li>CLI interface</li>
 	<li>mail() wrapper</li>
 	<li>SMTP mailing</li>
+	<li>Html helper</li>
+	<li>Form helper</li>
+	<li>Carbon support</li>
+	<li>npm/webpack support</li>
 </ul>
 Schauen Sie sich die <a href="https://www.asatru-php.org/doc/1.0/installation">Dokumentation</a> für weitere Details an.<br/>

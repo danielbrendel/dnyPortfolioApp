@@ -13,7 +13,7 @@ An example code construct can look like as follows:<br/><br/>
 	&nbsp;&nbsp;local res int;<br/>
 	&nbsp;&nbsp;set res <= 0;<br/><br/>
 
-	&nbsp;&nbsp;for (i, -ls, %bar) {<br/>
+	&nbsp;&nbsp;for (i, 0, %bar, -inc) {<br/>
 	&nbsp;&nbsp;&nbsp;&nbsp;+= res %i;<br/>
 	&nbsp;&nbsp;};<br/><br/>
 

@@ -31,7 +31,7 @@ class MainController extends Controller
     public function imprint()
     {
         return view('imprint', [
-            'content' => ContentModel::queryContent('home_imprint', \App::getLocale())
+            'content' => str_replace('{%CONTACT_EMAIL%}', env('CONTACT_EMAIL'), ContentModel::queryContent('home_imprint', \App::getLocale()))
         ]);
     }
 }

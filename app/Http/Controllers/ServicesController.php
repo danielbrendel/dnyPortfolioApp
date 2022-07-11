@@ -55,4 +55,11 @@ class ServicesController extends Controller
             'content' => ContentModel::queryContent('services_mittelalterevents', \App::getLocale())
         ]);
     }
+
+    public function gamedevscreens()
+    {
+        return view('services.gamedevscreens', [
+            'content' => ContentModel::queryContent('services_gamedevscreens', \App::getLocale())
+        ]);
+    }
 }

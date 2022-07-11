@@ -116,6 +116,9 @@
                             <a class="navbar-item" href="{{ url('/services/mittelalterevents') }}">
                                 mittelalter-events.net
                             </a>
+                            <a class="navbar-item" href="{{ url('/services/gamedevscreens') }}">
+                                gamedevscreens.com
+                            </a>
                         </div>
                     </div>
 
