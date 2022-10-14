@@ -34,7 +34,7 @@ class ContentModel extends Model
     private static function queryContentDb(string $field, string $lang)
     {
         $item = ContentModel::where('lang', '=', $lang)->first();
-        return $item->$field;
+        return static::replaceVars($item->$field);
     }
 
     /**
@@ -48,6 +48,22 @@ class ContentModel extends Model
             return null;
         }
 
-        return file_get_contents(base_path() . '/resources/pages/' . $lang . '/' . $field . '.txt');
+        $content = file_get_contents(base_path() . '/resources/pages/' . $lang . '/' . $field . '.txt');
+
+        return static::replaceVars($content);
+    }
+
+    /**
+     * @param string $content
+     * @return string
+     */
+    public static function replaceVars($content)
+    {
+        $content = str_replace(':title:', env('APP_TITLE'), $content);
+        $content = str_replace(':author:', env('APP_AUTHOR'), $content);
+        $content = str_replace(':contact:', env('APP_CONTACT'), $content);
+        $content = str_replace(':year:', date('Y'), $content);
+
+        return $content;
     }
 }

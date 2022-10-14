@@ -16,7 +16,7 @@ return [
     'tech_top' => '&laquo; Modern solutions require modern technology &raquo;',
     'tech_sub' => 'Progress is key',
     'tech_title' => 'I am using the following technology stack',
-    'home_title' => 'Welcome to the official website of Daniel Brendel IT Systems',
+    'home_title' => 'Welcome to the official website of ' . env('APP_TITLE', 'Daniel Brendel IT Systems'),
 	'news_title' => 'Latest news',
     'imprint_title' => 'Imprint',
     'geekflash_top' => 'Your free source of geeky content',

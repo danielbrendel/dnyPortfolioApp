@@ -18,7 +18,7 @@ return [
     'tech_title' => 'Ich benutze folgenden Technologie-Stack',
     'imprint_title' => 'Impressum',
 	'news_title' => 'Neuigkeiten',
-    'home_title' => 'Willkommen auf der offiziellen Seite von Daniel Brendel IT Systeme',
+    'home_title' => 'Willkommen auf der offiziellen Seite von ' . env('APP_TITLE', 'Daniel Brendel IT Systeme'),
     'geekflash_top' => 'Die gratis Quelle für Geek-Inhalte',
     'geekflash_sub' => 'Seit 2021 - gratis Geek-Feed &#x25CF; <a href="https://www.geekflash.net/">geekflash.net</a> &#x25CF; <span class="is-abandoned">eingestellt</span>',
     'geekflash_title' => 'Gratis Geek, Gaming, Otaku, süße Tiere, Cosplay und weitere unterhaltsame Inhalte',
