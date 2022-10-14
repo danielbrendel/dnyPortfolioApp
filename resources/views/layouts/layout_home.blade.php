@@ -227,6 +227,20 @@
                 </div>
             </div>
         </div>
+
+        <div class="footer">
+            <div class="columns">
+                <div class="column is-4"></div>
+                <div class="column is-4">
+                    <div class="footer-frame">
+                        <div class="footer-content">
+                            &copy; {{ date('Y') }} by {{ env('APP_AUTHOR') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4"></div>
+            </div>
+        </div>
     </div>
     <script>
         window.handleCookieConsent = function() {

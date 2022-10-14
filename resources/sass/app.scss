@@ -365,6 +365,27 @@ code {
     font-weight: bold;
 }
 
+.footer {
+    width: 100%;
+    color: rgb(100, 100, 100);
+    background-color: rgb(235, 235, 235);
+    padding: 1rem 1.5rem 1rem;
+}
+
+.footer-frame {
+    width: 100%;
+}
+.footer-content {
+    text-align: center;
+}
+.footer-content a {
+    color: rgb(130, 130, 130);
+}
+.footer-content a:hover {
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+}
+
 .mobile-only {
     position: relative;
     margin-left: 15px;
