@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'home_welcometext' => 'Daniel Brendel IT Systems',
+    'website_title' => env('APP_TITLE', 'Daniel Brendel IT Systems'),
+    'home_welcometext' => env('APP_WELCOMETEXT', 'Daniel Brendel IT Systems'),
     'home_sublinetext' => 'Geeky software for geeky people',
-    'website_title' => 'Daniel Brendel IT Systems',
     'home' => 'Home',
     'news' => 'News',
     'products' => 'Products',
