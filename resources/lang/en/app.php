@@ -83,7 +83,7 @@ return [
     'corvus_sub' => 'Since 2012 &#x25CF; <a href="https://github.com/danielbrendel/dnyCorvusChat">View on GitHub</a>',
     'corvus_title' => 'Chat in privat and in chatrooms',
     'ufw_top' => 'Use fonts in other applications',
-    'ufw_sub' => 'Since 2018 &#x25CF; <a href="https://github.com/danielbrendel/dnyUniFontWriter">View on GitHub</a>',
+    'ufw_sub' => 'Since 2018 &#x25CF; <a href="https://store.steampowered.com/app/2181560/UniFont_Writer/">Get on Steam</a>',
     'ufw_title' => 'Use different fontsets in other applications during runtime',
     'ok' => 'Ok',
     'cookie_consent' => 'This website uses cookies. By browsing this site you agree to the usage of cookies.',
