@@ -114,7 +114,7 @@
                                 webframeworkdb.com
                             </a>
                             <a class="navbar-item" href="{{ url('/services/mittelalterevents') }}">
-                                mittelalter-events.net
+                                mittelalter-events.com
                             </a>
                             <a class="navbar-item" href="{{ url('/services/gamedevscreens') }}">
                                 gamedevscreens.com

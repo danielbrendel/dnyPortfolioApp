@@ -38,7 +38,7 @@ return [
     'webframeworkdb_sub' => 'Die neusten Webframeworks finden und bewerten &#x25CF; <a href="https://www.webframeworkdb.com/">webframeworkdb.com</a> &#x25CF; <span class="is-online">aktiv</span>',
     'webframeworkdb_title' => 'Sieh dir dir neusten Webframeworks and oder poste dein eigenes',
     'mittelalterevents_top' => 'Die Community für Events rund um Mittelalter und Fantasy',
-    'mittelalterevents_sub' => 'Finde aktuelle Mittelaltermärkte und mehr &#x25CF; <a href="https://www.mittelalter-events.net/">mittelalter-events.net</a> &#x25CF; <span class="is-online">aktiv</span>',
+    'mittelalterevents_sub' => 'Finde aktuelle Mittelaltermärkte und mehr &#x25CF; <a href="https://www.mittelalter-events.com/">mittelalter-events.com</a> &#x25CF; <span class="is-online">aktiv</span>',
     'mittelalterevents_title' => 'Werde Teil einer Community rund um Mittelaltermärkte & mehr',
     'steamwidgets_top' => 'Steam Widgets für die eigene Website/Blog',
     'steamwidgets_sub' => 'Einfach Steam Widgets in die eigene Website/Blog integrieren &#x25CF; <a href="https://www.steamwidgets.com/">steamwidgets.com</a> &#x25CF; <span class="is-online">aktiv</span>',

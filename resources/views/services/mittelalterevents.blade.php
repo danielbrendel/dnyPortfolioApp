@@ -22,7 +22,7 @@
 
             <div class="page-content">
                 <div class="link">
-                    <a href="https://www.mittelalter-events.net/">https://www.mittelalter-events.net/</a>
+                    <a href="https://www.mittelalter-events.com/">https://www.mittelalter-events.com/</a>
                 </div>
 
                 {!! $content !!}

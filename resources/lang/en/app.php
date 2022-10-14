@@ -38,7 +38,7 @@ return [
     'webframeworkdb_sub' => 'Find the latest webframeworks and rate them &#x25CF; <a href="https://www.webframeworkdb.com/">webframeworkdb.com</a> &#x25CF; <span class="is-online">active</span>',
     'webframeworkdb_title' => 'View the latest webframeworks or post your own',
     'mittelalterevents_top' => 'A community for medieval markets and fantasy events',
-    'mittelalterevents_sub' => 'Find medieval markets and fantasy events &#x25CF; <a href="https://www.mittelalter-events.net/">mittelalter-events.net</a> &#x25CF; <span class="is-online">active</span>',
+    'mittelalterevents_sub' => 'Find medieval markets and fantasy events &#x25CF; <a href="https://www.mittelalter-events.com/">mittelalter-events.com</a> &#x25CF; <span class="is-online">active</span>',
     'mittelalterevents_title' => 'Be part of a community all about medieval markets & more',
     'gamedevscreens_top' => 'A Twitter bot for r/gamedevscreens',
     'gamedevscreens_sub' => 'Get precious content into your Twitter feed &#x25CF; <a href="https://www.gamedevscreens.com/">gamedevscreens.com</a> &#x25CF; <span class="is-online">active</span>',
