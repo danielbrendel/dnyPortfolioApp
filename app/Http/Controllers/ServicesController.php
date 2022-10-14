@@ -62,4 +62,11 @@ class ServicesController extends Controller
             'content' => ContentModel::queryContent('services_gamedevscreens', \App::getLocale())
         ]);
     }
+
+    public function steamwidgets()
+    {
+        return view('services.steamwidgets', [
+            'content' => ContentModel::queryContent('services_steamwidgets', \App::getLocale())
+        ]);
+    }
 }

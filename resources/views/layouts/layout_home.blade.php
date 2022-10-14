@@ -119,6 +119,9 @@
                             <a class="navbar-item" href="{{ url('/services/gamedevscreens') }}">
                                 gamedevscreens.com
                             </a>
+                            <a class="navbar-item" href="{{ url('/services/steamwidgets') }}">
+                                steamwidgets.com
+                            </a>
                         </div>
                     </div>
 

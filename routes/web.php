@@ -39,3 +39,4 @@ Route::get('/services/helprealm', 'ServicesController@helprealm');
 Route::get('/services/webframeworkdb', 'ServicesController@webframeworkdb');
 Route::get('/services/mittelalterevents', 'ServicesController@mittelalterevents');
 Route::get('/services/gamedevscreens', 'ServicesController@gamedevscreens');
+Route::get('/services/steamwidgets', 'ServicesController@steamwidgets');

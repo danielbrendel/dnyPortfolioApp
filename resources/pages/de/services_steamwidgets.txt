@@ -1,0 +1,17 @@
+SteamWidgets ist eine clientseitige Web-Komponente, mit der man einfach Widgets verschiedener Steam Entitäten einbinden kann. Um ein einfaches Widget einzubinden braucht es nur sehr wenig Code.
+<br/><br/>
+
+SteamWidgets basiert auf JavaScript. Da JavaScript von allen wichtigen Browsern unterstützt wird, ist es sehr kompatibel und plattformunabhängig.
+<br/><br/>
+
+Zur Zeit sind folgende Widgets verfügbar:<br/>
+<ul>
+    <li>Steam App Widget</li>
+    <li>Steam Server Widget</li>
+    <li>Steam User Widget</li>
+    <li>Steam Workshop Widget</li>
+    <li>Steam Group Widget</li>
+</ul>
+
+<br/><br/>
+<img src="/gfx/screens/steamwidgets.png" alt="steamwidgets.com"/><br/>

@@ -1,0 +1,17 @@
+SteamWidgets is a clientside web component that offers an easy way to integrate Steam Widgets of various Steam entities into your website. Therefore you only need very few code in order to render Steam Widgets into your document.
+<br/><br/>
+
+SteamWidgets is used via JavaScript. Since JavaScript is supported by all major browser per default it is platform independent and compatible.
+<br/><br/>
+
+The following Widgets are currently available:<br/>
+<ul>
+    <li>Steam App Widget</li>
+    <li>Steam Server Widget</li>
+    <li>Steam User Widget</li>
+    <li>Steam Workshop Widget</li>
+    <li>Steam Group Widget</li>
+</ul>
+
+<br/><br/>
+<img src="/gfx/screens/steamwidgets.png" alt="steamwidgets.com"/><br/>
