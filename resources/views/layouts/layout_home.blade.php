@@ -180,7 +180,7 @@
                             <div class="banner-content-subline">{{ __('app.home_sublinetext') }}</div>
 
                             <div class="banner-content-products">
-                                <div class="preview-chevron"><i class="fas fa-chevron-left fa-10x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
+                                <div class="preview-chevron"><i class="fas fa-chevron-left fa-5x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
 
                                 @foreach (app('config')->get('previews') as $key => $item)
                                     <div class="preview-item is-hidden" id="preview-item-{{ $key }}" onmouseover="document.getElementById('preview-item-hover-{{ $key }}').classList.remove('is-hidden');" onmouseout="document.getElementById('preview-item-hover-{{ $key }}').classList.add('is-hidden');">
@@ -192,7 +192,7 @@
                                     </div>
                                 @endforeach
 
-                                <div class="preview-chevron"><i class="fas fa-chevron-right fa-10x is-pointer" onclick="window.productsNavGoRight();"></i></div>
+                                <div class="preview-chevron"><i class="fas fa-chevron-right fa-5x is-pointer" onclick="window.productsNavGoRight();"></i></div>
                             </div>
 
                             <div class="banner-content-products-nav">
