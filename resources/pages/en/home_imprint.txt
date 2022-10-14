@@ -8,4 +8,6 @@ Copyright &copy; 2020 - :year: :author:<br/><br/>
 <a href="https://store.steampowered.com/developer/danielbrendel">Steam Developer Profile</a><br/>
 <a href="https://danielbrendel.itch.io/">itch.io Developer Profile</a><br/>
 <a href="https://play.google.com/store/apps/dev?id=8955015533201204727">Google Play Developer Profile</a><br/>
-<a href="https://www.youtube.com/channel/UCPETT7XPpvLHeUTZ-4l-K5w">YouTube Channel</a><br/><br/>
+<a href="https://www.youtube.com/channel/UCPETT7XPpvLHeUTZ-4l-K5w">YouTube Channel</a><br/>
+<a href="">LinkedIn Profile</a><br/>
+<br/>
