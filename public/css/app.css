@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   width: 100%;
   margin: 0 auto;
   min-height: 100%;
@@ -30,7 +29,6 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
 @media screen and (max-width: 558px) {
   .banner {
     height: 450px;
@@ -49,7 +47,6 @@ a:hover {
   padding: 10px;
   color: white;
 }
-
 @media screen and (max-width: 558px) {
   .banner-content {
     vertical-align: middle;
@@ -87,7 +84,6 @@ a:hover {
   width: 100%;
   overflow-x: auto;
 }
-
 @media screen and (max-width: 558px) {
   .banner-content-products {
     display: none;
@@ -99,7 +95,6 @@ a:hover {
   display: inline-block;
   width: 100%;
 }
-
 @media screen and (max-width: 558px) {
   .banner-content-products-nav {
     display: none;
@@ -177,7 +172,6 @@ a:hover {
   position: relative;
   height: 120px;
 }
-
 @media screen and (max-width: 653px) {
   .header-box {
     display: none;
@@ -208,7 +202,6 @@ a:hover {
   left: -50px;
   background-color: rgb(235, 235, 235);
 }
-
 @media screen and (min-width: 771px) and (max-width: 989px) {
   .header-box-middle {
     width: 57%;
@@ -260,7 +253,6 @@ a:hover {
 .page-title h1 {
   font-size: 1.5em;
 }
-
 @media screen and (max-width: 653px) {
   .page-title h1 {
     position: relative;
@@ -324,7 +316,6 @@ code {
   display: block;
   word-wrap: break-word;
 }
-
 @media screen and (min-width: 654px) {
   .link {
     display: none;
@@ -371,7 +362,6 @@ code {
     z-index: 1;
   }
 }
-
 .cookie-consent-text {
   position: relative;
   margin-left: 25px;
@@ -428,7 +418,6 @@ code {
   margin-left: 15px;
   top: -11px;
 }
-
 @media screen and (min-width: 1088px) {
   .mobile-only {
     display: none;
@@ -454,4 +443,3 @@ code {
   font-size: 1.3em;
   font-weight: bold;
 }
-
