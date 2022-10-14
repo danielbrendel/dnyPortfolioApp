@@ -21,4 +21,11 @@ class Controller extends BaseController
             return $next($request);
         });
     }
+
+    public function validateNsfw()
+    {
+        if (!env('APP_SHOWNSFW', false)) {
+            abort(404);
+        }
+    }
 }

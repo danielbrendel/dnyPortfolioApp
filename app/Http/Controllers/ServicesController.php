@@ -69,4 +69,13 @@ class ServicesController extends Controller
             'content' => ContentModel::queryContent('services_steamwidgets', \App::getLocale())
         ]);
     }
+
+    public function redhotsubs()
+    {
+        $this->validateNsfw();
+
+        return view('services.redhotsubs', [
+            'content' => ContentModel::queryContent('services_redhotsubs', \App::getLocale())
+        ]);
+    }
 }

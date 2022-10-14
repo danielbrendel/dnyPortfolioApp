@@ -122,6 +122,11 @@
                             <a class="navbar-item" href="{{ url('/services/steamwidgets') }}">
                                 steamwidgets.com
                             </a>
+                            @if (env('APP_SHOWNSFW', false))
+                            <a class="navbar-item" href="{{ url('/services/redhotsubs') }}">
+                                redhotsubs.com
+                            </a>
+                            @endif
                         </div>
                     </div>
 
