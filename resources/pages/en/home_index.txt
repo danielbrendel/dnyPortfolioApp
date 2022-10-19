@@ -1,5 +1,32 @@
 Hey there! Welcome to my website. I am a web and C++ developer and founder of several projects.<br/><br/>
+
 In modern age our life is very much supported by information technology systems. My goal is to make
 a change in the world by creating awesome systems and services that make a change!<br/><br/>
+
+<div class="values">
+    <h2 class="bottom-spacing">My values</h2>
+
+    <div class="value-item">
+        <div class="value-item-icon"><i class="far fa-heart fa-4x"></i></div>
+        <div class="value-item-label">Passion</div>
+    </div>
+
+    <div class="value-item">
+        <div class="value-item-icon"><i class="fas fa-code fa-4x"></i></div>
+        <div class="value-item-label">OpenSource</div>
+    </div>
+
+    <div class="value-item">
+        <div class="value-item-icon"><i class="fas fa-solar-panel fa-4x"></i></div>
+        <div class="value-item-label">Free to use</div>
+    </div>
+
+    <div class="value-item">
+        <div class="value-item-icon"><i class="far fa-file-alt fa-4x"></i></div>
+        <div class="value-item-label">Documented</div>
+    </div>
+</div>
+
 On this website I want to showcase some of my projects and also post news from time to time.<br/><br/>
+
 Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile for viewing my repositories.<br/><br/>

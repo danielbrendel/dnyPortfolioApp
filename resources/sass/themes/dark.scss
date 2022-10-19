@@ -30,7 +30,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     @media screen and (max-width: 558px) {
-        height: 450px;
+        height: 476px;
     }
 }
 
@@ -314,6 +314,10 @@ code {
     word-wrap: break-word;
 }
 
+h2 {
+    font-size: 1.5em;
+}
+
 .link {
     background: #1a1a1a;
     border: 1px solid #555;
@@ -335,6 +339,10 @@ code {
 }
 .link a:hover {
     color: rgb(50, 150, 255);
+}
+
+.bottom-spacing {
+    margin-bottom: 40px;
 }
 
 .is-color-grey {
@@ -396,13 +404,27 @@ code {
     font-weight: bold;
 }
 
+.values {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.value-item {
+    position: relative;
+    margin-bottom: 54px;
+}
+.value-item-icon {
+    margin-bottom: 15px;
+}
+.value-item-label {
+}
+
 .footer {
     width: 100%;
     color: rgb(100, 100, 100);
     background-color: rgb(50, 50, 50);
     padding: 1rem 1.5rem 1rem;
 }
-
 .footer-frame {
     width: 100%;
 }

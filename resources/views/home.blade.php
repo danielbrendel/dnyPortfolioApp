@@ -1,9 +1,9 @@
 @extends('layouts.layout_home')
 
 @section('content')
-    <div class="column is-1"></div>
+    <div class="column is-2"></div>
 
-    <div class="column is-10 is-default-padding is-content-top">
+    <div class="column is-8 is-default-padding is-content-top">
         <div class="column-center">
             <div class="header-box">
                 <div class="header-box-left">&nbsp;</div>
@@ -26,5 +26,5 @@
         </div>
     </div>
 
-    <div class="column is-1"></div>
+    <div class="column is-2"></div>
 @endsection
