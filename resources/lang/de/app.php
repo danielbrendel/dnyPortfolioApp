@@ -19,6 +19,7 @@ return [
     'imprint_title' => 'Impressum',
 	'news_title' => 'Neuigkeiten',
     'home_title' => 'Willkommen auf der offiziellen Seite von ' . env('APP_TITLE', 'Daniel Brendel IT Systeme'),
+    'readmore' => 'Mehr erfahren',
     'geekflash_top' => 'Die gratis Quelle für Geek-Inhalte',
     'geekflash_sub' => 'Seit 2021 - gratis Geek-Feed &#x25CF; <a href="https://www.geekflash.net/">geekflash.net</a> &#x25CF; <span class="is-abandoned">eingestellt</span>',
     'geekflash_title' => 'Gratis Geek, Gaming, Otaku, süße Tiere, Cosplay und weitere unterhaltsame Inhalte',

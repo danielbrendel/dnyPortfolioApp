@@ -19,6 +19,7 @@ return [
     'home_title' => 'Welcome to the official website of ' . env('APP_TITLE', 'Daniel Brendel IT Systems'),
 	'news_title' => 'Latest news',
     'imprint_title' => 'Imprint',
+    'readmore' => 'Read more',
     'geekflash_top' => 'Your free source of geeky content',
     'geekflash_sub' => 'Since 2021 - free geeky feed &#x25CF; <a href="https://www.geekflash.net/">geekflash.net</a> &#x25CF; <span class="is-abandoned">abandoned</span>',
     'geekflash_title' => 'Geeky, gaming, animals, otaku, cosplay and funny content for free',

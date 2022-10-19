@@ -200,6 +200,10 @@
                                     <span class="is-pointer" id="products-nav-{{ $i }}" onclick="window.selectProductsEntry({{ $i }});"><i id="products-nav-icon-{{ $i }}" class="far fa-circle"></i></span>
                                 @endfor
                             </div>
+
+                            <div class="banner-content-readmore">
+                                <a class="button is-success is-outlined" href="javascript:void(0);" onclick="document.getElementById('anchor-content').scrollIntoView({behavior: 'smooth'});">{{ __('app.readmore') }}</a>
+                            </div>
                         </div>
                     </div>
 
@@ -210,7 +214,7 @@
         @endif
 
         <div class="container">
-            <a name="content"></a>
+            <a name="content" id="anchor-content"></a>
             <div class="columns">
                 @yield('content')
             </div>
