@@ -9,7 +9,7 @@
 	<link rel="icon" type="image/png" href="{{ asset('gfx/logo.png') }}">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bulma.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ \App\ThemeModel::getTheme() }}">
 
     <script src="{{ asset('js/fontawesome.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
