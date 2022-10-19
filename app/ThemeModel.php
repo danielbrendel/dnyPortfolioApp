@@ -13,7 +13,7 @@ class ThemeModel extends Model
     {
         $theme = env('APP_THEME', null);
         
-        if (($theme !== null) && (file_exists(public_path() . '/css/themes/' . $theme . '.css'))) {
+        if (($theme !== null) && (is_string($theme)) && ($theme !== 'default') && (file_exists(public_path() . '/css/themes/' . $theme . '.css'))) {
             return asset('css/themes/' . $theme . '.css');
         }
 
