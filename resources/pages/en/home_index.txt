@@ -3,6 +3,12 @@ Hey there! Welcome to my website. I am a web and C++ developer and founder of se
 In modern age our life is very much supported by information technology systems. My goal is to make
 a change in the world by creating awesome systems and services that make a change!<br/><br/>
 
+OpenSource is the best way of sharing software projects. Not only ensures it that software is free
+and reachable for everyone, it does also provide great community opportunities. People can learn from
+the software and provide feedback to the creator. OpenSource software is used everywhere and does still
+maintain a high security safety. Many of my projects are open-source because I think free software is
+the best way to share knowledge.<br/><br/>
+
 <div class="values">
     <h2 class="bottom-spacing">My values</h2>
 
@@ -27,6 +33,6 @@ a change in the world by creating awesome systems and services that make a chang
     </div>
 </div>
 
-On this website I want to showcase some of my projects and also post news from time to time.<br/><br/>
+On this website I want to showcase many of my projects and also post news from time to time.<br/><br/>
 
 Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile for viewing my repositories.<br/><br/>

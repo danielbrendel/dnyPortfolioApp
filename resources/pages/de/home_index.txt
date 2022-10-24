@@ -3,6 +3,12 @@ Hallo allerseits! Willkommen auf meiner Website. Ich bin ein Web- und C++ Entwic
 Im modernen Zeitalter ist unser Leben sehr durch die Informationstechnologie bestimmt. Deshalb ist es mein
 Ziel, die Welt durch Software zu verändern und ein Stück besser zu machen!<br/><br/>
 
+OpenSource ist die beste Art, um Software zu veröffentlichen. Es bietet so nicht nur die Möglichkeit,
+dass Software so frei für jeden zugänglich ist, es bietet auch sehr gute Community-Möglichkeiten. Menschen
+können so von dieser Software lernen und Feedback an den Urheber mitteilen. OpenSource Software wird überall
+eingesetzt und bietet einen hohen Sicherheitsstandard. Viele meiner Projekte sind OpenSource, da ich denke,
+dass dies die beste Art ist, um so Wissen zu teilen.<br/><br/>
+
 <div class="values">
     <h2 class="bottom-spacing">Meine Werte</h2>
 
