@@ -40,4 +40,5 @@ Route::get('/services/webframeworkdb', 'ServicesController@webframeworkdb');
 Route::get('/services/mittelalterevents', 'ServicesController@mittelalterevents');
 Route::get('/services/gamedevscreens', 'ServicesController@gamedevscreens');
 Route::get('/services/steamwidgets', 'ServicesController@steamwidgets');
+Route::get('/services/acr', 'ServicesController@acr');
 Route::get('/services/redhotsubs', 'ServicesController@redhotsubs');

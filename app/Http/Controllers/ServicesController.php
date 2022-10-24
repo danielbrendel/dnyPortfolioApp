@@ -70,6 +70,13 @@ class ServicesController extends Controller
         ]);
     }
 
+    public function acr()
+    {
+        return view('services.acr', [
+            'content' => ContentModel::queryContent('services_acr', \App::getLocale())
+        ]);
+    }
+
     public function redhotsubs()
     {
         $this->validateNsfw();

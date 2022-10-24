@@ -1,0 +1,16 @@
+AC-Resources ist ein Hosting-Dienst für alle Arten von AssaultCube Community-Inhalten.
+<br/><br/>
+
+Hier kann man Community-Inhalte wie Maps, Skins, Models, Sprites, Texturen, Skripte, Mods & mehr herunterladen und teilen.
+<br/><br/>
+
+Es ist mein Beitrag zu einem Spiel, welches ich immer gerne gespielt habe und welches einen großen Community-Wert hat.
+Es bietet nicht nur ausgereifte Gameplay-Mechaniken und Spiele-Feeling, es bietet auch viele Möglichen, Community-Inhalte 
+zu erstellen.
+<br/><br/>
+
+Man kann eigene Maps, Models, Skins, Texturen, Sprites und Skripte erstellen. Man kann auch eigene Mods erstellen. 
+So entstand eine große Modding-Community für AssaultCube. Und es bietet auch dedizierte Spieleserver an.
+
+<br/><br/>
+<img src="/gfx/screens/acr.png" alt="ac-resources.org"/><br/>
