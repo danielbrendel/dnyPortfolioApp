@@ -32,8 +32,8 @@ return [
     ],
 
     [
-        'img' => 'webframeworkdb.png',
-        'text' => 'WebframeworkDB',
-        'route' => '/services/webframeworkdb'
+        'img' => 'acr.png',
+        'text' => 'AC-Resources',
+        'route' => '/services/acr'
     ],
 ];
