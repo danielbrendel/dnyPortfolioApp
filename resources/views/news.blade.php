@@ -21,7 +21,7 @@
             </div>
 
             <div class="page-content">
-                <a class="twitter-timeline" href="https://twitter.com/{{ env('TWITTER_HANDLE') }}?ref_src=twsrc%5Etfw">Tweets by {{ env('TWITTER_HANDLE') }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" href="https://twitter.com/{{ env('TWITTER_HANDLE') }}?ref_src=twsrc%5Etfw" @if (env('APP_THEME') == 'dark') data-theme="dark" @endif>Tweets by {{ env('TWITTER_HANDLE') }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </div>
