@@ -185,7 +185,7 @@
                             <div class="banner-content-products">
                                 <div class="preview-chevron"><i class="fas fa-chevron-left fa-5x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
 
-                                @foreach (app('config')->get('previews') as $key => $item)
+                                @foreach (\App\PreviewModel::getItems() as $key => $item)
                                     <div class="preview-item is-hidden" id="preview-item-{{ $key }}" onmouseover="document.getElementById('preview-item-hover-{{ $key }}').classList.remove('is-hidden');" onmouseout="document.getElementById('preview-item-hover-{{ $key }}').classList.add('is-hidden');">
                                         <div class="preview-item-hover is-pointer is-hidden" id="preview-item-hover-{{ $key }}" onclick="location.href = '{{ url($item['route']) }}';">
                                             <div class="preview-item-hover-text">{{ $item['text'] }}</div>
@@ -199,7 +199,7 @@
                             </div>
 
                             <div class="banner-content-products-nav">
-                                @for ($i = 0; $i < count(app('config')->get('previews')); $i++)
+                                @for ($i = 0; $i < \App\PreviewModel::getCount(); $i++)
                                     <span class="is-pointer" id="products-nav-{{ $i }}" onclick="window.selectProductsEntry({{ $i }});"><i id="products-nav-icon-{{ $i }}" class="far fa-circle"></i></span>
                                 @endfor
                             </div>
@@ -295,7 +295,7 @@
             document.cookie = 'lang=' + lang + '; expires=' + curDate.toUTCString() + ';';
         }
 
-        window.productsCount = {{ count(app('config')->get('previews')) }};
+        window.productsCount = {{ \App\PreviewModel::getCount() }};
         window.productsIndex = 0;
         window.selectProductsEntry = function(index) {
             window.productsIndex = index;

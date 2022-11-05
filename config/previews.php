@@ -2,9 +2,15 @@
 
 return [
     [
-        'img' => 'asatruphp.png',
-        'text' => 'Asatru PHP Framework',
-        'route' => '/products/asatruphp'
+        'img' => 'acr.png',
+        'text' => 'AC-Resources',
+        'route' => '/services/acr'
+    ],
+
+    [
+        'img' => 'blackspace.png',
+        'text' => 'Black Space',
+        'route' => '/products/blackspace'
     ],
 
     [
@@ -20,20 +26,33 @@ return [
     ],
 
     [
-        'img' => 'blackspace.png',
-        'text' => 'Black Space',
-        'route' => '/products/blackspace'
+        'img' => 'cpw.png',
+        'text' => 'Casual Pixel Warrior',
+        'route' => '/products/cpw'
     ],
 
     [
-        'img' => 'gamingpals.png',
-        'text' => 'GamingPals',
-        'route' => '/services/gamingpals'
+        'img' => 'mittelalterevents.png',
+        'text' => 'mittelalter-events.com',
+        'route' => '/services/mittelalterevents'
     ],
 
     [
-        'img' => 'acr.png',
-        'text' => 'AC-Resources',
-        'route' => '/services/acr'
+        'img' => 'redhotsubs.png',
+        'text' => 'redhotsubs.com',
+        'route' => '/services/redhotsubs',
+        'nsfw' => true
+    ],
+
+    [
+        'img' => 'solitarius.png',
+        'text' => 'Solitarius',
+        'route' => '/products/solitarius'
+    ],
+
+    [
+        'img' => 'steamwidgets.png',
+        'text' => 'steamwidgets.com',
+        'route' => '/services/steamwidgets'
     ],
 ];

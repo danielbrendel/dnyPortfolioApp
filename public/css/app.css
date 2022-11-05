@@ -149,12 +149,6 @@ a:hover {
 }
 
 @media screen and (min-width: 1088px) {
-  .navbar-item-brand {
-    visibility: hidden;
-  }
-}
-
-@media screen and (min-width: 1088px) {
   .navbar-start {
     flex-grow: 1;
     justify-content: center;

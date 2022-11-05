@@ -140,12 +140,6 @@ a:hover {
     height: 200px;
 }
 
-.navbar-item-brand {
-    @media screen and (min-width: 1088px) {
-        visibility: hidden;
-    }
-}
-
 .navbar-start {
     @media screen and (min-width: 1088px) {
         flex-grow: 1;
