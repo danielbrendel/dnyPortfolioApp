@@ -396,6 +396,7 @@ h2 {
 }
 
 .values {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -403,7 +404,14 @@ h2 {
 
 .value-item {
   position: relative;
+  width: 302px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 54px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
 }
 
 .value-item-icon {
