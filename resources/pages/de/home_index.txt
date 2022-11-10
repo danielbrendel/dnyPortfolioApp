@@ -1,7 +1,7 @@
-Hallo allerseits! Willkommen auf meiner Website. Ich bin ein Web- und C++ Entwickler und Gründer mehrerer Projekte.<br/><br/>
+Hallo allerseits! Willkommen auf meiner Website. Ich bin ein unabhängiger Software-Entwickler und Gründer mehrerer Projekte.<br/><br/>
 
-Im modernen Zeitalter ist unser Leben sehr durch die Informationstechnologie bestimmt. Deshalb ist es mein
-Ziel, die Welt durch Software zu verändern und ein Stück besser zu machen!<br/><br/>
+Software-Entwicklung, allen voran Programmierung, ist eine Möglichkeit, Kreativität, Logik und Kunst zu kombinieren.
+Dies ist meine Art, um mich auszuleben und Dinge zu erschaffen, für die ich mich begeistere und interessant finde.<br/><br/>
 
 OpenSource ist die beste Art, um Software zu veröffentlichen. Es bietet so nicht nur die Möglichkeit,
 dass Software so frei für jeden zugänglich ist, es bietet auch sehr gute Community-Möglichkeiten. Menschen
@@ -33,6 +33,20 @@ dass dies die beste Art ist, um so Wissen zu teilen.<br/><br/>
     </div>
 </div>
 
-Auf dieser Website finden sich eine Liste einiger meiner Projekte, sowie ein News-Feed.<br/><br/>
+Ich habe schon viele Projekte erschaffen, für die ich mich begeistere und die eine Inspiration sind.<br/><br/>
+
+<div class="numbers">
+    <h2 class="bottom-spacing">Ein paar Zahlen</h2>
+
+    <div class="number-item">
+        <div class="number-item-count">12.000+</div>
+        <div class="number-item-label">Nutzer im Monat</div>
+    </div>
+
+    <div class="number-item">
+        <div class="number-item-count">80.000+</div>
+        <div class="number-item-label">Downloads</div>
+    </div>
+</div>
 
 Bitte besuchen Sie auch mein <a href="https://github.com/danielbrendel">GitHub</a> Profil.<br/><br/>

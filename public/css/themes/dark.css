@@ -32,7 +32,7 @@ a:hover {
 }
 @media screen and (max-width: 558px) {
   .banner {
-    height: 476px;
+    height: 400px;
   }
 }
 
@@ -447,6 +447,32 @@ h2 {
 
 .value-item-icon {
   margin-bottom: 15px;
+}
+
+.numbers {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.number-item {
+  position: relative;
+  display: inline-block;
+  width: 302px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgb(50, 50, 50);
+  border-radius: 5px;
+}
+
+.number-item-count {
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  color: rgb(200, 200, 200);
 }
 
 .footer {

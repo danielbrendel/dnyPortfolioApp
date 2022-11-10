@@ -41,6 +41,7 @@
                     </a>
                     @endif
 
+                    @if (env('APP_SHOWCASE'))
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
                             {{ __('app.products') }}
@@ -132,6 +133,7 @@
                             @endif
                         </div>
                     </div>
+                    @endif
 
                     <a class="navbar-item" href="{{ url('/tech') }}">
                         {{ __('app.tech') }}
@@ -182,26 +184,28 @@
 
                             <div class="banner-content-subline">{{ __('app.home_sublinetext') }}</div>
 
-                            <div class="banner-content-products">
-                                <div class="preview-chevron"><i class="fas fa-chevron-left fa-5x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
+                            <div id="banner-content-showcase">
+                                <div class="banner-content-products">
+                                    <div class="preview-chevron"><i class="fas fa-chevron-left fa-5x is-pointer" onclick="window.productsNavGoLeft();"></i></div>
 
-                                @foreach (\App\PreviewModel::getItems() as $key => $item)
-                                    <div class="preview-item is-hidden" id="preview-item-{{ $key }}" onmouseover="document.getElementById('preview-item-hover-{{ $key }}').classList.remove('is-hidden');" onmouseout="document.getElementById('preview-item-hover-{{ $key }}').classList.add('is-hidden');">
-                                        <div class="preview-item-hover is-pointer is-hidden" id="preview-item-hover-{{ $key }}" onclick="location.href = '{{ url($item['route']) }}';">
-                                            <div class="preview-item-hover-text">{{ $item['text'] }}</div>
+                                    @foreach (\App\PreviewModel::getItems() as $key => $item)
+                                        <div class="preview-item is-hidden" id="preview-item-{{ $key }}" onmouseover="document.getElementById('preview-item-hover-{{ $key }}').classList.remove('is-hidden');" onmouseout="document.getElementById('preview-item-hover-{{ $key }}').classList.add('is-hidden');">
+                                            <div class="preview-item-hover is-pointer is-hidden" id="preview-item-hover-{{ $key }}" onclick="location.href = '{{ url($item['route']) }}';">
+                                                <div class="preview-item-hover-text">{{ $item['text'] }}</div>
+                                            </div>
+                                            
+                                            <img src="{{ asset('gfx/screens/' . $item['img']) }}" alt="preview-image"/>
                                         </div>
-                                        
-                                        <img src="{{ asset('gfx/screens/' . $item['img']) }}" alt="preview-image"/>
-                                    </div>
-                                @endforeach
+                                    @endforeach
 
-                                <div class="preview-chevron"><i class="fas fa-chevron-right fa-5x is-pointer" onclick="window.productsNavGoRight();"></i></div>
-                            </div>
+                                    <div class="preview-chevron"><i class="fas fa-chevron-right fa-5x is-pointer" onclick="window.productsNavGoRight();"></i></div>
+                                </div>
 
-                            <div class="banner-content-products-nav">
-                                @for ($i = 0; $i < \App\PreviewModel::getCount(); $i++)
-                                    <span class="is-pointer" id="products-nav-{{ $i }}" onclick="window.selectProductsEntry({{ $i }});"><i id="products-nav-icon-{{ $i }}" class="far fa-circle"></i></span>
-                                @endfor
+                                <div class="banner-content-products-nav">
+                                    @for ($i = 0; $i < \App\PreviewModel::getCount(); $i++)
+                                        <span class="is-pointer" id="products-nav-{{ $i }}" onclick="window.selectProductsEntry({{ $i }});"><i id="products-nav-icon-{{ $i }}" class="far fa-circle"></i></span>
+                                    @endfor
+                                </div>
                             </div>
 
                             <div class="banner-content-readmore">
@@ -375,6 +379,11 @@
             window.initialLangCookie();
 
             selectProductsEntry(0);
+
+            @if (!env('APP_SHOWCASE'))
+                document.getElementById('banner-content-showcase').style.display = 'none';
+                document.getElementsByClassName('banner')[0].style.height = '345px';
+            @endif
 
             window.nonIndex = ['/imprint', '/news', '/tech', '/services/', '/products/'];
             let url = '{{ Request::url() }}';

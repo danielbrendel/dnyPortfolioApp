@@ -1,7 +1,7 @@
-Hey there! Welcome to my website. I am a web and C++ developer and founder of several projects.<br/><br/>
+Hey there! Welcome to my website. I am an indie software developer and founder of several projects.<br/><br/>
 
-In modern age our life is very much supported by information technology systems. My goal is to make
-a change in the world by creating awesome systems and services that make a change!<br/><br/>
+Software development, especially programming, is a way to combine creativity, logic and art. It is my way of
+expressing myself and create what I am passionate about and what I find enjoyable.<br/><br/>
 
 OpenSource is the best way of sharing software projects. Not only ensures it that software is free
 and reachable for everyone, it does also provide great community opportunities. People can learn from
@@ -33,6 +33,20 @@ the best way to share knowledge.<br/><br/>
     </div>
 </div>
 
-On this website I want to showcase many of my projects and also post news from time to time.<br/><br/>
+I have created many projects which I find interesting and can be passionate about. And some do even inspire others.<br/><br/>
+
+<div class="numbers">
+    <h2 class="bottom-spacing">Some numbers</h2>
+
+    <div class="number-item">
+        <div class="number-item-count">12.000+</div>
+        <div class="number-item-label">Users per month</div>
+    </div>
+
+    <div class="number-item">
+        <div class="number-item-count">80.000+</div>
+        <div class="number-item-label">Downloads</div>
+    </div>
+</div>
 
 Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile for viewing my repositories.<br/><br/>
