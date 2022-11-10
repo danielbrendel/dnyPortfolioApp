@@ -19,6 +19,7 @@
 		<li>VS Code</li>
 		<li>PhpStorm</li>
 		<li>Xdebug</li>
+		<li>FontAwesome</li>
 	</ul>
 </div>
 <div id="expCpp" class="tab-item is-hidden">
