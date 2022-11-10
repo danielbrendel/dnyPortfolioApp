@@ -278,7 +278,7 @@
 
         window.clickedCookieConsentButton = function() {
             var curDate = new Date(Date.now() + 1000 * 60 * 60 * 24 * 365);
-            document.cookie = 'cookieconsent=1; expires=' + curDate.toUTCString() + ';';
+            document.cookie = 'cookieconsent=1; expires=' + curDate.toUTCString() + '; path=/;';
 
             document.getElementById('cookie-consent').style.display = 'none';
         }
@@ -286,13 +286,13 @@
         window.initialLangCookie = function() {
             if (!window.hasLangCookie()) {
                 var curDate = new Date(Date.now() + 1000 * 60 * 60 * 24 * 365);
-                document.cookie = 'lang=en; expires=' + curDate.toUTCString() + ';';
+                document.cookie = 'lang=en; expires=' + curDate.toUTCString() + '; path=/;';
             }
         }
 
         window.setLangCookie = function(lang) {
             var curDate = new Date(Date.now() + 1000 * 60 * 60 * 24 * 365);
-            document.cookie = 'lang=' + lang + '; expires=' + curDate.toUTCString() + ';';
+            document.cookie = 'lang=' + lang + '; expires=' + curDate.toUTCString() + '; path=/;';
         }
 
         window.productsCount = {{ \App\PreviewModel::getCount() }};
