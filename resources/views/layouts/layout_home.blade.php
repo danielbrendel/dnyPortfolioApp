@@ -139,6 +139,12 @@
                         {{ __('app.tech') }}
                     </a>
 
+                    @if (env('APP_SHOW_DISCORD'))
+                    <a class="navbar-item" href="{{ url('/discord') }}">
+                    {{ __('app.discord') }}
+                    </a>
+                    @endif
+
                     @if (env('HELPREALM_WORKSPACE') !== null)
                     <a class="navbar-item" href="https://helprealm.io/{{ env('HELPREALM_WORKSPACE') }}" target="_blank">
                         {{ __('app.contact') }}

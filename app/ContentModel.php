@@ -63,6 +63,14 @@ class ContentModel extends Model
         $content = str_replace(':author:', env('APP_AUTHOR'), $content);
         $content = str_replace(':contact:', env('APP_CONTACT'), $content);
         $content = str_replace(':year:', date('Y'), $content);
+        $content = str_replace(':steam:', env('LINK_STEAM'), $content);
+        $content = str_replace(':itch:', env('LINK_ITCHIO'), $content);
+        $content = str_replace(':gplay:', env('LINK_GOOGLEPLAY'), $content);
+        $content = str_replace(':youtube:', env('LINK_YOUTUBE'), $content);
+        $content = str_replace(':mastodon:', env('LINK_MASTODON'), $content);
+        $content = str_replace(':twitter:', env('LINK_TWITTER'), $content);
+        $content = str_replace(':linkedin:', env('LINK_LINKEDIN'), $content);
+        $content = str_replace(':discord:', env('LINK_DISCORD'), $content);
 
         return $content;
     }

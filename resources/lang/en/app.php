@@ -92,5 +92,9 @@ return [
     'ok' => 'Ok',
     'cookie_consent' => 'This website uses cookies. By browsing this site you agree to the usage of cookies.',
     'change_german' => 'Switch to german',
-    'change_english' => 'Switch to english'
+    'change_english' => 'Switch to english',
+    'discord' => 'IGDB Discord',
+    'discord_title' => 'Join the IGDB Discord',
+    'discord_info' => 'The <a href=":link">IGDB Discord</a> is an online community of indie game development beginners who want to connect with others and support each other. Occassionally we do gamejams hosted on itch.io.',
+    'discord_join' => 'Join Community'
 ];

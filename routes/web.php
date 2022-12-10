@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'MainController@index');
 Route::get('/news', 'MainController@news');
 Route::get('/tech', 'MainController@tech');
+Route::get('/discord', 'MainController@discord');
 Route::get('/imprint', 'MainController@imprint');
 
 Route::get('/products/asatruphp', 'ProductsController@asatruphp');

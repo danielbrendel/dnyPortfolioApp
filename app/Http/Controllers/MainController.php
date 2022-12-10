@@ -28,10 +28,19 @@ class MainController extends Controller
         ]);
     }
 
+    public function discord()
+    {
+        if (!env('APP_SHOW_DISCORD')) {
+            abort(404);
+        }
+
+        return view('discord');
+    }
+
     public function imprint()
     {
         return view('imprint', [
-            'content' => str_replace('{%CONTACT_EMAIL%}', env('CONTACT_EMAIL'), ContentModel::queryContent('home_imprint', \App::getLocale()))
+            'content' => ContentModel::queryContent('home_imprint', \App::getLocale())
         ]);
     }
 }

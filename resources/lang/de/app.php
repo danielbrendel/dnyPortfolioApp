@@ -89,5 +89,9 @@ return [
     'ok' => 'Ok',
     'cookie_consent' => 'Diese Webseite verwendet Cookies. Beim Nutzen dieser Webseite erklären Sie sich damit einverstanden.',
     'change_german' => 'Auf deutsch',
-    'change_english' => 'Auf englisch'
+    'change_english' => 'Auf englisch',
+    'discord' => 'IGDB Discord',
+    'discord_title' => 'Tritt dem IGDB Discord bei',
+    'discord_info' => 'Der <a href=":link">IGDB Discord</a> ist für Anfänger:innen von Indie Spieleentwicklung gedacht und dient dazu sich gegenseitig zu unterstützen. Gelegentlich werden auch Gamejams veranstaltet, die über itch.io gehosted werden.',
+    'discord_join' => 'Community beitreten'
 ];

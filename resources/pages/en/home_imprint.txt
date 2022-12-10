@@ -4,10 +4,12 @@ Copyright &copy; 2020 - :year: :author:<br/><br/>
 <strong>Contact</strong><br/>
 <a href="mailto::contact:">Contact by e-mail</a><br/>
 <a href="https://github.com/danielbrendel">GitHub profile</a><br/>
-<a href="https://twitter.com/dbrendel_dev">Follow on Twitter</a><br/>
-<a href="https://store.steampowered.com/developer/danielbrendel">Steam Developer Profile</a><br/>
-<a href="https://danielbrendel.itch.io/">itch.io Developer Profile</a><br/>
-<a href="https://play.google.com/store/apps/dev?id=8955015533201204727">Google Play Developer Profile</a><br/>
-<a href="https://www.youtube.com/channel/UCPETT7XPpvLHeUTZ-4l-K5w">YouTube Channel</a><br/>
-<a href="https://www.linkedin.com/in/daniel-brendel-88375a248/">LinkedIn Profile</a><br/>
+<a href=":steam:">Steam Profile</a><br/>
+<a href=":itch:">itch.io Profile</a><br/>
+<a href=":gplay:">Google Play Profile</a><br/>
+<a href=":youtube:">YouTube Channel</a><br/>
+<a href=":mastodon:">Follow on Mastodon</a><br/>
+<a href=":twitter:">Follow on Twitter</a><br/>
+<a href=":linkedin:">LinkedIn Profile</a><br/>
+<a href=":discord:">Discord</a><br/>
 <br/>
