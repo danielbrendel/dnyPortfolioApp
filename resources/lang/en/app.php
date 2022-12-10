@@ -96,5 +96,6 @@ return [
     'discord' => 'IGDB Discord',
     'discord_title' => 'Join the IGDB Discord',
     'discord_info' => 'The <a href=":link">IGDB Discord</a> is an online community of indie game development beginners who want to connect with others and support each other. Occassionally we do gamejams hosted on itch.io.',
-    'discord_join' => 'Join Community'
+    'discord_join' => 'Join Community',
+    'upcoming_gamejam' => 'Upcoming gamejam: '
 ];

@@ -14,6 +14,12 @@
                     {!! __('app.discord_info', ['link' => env('LINK_DISCORD')]) !!}
                 </p>
 
+                @if (env('GAMEJAM_ENABLE'))
+                    <div class="gamejam-info">
+                        <strong><i class="fas fa-exclamation-circle"></i> {{ __('app.upcoming_gamejam') }}</strong> <a href="{{ env('GAMEJAM_LINK') }}">{{ env('GAMEJAM_LINK') }}</a>
+                    </div>
+                @endif
+
                 <p>
                     <br/><iframe class="embed-discord-widget" src="https://discord.com/widget?id=890565508146016296&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe><br/><br/>
                 </p>

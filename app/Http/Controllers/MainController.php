@@ -43,4 +43,28 @@ class MainController extends Controller
             'content' => ContentModel::queryContent('home_imprint', \App::getLocale())
         ]);
     }
+
+    public function gamejam()
+    {
+        if (!env('APP_SHOW_DISCORD')) {
+            abort(404);
+        }
+
+        if (!env('GAMEJAM_ENABLE')) {
+            abort(404);
+        }
+
+        $issue = env('GAMEJAM_ISSUE');
+        $theme = env('GAMEJAM_THEME');
+        $revealDate = new \DateTime(env('GAMEJAM_REVEALDATE'));
+        $dateNow = new \DateTime('now');
+
+        $dateDiff = $dateNow->diff($revealDate);
+
+        return view('gamejam', [
+            'diff' => $dateDiff,
+            'theme' => $theme,
+            'issue' => $issue
+        ]);
+    }
 }

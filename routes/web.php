@@ -43,3 +43,5 @@ Route::get('/services/gamedevscreens', 'ServicesController@gamedevscreens');
 Route::get('/services/steamwidgets', 'ServicesController@steamwidgets');
 Route::get('/services/acr', 'ServicesController@acr');
 Route::get('/services/redhotsubs', 'ServicesController@redhotsubs');
+
+Route::get('/gamejam/theme', 'MainController@gamejam');

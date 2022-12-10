@@ -501,3 +501,22 @@ h2 {
 .embed-discord-widget {
   height: 500px;
 }
+
+.gamejam-info {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  background-color: rgb(200, 200, 100);
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.gamejam-info a {
+  color: rgb(15, 63, 85);
+}
+
+.gamejam-info a:hover {
+  color: rgb(15, 63, 85);
+  text-decoration: underline;
+}
