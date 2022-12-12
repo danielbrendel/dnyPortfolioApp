@@ -135,7 +135,7 @@
 
                     <div class="links">
                         <div class="link"><a href="{{ env('GAMEJAM_LINK') }}">Join @ itch.io</a></div>
-                        <div class="link"><a href="{{ url('/') }}">Powered by {{ env('APP_AUTHOR') }}</a></div>
+                        <div class="link"><a href="{{ url('/') }}">Powered by {{ env('APP_TITLE') }}</a></div>
                     </div>
                 </div>
             </div>
