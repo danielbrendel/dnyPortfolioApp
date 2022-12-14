@@ -261,7 +261,11 @@ a.navbar-burger:hover {
 
 .page-title h1 {
     font-size: 1.5em;
+    background-image: linear-gradient(to right, rgb(40, 158, 90), rgb(85, 105, 215));
+    background-clip: text;
+    color: transparent;
     @media screen and (max-width: 653px) {
+        background-clip: text;
         position: relative;
         top: -25px;
     }
