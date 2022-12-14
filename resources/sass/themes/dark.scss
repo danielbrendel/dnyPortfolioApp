@@ -471,6 +471,11 @@ h2 {
     color: rgb(150, 150, 150);
     text-decoration: none;
 }
+.footer-padding {
+    @media screen and (max-width: 1087px) {
+        padding: 0px;
+    }
+}
 
 .mobile-only {
     position: relative;

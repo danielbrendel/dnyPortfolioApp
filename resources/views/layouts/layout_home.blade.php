@@ -248,7 +248,7 @@
         <div class="footer">
             <div class="columns">
                 <div class="column is-4"></div>
-                <div class="column is-4">
+                <div class="column is-4 footer-padding">
                     <div class="footer-frame">
                         <div class="footer-content">
                             &copy; {{ date('Y') }} by {{ env('APP_AUTHOR') }}

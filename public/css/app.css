@@ -468,6 +468,12 @@ h2 {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1087px) {
+  .footer-padding {
+    padding: 0px;
+  }
+}
+
 .mobile-only {
   position: relative;
   margin-left: 15px;
