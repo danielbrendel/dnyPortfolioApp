@@ -49,4 +49,4 @@ I have created many projects which I find interesting and can be passionate abou
     </div>
 </div>
 
-Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile for viewing my repositories.<br/><br/>
+Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile in order to view my repositories.<br/><br/>

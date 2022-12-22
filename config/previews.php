@@ -2,12 +2,6 @@
 
 return [
     [
-        'img' => 'acr.png',
-        'text' => 'AC-Resources',
-        'route' => '/services/acr'
-    ],
-
-    [
         'img' => 'blackspace.png',
         'text' => 'Black Space',
         'route' => '/products/blackspace'

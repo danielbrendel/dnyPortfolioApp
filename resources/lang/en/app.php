@@ -48,7 +48,7 @@ return [
     'steamwidgets_sub' => 'Integrate various Steam widgets into your website/blog &#x25CF; <a href="https://www.steamwidgets.com/">steamwidgets.com</a> &#x25CF; <span class="is-online">active</span>',
     'steamwidgets_title' => 'Responsive, localizable, controllable & dynamic Steam Widgets via CDN or NPM',
     'acr_top' => 'AC-Resources Community Resources',
-    'acr_sub' => 'AssaultCube community content hoster &#x25CF; <a href="https://www.ac-resources.org/">ac-resources.org</a> &#x25CF; <span class="is-online">active</span>',
+    'acr_sub' => 'AssaultCube community content hoster &#x25CF; <a href="https://www.ac-resources.org/">ac-resources.org</a> &#x25CF; <span class="is-abandoned">abandoned</span>',
     'acr_title' => 'Get and share community content such as maps, sprites, models, scripts & more for AssaultCube',
     'redhotsubs_top' => 'Free NSFW client for Reddit',
     'redhotsubs_sub' => 'View the best NSFW content aggregated from Reddit &#x25CF; <a href="https://www.redhotsubs.com/">redhotsubs.com</a> &#x25CF; <span class="is-online">active</span>',
