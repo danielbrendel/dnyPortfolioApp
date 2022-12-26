@@ -252,6 +252,7 @@ a.navbar-burger:hover {
   top: -94px;
   left: 93px;
   font-size: 1.2em;
+  color: rgb(200, 200, 200);
 }
 
 .header-box-middle div.header-sub {
@@ -484,7 +485,7 @@ h2 {
 
 .footer {
   width: 100%;
-  color: rgb(100, 100, 100);
+  color: rgb(150, 150, 150);
   background-color: rgb(50, 50, 50);
   padding: 1rem 1.5rem 1rem;
 }
