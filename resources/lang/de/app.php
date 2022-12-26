@@ -94,5 +94,6 @@ return [
     'discord_title' => 'Tritt dem IGDB Discord bei',
     'discord_info' => 'Der <a href=":link">IGDB Discord</a> ist für Anfänger:innen von Indie Spieleentwicklung gedacht und dient dazu sich gegenseitig zu unterstützen. Gelegentlich werden auch Gamejams veranstaltet, die über itch.io gehosted werden.',
     'discord_join' => 'Community beitreten',
-    'upcoming_gamejam' => 'Anstehender Gamejam: '
+    'upcoming_gamejam' => 'Anstehender Gamejam: ',
+    'gamejam_revelation' => 'Gamejam Thema Veröffentlichung: '
 ];

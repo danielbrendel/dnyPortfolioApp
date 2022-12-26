@@ -18,6 +18,10 @@
                     <div class="gamejam-info">
                         <strong><i class="fas fa-exclamation-circle"></i> {{ __('app.upcoming_gamejam') }}</strong> <a href="{{ env('GAMEJAM_LINK') }}">{{ env('GAMEJAM_LINK') }}</a>
                     </div>
+
+                    <div class="gamejam-info">
+                        <strong><i class="fas fa-exclamation-circle"></i> {{ __('app.gamejam_revelation') }}</strong> <a href="{{ url('/gamejam/theme') }}">{{ url('/gamejam/theme') }}</a>
+                    </div>
                 @endif
 
                 <p>
