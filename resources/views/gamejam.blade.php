@@ -110,6 +110,20 @@
                 color: rgb(153, 220, 234);
                 text-decoration: underline;
             }
+
+            .ad {
+                position: relative;
+                display: block;
+                width: 76%;
+                height: 193px;
+                margin-left: auto;
+                margin-right: auto;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border: 1px solid rgb(200, 200, 200);
+                margin-top: 20px;
+                border-radius: 5px;
+            }
         </style>
     </head>
 
@@ -137,6 +151,12 @@
                         <div class="link"><a href="{{ env('GAMEJAM_LINK') }}">Join @ itch.io</a></div>
                         <div class="link"><a href="{{ url('/') }}">Powered by {{ env('APP_TITLE') }}</a></div>
                     </div>
+
+                    @if ((is_string(env('GAMEJAM_ADIMG'))) && (strlen(env('GAMEJAM_ADIMG') > 0)))
+                    <a href="{{ env('GAMEJAM_ADLINK') }}" target="_blank">
+                        <div class="ad" style="background-image: url('{{ env('GAMEJAM_ADIMG') }}');"></div>
+                    </a>
+                    @endif
                 </div>
             </div>
         </div>
