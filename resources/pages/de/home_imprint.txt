@@ -9,7 +9,6 @@ Copyright &copy; 2020 - :year: :author:<br/><br/>
 <a href=":gplay:">Google Play Profil</a><br/>
 <a href=":youtube:">YouTube Kanal</a><br/>
 <a href=":mastodon:">Auf Mastodon folgen</a><br/>
-<a href=":twitter:">Auf Twitter folgen</a><br/>
 <a href=":linkedin:">LinkedIn Profil</a><br/>
 <a href=":discord:">Discord</a><br/>
 <br/>
