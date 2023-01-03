@@ -6,7 +6,7 @@
     <div class="column is-10 is-default-padding is-content-top">
         <div class="column-center">
             <div class="header-box">
-                <div class="header-box-left">&nbsp;</div>
+                <div class="header-box-left is-bg-bar">&nbsp;</div>
                 <div class="header-box-middle">
                     <img src="{{ asset('gfx/logos/rhs.png') }}" alt="redhotsubs.com"/>
 
