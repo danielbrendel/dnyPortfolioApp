@@ -115,20 +115,20 @@
                                 webframeworkdb.com
                             </a>
                             <a class="navbar-item" href="{{ url('/services/mittelalterevents') }}">
-                                mittelalter-events.com
+                                mittelalter-events.com &nbsp;<i class="fas fa-circle fa-sm is-online"></i>
                             </a>
                             <a class="navbar-item" href="{{ url('/services/gamedevscreens') }}">
                                 gamedevscreens.com
                             </a>
                             <a class="navbar-item" href="{{ url('/services/steamwidgets') }}">
-                                steamwidgets.com
+                                steamwidgets.com &nbsp;<i class="fas fa-circle fa-sm is-online"></i>
                             </a>
                             <a class="navbar-item" href="{{ url('/services/acr') }}">
                                 ac-resources.org
                             </a>
                             @if (env('APP_SHOWNSFW', false))
                             <a class="navbar-item" href="{{ url('/services/redhotsubs') }}">
-                                redhotsubs.com
+                                redhotsubs.com &nbsp;<i class="fas fa-circle fa-sm is-online"></i>
                             </a>
                             @endif
                         </div>
