@@ -25,6 +25,8 @@ The features are as follows:<br/>
 	<li>Profile management</li>
 	<li>Favorites system</li>
 	<li>Forum system</li>
+	<li>Gallery system</li>
+	<li>Marketplace system</li>
 	<li>Notification system</li>
 	<li>Messaging system</li>
 	<li>E-Mail system</li>

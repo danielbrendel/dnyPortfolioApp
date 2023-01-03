@@ -27,6 +27,8 @@ Hier eine Feature-Liste:<br/>
 	<li>Notification system</li>
 	<li>Messaging system</li>
 	<li>Forum system</li>
+	<li>Gallery system</li>
+	<li>Marketplace system</li>
 	<li>E-Mail system</li>
 	<li>Administration</li>
 	<li>Maintainer system</li>
