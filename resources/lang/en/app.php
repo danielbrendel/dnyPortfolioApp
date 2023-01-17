@@ -27,7 +27,7 @@ return [
     'helprealm_sub' => 'Since 2020 - no ads, almost no costs &#x25CF; <a href="https://helprealm.io">helprealm.io</a> &#x25CF; <span class="is-abandoned">abandoned</span>',
     'helprealm_title' => 'Especially suited for freelancers and small teams',
     'lachanfall_top' => 'Funny images, jokes & videos',
-    'lachanfall_sub' => 'Find and post funny images, memes, jokes, gifs & videos &#x25CF; <a href="https://lachanfall.co/">lachanfall.co</a> &#x25CF; <span class="is-abandoned">abandoned</span>',
+    'lachanfall_sub' => 'Find and post funny images, memes, jokes, gifs & videos &#x25CF; <a href="https://www.lachanfall.net/">lachanfall.net</a> &#x25CF; <span class="is-online">active</span>',
     'lachanfall_title' => 'A service to entertain its users on a daily basis',
     'astarlove_top' => 'The free dating platform for all around metal, gothic & alternative',
     'astarlove_sub' => 'Find your metal, gothic or alternative soul mate &#x25CF; <a href="https://www.astarlove.com/">astarlove.com</a> &#x25CF; <span class="is-abandoned">abandoned</span>',

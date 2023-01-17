@@ -100,7 +100,7 @@
                                 geekflash.net
                             </a>
                             <a class="navbar-item" href="{{ url('/services/lachanfall') }}">
-                                lachanfall.co
+                                lachanfall.net
                             </a>
                             <a class="navbar-item" href="{{ url('/services/astarlove') }}">
                                 astarlove.com
