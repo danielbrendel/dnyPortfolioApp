@@ -33,7 +33,7 @@ dass dies die beste Art ist, um so Wissen zu teilen.<br/><br/>
     </div>
 </div>
 
-Ich habe schon viele Projekte erschaffen, für die ich mich begeistere und die eine Inspiration sind.<br/><br/>
+<center>Ich habe schon viele Projekte erschaffen, für die ich mich begeistere und die eine Inspiration sind.</center><br/><br/>
 
 <div class="numbers">
     <h2 class="bottom-spacing">Ein paar Zahlen</h2>
@@ -49,4 +49,4 @@ Ich habe schon viele Projekte erschaffen, für die ich mich begeistere und die e
     </div>
 </div>
 
-Bitte besuchen Sie auch mein <a href="https://github.com/danielbrendel">GitHub</a> Profil.<br/><br/>
+<center>Bitte besuchen Sie auch mein <a href="https://github.com/danielbrendel">GitHub</a> Profil.</center><br/><br/>

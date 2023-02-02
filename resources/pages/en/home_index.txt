@@ -33,7 +33,7 @@ the best way to share knowledge.<br/><br/>
     </div>
 </div>
 
-I have created many projects which I find interesting and can be passionate about. And some do even inspire others.<br/><br/>
+<center>I have created many projects which I find interesting and can be passionate about. And some do even inspire others.</center><br/><br/>
 
 <div class="numbers">
     <h2 class="bottom-spacing">Some numbers</h2>
@@ -49,4 +49,4 @@ I have created many projects which I find interesting and can be passionate abou
     </div>
 </div>
 
-Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile in order to view my repositories.<br/><br/>
+<center>Please have a look at my <a href="https://github.com/danielbrendel">GitHub</a> profile in order to view my repositories.</center><br/><br/>
