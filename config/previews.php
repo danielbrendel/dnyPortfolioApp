@@ -26,12 +26,6 @@ return [
     ],
 
     [
-        'img' => 'lachanfall.png',
-        'text' => 'Lachanfall',
-        'route' => '/services/lachanfall'
-    ],
-
-    [
         'img' => 'mittelalterevents.png',
         'text' => 'mittelalter-events.com',
         'route' => '/services/mittelalterevents'
