@@ -252,12 +252,12 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<button class="is-pointer" title="{{ env('LINK_SOCIAL_GITHUB') }}" onclick="window.open('{{ env('LINK_SOCIAL_GITHUB') }}');"><i class="fab fa-github fa-lg"></i></button>
-				<button class="is-pointer" title="{{ env('LINK_SOCIAL_STEAM') }}" onclick="window.open('{{ env('LINK_SOCIAL_STEAM') }}');"><i class="fab fa-steam fa-lg"></i></button>
-				<button class="is-pointer" title="{{ env('LINK_SOCIAL_ITCHIO') }}" onclick="window.open('{{ env('LINK_SOCIAL_ITCHIO') }}');"><i class="fab fa-itch-io fa-lg"></i></button>
-				<button class="is-pointer" title="{{ env('LINK_SOCIAL_YOUTUBE') }}" onclick="window.open('{{ env('LINK_SOCIAL_YOUTUBE') }}');"><i class="fab fa-youtube fa-lg"></i></button>
-				<button class="is-pointer" title="{{ env('LINK_SOCIAL_LINKEDIN') }}" onclick="window.open('{{ env('LINK_SOCIAL_LINKEDIN') }}');"><i class="fab fa-linkedin fa-lg"></i></button>
-				<button class="is-pointer" title="{{ env('LINK_SOCIAL_MASTODON') }}" onclick="window.open('{{ env('LINK_SOCIAL_MASTODON') }}');"><i class="fab fa-mastodon fa-lg"></i></button>
+				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_GITHUB') }}" onclick="window.open('{{ env('LINK_SOCIAL_GITHUB') }}');"><i class="fab fa-github fa-lg"></i></button>
+				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_STEAM') }}" onclick="window.open('{{ env('LINK_SOCIAL_STEAM') }}');"><i class="fab fa-steam fa-lg"></i></button>
+				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_ITCHIO') }}" onclick="window.open('{{ env('LINK_SOCIAL_ITCHIO') }}');"><i class="fab fa-itch-io fa-lg"></i></button>
+				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_YOUTUBE') }}" onclick="window.open('{{ env('LINK_SOCIAL_YOUTUBE') }}');"><i class="fab fa-youtube fa-lg"></i></button>
+				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_LINKEDIN') }}" onclick="window.open('{{ env('LINK_SOCIAL_LINKEDIN') }}');"><i class="fab fa-linkedin fa-lg"></i></button>
+				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_MASTODON') }}" onclick="window.open('{{ env('LINK_SOCIAL_MASTODON') }}');"><i class="fab fa-mastodon fa-lg"></i></button>
 			</div>
 		</div>
 	</div>

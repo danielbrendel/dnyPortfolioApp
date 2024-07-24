@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background-color: #146bb3;
+    background-color: rgb(130, 174, 215);
 }
 
 .content {
@@ -150,4 +150,8 @@ fieldset {
 
 .button-icon-dark i {
     color: rgb(90, 67, 10);
+}
+
+.button-social {
+    min-height: 32px;
 }
