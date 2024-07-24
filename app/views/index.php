@@ -41,95 +41,37 @@
 		</div>
 		<div class="window-body">
 			<menu role="tablist" class="multirows">
-				<li role="tab" id="role-project-1" aria-selected="true"><a href="javascript:void(0);" onclick="window.switchProjectTab(1);">HortusFox</a></li>
-				<li role="tab" id="role-project-2"><a href="javascript:void(0);" onclick="window.switchProjectTab(2);">Mittelalter Events</a></li>
-				<li role="tab" id="role-project-3"><a href="javascript:void(0);" onclick="window.switchProjectTab(3);">HelpRealm</a></li>
-				<li role="tab" id="role-project-4"><a href="javascript:void(0);" onclick="window.switchProjectTab(4);">Steamwidgets</a></li>
+				@for ($i = 0; $i < count($projects) / 2; $i++)
+				<li role="tab" id="role-project-{{ $i + 1 }}" aria-selected="false"><a href="javascript:void(0);" onclick="window.switchProjectTab({{ $i + 1 }});">{{ $projects[$i]['name'] }}</a></li>
+				@endfor
 			</menu>
 			<menu role="tablist" class="multirows">
-				<li role="tab" id="role-project-5"><a href="javascript:void(0);" onclick="window.switchProjectTab(5);">AquaShell</a></li>
-				<li role="tab" id="role-project-6"><a href="javascript:void(0);" onclick="window.switchProjectTab(6);">Casual Desktop Game</a></li>
-				<li role="tab" id="role-project-7"><a href="javascript:void(0);" onclick="window.switchProjectTab(7);">Casual Pixel Warrior</a></li>
+				@for ($i = count($projects) / 2; $i < count($projects); $i++)
+				<li role="tab" id="role-project-{{ $i + 1 }}" aria-selected="false"><a href="javascript:void(0);" onclick="window.switchProjectTab({{ $i + 1 }});">{{ $projects[$i]['name'] }}</a></li>
+				@endfor
 			</menu>
 			<div class="window" role="tabpanel">
 				<div class="window-body">
-					<div id="tab-project-1">
+					@for ($i = 0; $i < count($projects); $i++)
+					<div id="tab-project-{{ $i + 1 }}" class="is-hidden">
 						<p>
-							HortusFox is a free and open-sourced self-hosted plant manager system that you can use to manage, keep track and journal your home plants. 
-							It is designed in a collaborative way, so you can manage your home plants with your partner, friends, family & more! 
-							By shipping the software as a self-hosted product, you are always master of your own personal data and thus are in full control over them. 
-							HortusFox is open-sourced MIT licensed software, so you can contribute to the software or make your own version of it. 
+							{{ $projects[$i]['description'] }}
 						</p>
 
-						<p><a href="">GitHub</a>&nbsp;|&nbsp;<a href="">Homepage</a>&nbsp;|&nbsp;<a href="">Documentation</a></p>
-					</div>
-
-					<div id="tab-project-2" class="is-hidden">
 						<p>
-							Mittelalter Events is a german social network for medieval market fans, fantasy fans and LARPers. It features upcoming events, gallery, forums, market place, messaging and many more. 
+							<?php $linkcnt = 0; ?>
+							@foreach ($projects[$i]['links'] as $project_key => $project_link)
+								<a href="{{ $project_link }}">{{ $project_key }}</a>
+
+								@if ($linkcnt < count($projects[$i]['links']) - 1)
+									&nbsp;|&nbsp;
+								@endif
+
+								<?php $linkcnt++; ?>
+							@endforeach
 						</p>
-
-						<p><a href="">Homepage</a>&nbsp;|&nbsp;<a href="">Android App</a>&nbsp;|&nbsp;<a href="">Instagram</a></p>
 					</div>
-
-					<div id="tab-project-3" class="is-hidden">
-						<p>
-							HelpRealm is a lightweight SaaS service support system for customers of your business. 
-							Customers can create support requests via a personal workspace contact form, e-mail or via your own frontend using our API, specifying data and attachments. 
-							For each support request there is a ticket created which is then handled by a registered agent. 
-							Tickets can be routed into different groups where initial tickets are routed to a defined index group. 
-							Superadmins can manage agents, groups, FAQ and system settings. Customers and agents get notified about ticket events by e-mail. 
-							Communication is possible via e-mail or a secret ticket thread form. The support system is especially suitable for freelancers and small teams. 
-						</p>
-
-						<p><a href="">GitHub</a>&nbsp;|&nbsp;<a href="">Homepage</a></p>
-					</div>
-
-					<div id="tab-project-4" class="is-hidden">
-						<p>
-							Steamwidgets is a clientside web component that offers an easy way to integrate Steam Widgets of various Steam entities into your website. 
-							Therefore you only need very few code in order to render Steam Widgets into your document. Steamwidgets is used via JavaScript. 
-							Since JavaScript is supported by all major browser per default it is platform independent and compatible. 
-							Steamwidgets widgets are responsive, localizable, customizable and easily adjustable. 
-						</p>
-
-						<p><a href="">GitHub</a>&nbsp;|&nbsp;<a href="">Homepage</a></p>
-					</div>
-
-					<div id="tab-project-5" class="is-hidden">
-						<p>
-							AquaShell is an easy-to-use Windows scripting and automation system. 
-							It integrates well with Windows and allows your to both create automation tasks as well as complex scripting applications. 
-							The product features a plugin system, so the shell can be extended with more commands. 
-							Of course there are standard plugins provided already. The syntax is inspired by C++, PHP, Tcl and PowerShell. 
-							It is easy to learn in order to quickly start developing your scripts.
-						</p>
-
-						<p><a href="">GitHub</a>&nbsp;|&nbsp;<a href="">Homepage</a></p>
-					</div>
-
-					<div id="tab-project-6" class="is-hidden">
-						<p>
-							Many played the Desktop Destroyer / Stress Reducer back in the days and really loved it. It created so many fond memories in many peoples childhood days.
-
-							That's why Casual Desktop Game has been created. To bring back the old fun in a new and modern shape - which means downloadable community content and other community features. Thus the game is freely available to download and play via Steam.
-						
-							Casual Desktop Game features AngelScript to create tools/entities. 
-						</p>
-
-						<p><a href="">Steam</a>&nbsp;|&nbsp;<a href="">Homepage</a></p>
-					</div>
-
-					<div id="tab-project-7" class="is-hidden">
-						<p>
-							Survive the waves! Buy weapons and ammo! Unlock new stages! Purchase companions! 
-							Solve daily quests and get rewards! 
-							Casual Pixel Warrior is a wave shooter where your endurance to last an infinite fight depends on your skill, unlocked weapons and purchased ammo. 
-							The game is based on the Casual Game Engine, a top-down 2D game engine. 
-						</p>
-
-						<p><a href="">Steam</a>&nbsp;|&nbsp;<a href="">Homepage</a></p>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
@@ -208,6 +150,10 @@
 						<input type="checkbox" id="field-row-fw-5" onclick="return false;" checked>
 						<label for="field-row-fw-5">Steamworks</label>
 					</div>
+					<div class="field-row">
+						<input type="checkbox" id="field-row-fw-6" onclick="return false;" checked>
+						<label for="field-row-fw-6">DirectX</label>
+					</div>
 				</fieldset>
 
 				<fieldset>
@@ -272,7 +218,7 @@
 			<div class="is-centered">
 				<p>For job and project negotiations, please contact me.</p>
 
-				<button class="is-half is-pointer" title="" onclick="window.open('mailto:');"><i class="fas fa-envelope"></i>&nbsp;Contact</button>
+				<button class="is-half is-pointer" title="{{ env('APP_CONTACT') }}" onclick="window.open('mailto:{{ env('APP_CONTACT') }}');"><i class="fas fa-envelope"></i>&nbsp;Contact</button>
 			</div>
 		</div>
 	</div>
@@ -290,12 +236,12 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<button class="is-pointer" title="" onclick="window.open('');"><i class="fab fa-github fa-lg"></i></button>
-				<button class="is-pointer" title="" onclick="window.open('');"><i class="fab fa-steam fa-lg"></i></button>
-				<button class="is-pointer" title="" onclick="window.open('');"><i class="fab fa-itch-io fa-lg"></i></button>
-				<button class="is-pointer" title="" onclick="window.open('');"><i class="fab fa-youtube fa-lg"></i></button>
-				<button class="is-pointer" title="" onclick="window.open('');"><i class="fab fa-linkedin fa-lg"></i></button>
-				<button class="is-pointer" title="" onclick="window.open('');"><i class="fab fa-mastodon fa-lg"></i></button>
+				<button class="is-pointer" title="{{ env('LINK_SOCIAL_GITHUB') }}" onclick="window.open('{{ env('LINK_SOCIAL_GITHUB') }}');"><i class="fab fa-github fa-lg"></i></button>
+				<button class="is-pointer" title="{{ env('LINK_SOCIAL_STEAM') }}" onclick="window.open('{{ env('LINK_SOCIAL_STEAM') }}');"><i class="fab fa-steam fa-lg"></i></button>
+				<button class="is-pointer" title="{{ env('LINK_SOCIAL_ITCHIO') }}" onclick="window.open('{{ env('LINK_SOCIAL_ITCHIO') }}');"><i class="fab fa-itch-io fa-lg"></i></button>
+				<button class="is-pointer" title="{{ env('LINK_SOCIAL_YOUTUBE') }}" onclick="window.open('{{ env('LINK_SOCIAL_YOUTUBE') }}');"><i class="fab fa-youtube fa-lg"></i></button>
+				<button class="is-pointer" title="{{ env('LINK_SOCIAL_LINKEDIN') }}" onclick="window.open('{{ env('LINK_SOCIAL_LINKEDIN') }}');"><i class="fab fa-linkedin fa-lg"></i></button>
+				<button class="is-pointer" title="{{ env('LINK_SOCIAL_MASTODON') }}" onclick="window.open('{{ env('LINK_SOCIAL_MASTODON') }}');"><i class="fab fa-mastodon fa-lg"></i></button>
 			</div>
 		</div>
 	</div>

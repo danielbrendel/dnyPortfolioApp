@@ -30,7 +30,10 @@ class IndexController extends BaseController {
 	 */
 	public function index($request)
 	{
-		//Generate and return a view by using the helper
-		return parent::view(['content', 'index']);
+		$projects = config('projects', false);
+
+		return parent::view(['content', 'index'], [
+			'projects' => $projects
+		]);
 	}
 }

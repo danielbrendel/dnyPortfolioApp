@@ -19,7 +19,7 @@
         </div>
 		<script src="{{ asset('js/app.js') }}"></script>
         <script>
-            window.maxProjects = 7;
+            window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
             window.switchProjectTab = function(which) {
                 for (let i = 1; i <= window.maxProjects; i++) {
                     let elHide = document.getElementById('tab-project-' + i);
@@ -47,6 +47,10 @@
                     targetRole.ariaSelected = true;
                 }
             };
+
+            document.addEventListener('DOMContentLoaded', function() {
+                window.switchProjectTab(1);
+            });
         </script>
     </body>
 </html>

@@ -4,4 +4,4 @@
  * Put here your application specific JavaScript implementations
  */
 
- import './../sass/app.scss';
+import './../sass/app.scss';
