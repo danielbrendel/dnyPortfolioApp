@@ -154,4 +154,7 @@ fieldset {
 
 .button-social {
     min-height: 32px;
+    @media screen and (max-width: 555px) {
+        margin-bottom: 3px;
+    }
 }
