@@ -152,9 +152,33 @@ fieldset {
     color: rgb(90, 67, 10);
 }
 
-.button-social {
-    min-height: 32px;
+a.btn {
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: transparent;
+    min-width: 75px;
+    min-height: 23px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0 0 #222;
+    text-decoration: none;
+    background: silver;
+    box-shadow: inset -1px -1px rgb(10, 10, 10), inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px rgb(223, 223, 223);
+}
+
+a.btn:not(:disabled):active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px rgb(10, 10, 10), inset -2px -2px rgb(223, 223, 223), inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
+}
+
+a.btn-social {
+    min-width: 55px;
+    padding-top: 12px;
     @media screen and (max-width: 555px) {
+        min-width: 95px;
         margin-bottom: 3px;
     }
 }

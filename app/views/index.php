@@ -170,6 +170,10 @@
 						<input type="checkbox" id="field-row-fw-6" onclick="return false;" checked>
 						<label for="field-row-fw-6">DirectX</label>
 					</div>
+					<div class="field-row">
+						<input type="checkbox" id="field-row-fw-7" onclick="return false;" checked>
+						<label for="field-row-fw-7">Bulma</label>
+					</div>
 				</fieldset>
 
 				<fieldset>
@@ -208,7 +212,7 @@
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-ide-3" onclick="return false;" checked>
-						<label for="field-row-ide-3">PHPStorm</label>
+						<label for="field-row-ide-3">PhpStorm</label>
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-ide-4" onclick="return false;" checked>
@@ -234,7 +238,7 @@
 			<div class="is-centered">
 				<p>For job and project negotiations, please contact me.</p>
 
-				<button class="is-half is-pointer" title="{{ env('APP_CONTACT') }}" onclick="window.open('mailto:{{ env('APP_CONTACT') }}');"><i class="fas fa-envelope"></i>&nbsp;Contact</button>
+				<a class="btn is-half is-pointer" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i>&nbsp;Contact</a>
 			</div>
 		</div>
 	</div>
@@ -252,12 +256,12 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_GITHUB') }}" onclick="window.open('{{ env('LINK_SOCIAL_GITHUB') }}');"><i class="fab fa-github fa-lg"></i></button>
-				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_STEAM') }}" onclick="window.open('{{ env('LINK_SOCIAL_STEAM') }}');"><i class="fab fa-steam fa-lg"></i></button>
-				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_ITCHIO') }}" onclick="window.open('{{ env('LINK_SOCIAL_ITCHIO') }}');"><i class="fab fa-itch-io fa-lg"></i></button>
-				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_YOUTUBE') }}" onclick="window.open('{{ env('LINK_SOCIAL_YOUTUBE') }}');"><i class="fab fa-youtube fa-lg"></i></button>
-				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_LINKEDIN') }}" onclick="window.open('{{ env('LINK_SOCIAL_LINKEDIN') }}');"><i class="fab fa-linkedin fa-lg"></i></button>
-				<button class="button-social is-pointer" title="{{ env('LINK_SOCIAL_MASTODON') }}" onclick="window.open('{{ env('LINK_SOCIAL_MASTODON') }}');"><i class="fab fa-mastodon fa-lg"></i></button>
+				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_GITHUB') }}" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_STEAM') }}" target="_blank"><i class="fab fa-steam fa-lg"></i></a>
+				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_ITCHIO') }}" target="_blank"><i class="fab fa-itch-io fa-lg"></i></a>
+				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_YOUTUBE') }}" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_LINKEDIN') }}" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_MASTODON') }}" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
 			</div>
 		</div>
 	</div>
