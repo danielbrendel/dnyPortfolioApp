@@ -1,8 +1,0 @@
-<p>Mittelalter Events ist eine Community Plattform, auf der man sich über anstehende Mittelaltermärkte und andere
-Szene Events informieren kann. Es ist nicht einfach nur eine Liste mit Terminen, sondern man kann sich mit anderen
-Menschen aus der Szene vernetzen, indem man Events kommentiert, teilnimmt oder favorisiert und auch mit anderen 
-Mitgliedern chatten kann. Auf diese Weise kann man nicht nur anstehende Mittelaltermärkte einsehen, sondern man
-findet auch gleich noch andere Menschen aus der Szene, die man über die Plattform kennenlernen kann.</p>
-
-<br/><br/>
-<img src="/gfx/screens/mittelalterevents.png" alt="Mittelalter Events"/><br/>

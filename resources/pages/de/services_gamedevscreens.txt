@@ -1,8 +1,0 @@
-<p>gamedevscreens.com ist der Server für einen Twitter bot, welcher beliebten Content von 
-<a href="https://www.reddit.com/r/gamedevscreens/">r/gamedevscreens</a> auf Twitter postet. 
-Dies passiert ein paar wenige Male pro Tag. Der Bot kann Bilder, GIFs und kleine Videos posten.
-Falls du gerne Bildmaterial von den Projekten anderer Indie Spieleentwickler in deinem
-Twitter-Feed sehen möchtest, dann kannst du gerne den Bot auf Twitter abonnieren.</p>
-
-<br/><br/>
-<img src="/gfx/screens/gamedevscreens.png" alt="gamedevscreens.com"/><br/>

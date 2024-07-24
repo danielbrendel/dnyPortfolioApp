@@ -1,9 +1,0 @@
-Dieses Spiel ist ein 2D Singleplayer Top-Down Space-Wave-Shooter, welcher in einem Weltraumszenario stattfindet. Anstatt, dass man solange Überstehen muss, wie man kann, muss man es tatsächlich durch die Level schaffen - in einem Rutsch!<br/><br/>
-
-Ausserirdische sind gekommen und haben alles auf der Erde zerstört. Jetzt liegt es an dir, die Menschheit zu rächen. Mit dem neusten Space-Kampfschiff, dass die Erde zu bieten hat, tritts du gegen die Ausserirdischen an und zeigst ihnen deine ganze Feuerkraft. Und dies wird ihnen so gar nicht schmecken!<br/><br/>
-
-Kämpfe gegen unterschiedliche Gegner, sammele Gegenstände ein, nutze unterschiedliche Waffen und gewinne am Ende gegen den Boss.<br/><br/>
-
-Viel Erfolg, Pilot!<br/><br/>
-
-<img src="/gfx/screens/solitarius.png" alt="Solitarius"/><br/>

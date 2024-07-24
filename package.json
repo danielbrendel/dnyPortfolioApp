@@ -1,22 +1,33 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^1.6.8",
-        "cross-env": "^7.0.3",
-        "laravel-mix": "^6.0.49",
-        "lodash": "^4.17.21",
-        "resolve-url-loader": "^5.0.0",
-        "sass": "^1.58.3",
-        "sass-loader": "^8.0.0",
-        "vue-template-compiler": "^2.7.14"
-    }
+  "name": "asatruphp",
+  "version": "1.0.0",
+  "description": "A lightweight PHP framework",
+  "main": "index.js",
+  "directories": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielbrendel/dnyAsatruPHP-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielbrendel/dnyAsatruPHP-App/issues"
+  },
+  "homepage": "https://github.com/danielbrendel/dnyAsatruPHP-App#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.7",
+    "sass": "^1.70.0",
+    "sass-loader": "^10.5.2",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "style-loader": "^1.2.1"
+  }
 }

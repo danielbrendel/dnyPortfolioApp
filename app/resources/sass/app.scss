@@ -1,0 +1,79 @@
+html, body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #146bb3;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and (max-width: 512px) {
+        padding-left: unset;
+        padding-right: unset;
+    }
+}
+
+.column {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.is-full {
+    width: 90%;
+}
+
+.is-half {
+    width: 45%;
+    @media screen and (max-width: 512px) {
+        width: 90%;
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-centered {
+    text-align: center;
+}
+
+.is-pointer {
+    cursor: pointer;
+}
+
+.window-body, .window-body button {
+    font-family: Arial;
+    font-size: 15px;
+    @media screen and (max-width: 512px) {
+        font-family: Arial;
+        font-size: 12px;
+    }
+}
+
+.window-content-frame {
+    position: relative;
+    display: inline-block;
+}
+
+.window-content-frame-image {
+    width: 79px;
+    vertical-align: top;
+}
+
+.window-content-frame-text {
+    width: 70%;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
