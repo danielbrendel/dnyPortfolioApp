@@ -14,7 +14,7 @@ body {
     margin-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    @media screen and (max-width: 512px) {
+    @media screen and (max-width: 950px) {
         padding-left: unset;
         padding-right: unset;
     }
@@ -34,7 +34,7 @@ body {
 
 .is-half {
     width: 45%;
-    @media screen and (max-width: 512px) {
+    @media screen and (max-width: 950px) {
         width: 90%;
     }
 }
@@ -71,7 +71,7 @@ body {
 .window-body, .window-body button {
     font-family: Arial;
     font-size: 15px;
-    @media screen and (max-width: 512px) {
+    @media screen and (max-width: 950px) {
         font-family: Arial;
         font-size: 12px;
     }
