@@ -22,7 +22,7 @@ return [
         'links' => [
             'Homepage' => env('PL_MITTELALTEREVENTS_HOMEPAGE'),
             'Android App' => env('PL_MITTELALTEREVENTS_ANDROIDAPP'),
-            'Documentation' => env('PL_MITTELALTEREVENTS_INSTAGRAM')
+            'Instagram' => env('PL_MITTELALTEREVENTS_INSTAGRAM')
         ]
     ],
 
