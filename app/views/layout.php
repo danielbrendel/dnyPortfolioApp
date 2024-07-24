@@ -6,7 +6,7 @@
 
         <title>Daniel Brendel | Indie Software Developer & Project Founder</title>
 
-        <link rel="stylesheet" type="text/css" href="https://unpkg.com/98.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/98.min.css') }}"/>
 
         <link rel="icon" type="image/png" href="img/logo.png"/>
 
