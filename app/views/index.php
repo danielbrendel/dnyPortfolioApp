@@ -23,7 +23,23 @@
 
 				<p> If you want to work together or want to offer a project/job, please feel free to contact me via the button below.</p>
 				
-				<p>When I am not developing software, I also like to do sports, music and enjoying a tasty Cappuccino. </p>
+				<p>When I am not developing software, I also like to do sports, music and enjoying a tasty Cappuccino.</p>
+
+				@if ((env('APP_GITHUB_SPONSOR')) || (env('APP_DONATION_KOFI')))
+				<div class="has-spacing">
+					@if (env('APP_GITHUB_SPONSOR'))
+					<div class="is-inline-block">
+						<a class="button button-blue button-icon-red" href="{{ env('APP_GITHUB_SPONSOR') }}"><i class="far fa-heart"></i>&nbsp;GitHub Sponsoring</a>
+					</div>
+					@endif
+
+					@if (env('APP_DONATION_KOFI'))
+					<div class="is-inline-block">
+						<a class="button button-caramel button-icon-dark" href="{{ env('APP_DONATION_KOFI') }}"><i class="fas fa-coffee"></i>&nbsp;Buy Me a Coffee</a>
+					</div>
+					@endif
+				</div>
+				@endif
 			</div>
 		</div>
 	</div>

@@ -39,6 +39,11 @@ body {
     }
 }
 
+.is-inline-block {
+    position: relative;
+    display: inline-block;
+}
+
 .is-hidden {
     display: none;
 }
@@ -49,6 +54,18 @@ body {
 
 .is-pointer {
     cursor: pointer;
+}
+
+.has-spacing {
+    margin-top: 30px;
+}
+
+.has-spacing div {
+    margin-bottom: 30px;
+}
+
+.has-spacing a {
+    margin-right: 5px;
 }
 
 .window-body, .window-body button {
@@ -76,4 +93,40 @@ body {
 
 fieldset {
     margin-bottom: 10px;
+}
+
+.button {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    color: rgb(250, 250, 250);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-blue {
+    background-color: rgb(52, 105, 190);
+}
+
+.button-blue:hover {
+    background-color: rgb(55, 115, 215);
+}
+
+.button-icon-red i {
+    color: rgb(205, 50, 50);
+}
+
+.button-caramel {
+    background-color: rgb(145, 123, 83);
+}
+
+.button-caramel:hover {
+    background-color: rgb(167, 145, 91);
+}
+
+.button-icon-dark i {
+    color: rgb(90, 67, 10);
 }
