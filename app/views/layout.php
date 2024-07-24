@@ -48,6 +48,13 @@
                 }
             };
 
+            window.toggleWindowSize = function(wnd, style) {
+                let elem = document.querySelector(wnd);
+                if (elem) {
+                    elem.classList.toggle(style);
+                }
+            };
+
             document.addEventListener('DOMContentLoaded', function() {
                 window.switchProjectTab(1);
             });

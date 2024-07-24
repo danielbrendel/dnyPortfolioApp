@@ -1,10 +1,10 @@
-<div class="column is-half">
+<div class="column is-half" id="column-window-about">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">About Me</div>
 			<div class="title-bar-controls">
-				<button aria-label="Minimize"></button>
-				<button aria-label="Maximize"></button>
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-about', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-about', 'window-maximized');"></button>
 				<button aria-label="Close"></button>
 			</div>
 		</div>
@@ -45,13 +45,13 @@
 	</div>
 </div>
 
-<div class="column is-half">
+<div class="column is-half"  id="column-window-projects">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">Projects</div>
 			<div class="title-bar-controls">
-			<button aria-label="Minimize"></button>
-			<button aria-label="Maximize"></button>
+			<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-projects', 'window-minimized');"></button>
+			<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-projects', 'window-maximized');"></button>
 			<button aria-label="Close"></button>
 			</div>
 		</div>
@@ -94,13 +94,13 @@
 	</div>
 </div>
 
-<div class="column is-half">
+<div class="column is-half" id="column-window-technologies">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">Technologies</div>
 			<div class="title-bar-controls">
-				<button aria-label="Minimize"></button>
-				<button aria-label="Maximize"></button>
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-technologies', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-technologies', 'window-maximized');"></button>
 				<button aria-label="Close"></button>
 			</div>
 		</div>
@@ -220,13 +220,13 @@
 	</div>
 </div>
 
-<div class="column is-half">
+<div class="column is-half" id="column-window-contact">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">Contact</div>
 			<div class="title-bar-controls">
-				<button aria-label="Minimize"></button>
-				<button aria-label="Maximize"></button>
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-contact', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-contact', 'window-maximized');"></button>
 				<button aria-label="Close"></button>
 			</div>
 		</div>
@@ -240,13 +240,13 @@
 	</div>
 </div>
 
-<div class="column is-half">
+<div class="column is-half" id="column-window-socials">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">Socials</div>
 			<div class="title-bar-controls">
-				<button aria-label="Minimize"></button>
-				<button aria-label="Maximize"></button>
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-socials', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-socials', 'window-maximized');"></button>
 				<button aria-label="Close"></button>
 			</div>
 		</div>
