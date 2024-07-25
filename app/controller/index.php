@@ -22,7 +22,7 @@ class IndexController extends BaseController {
 		parent::__construct(self::INDEX_LAYOUT);
 
 		try {
-			VisitorCounter::addCount();
+			Counter::addCount();
 		} catch (\Exception $e) {
 			addLog(ASATRU_LOG_WARNING, $e->getMessage());
 		}
@@ -42,7 +42,7 @@ class IndexController extends BaseController {
 
 		try {
 			$visitcount = Cache::remember('visitor_counter', 60 * 60 * 24, function() {
-				return VisitorCounter::getCount();
+				return Counter::getCount();
 			});
 		} catch (\Exception $e) {
 			addLog(ASATRU_LOG_WARNING, $e->getMessage());

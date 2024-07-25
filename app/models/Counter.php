@@ -7,7 +7,7 @@
 /**
  * This class extends the base model class and represents your associated table
  */ 
-class VisitorCounter extends \Asatru\Database\Model {
+class Counter extends \Asatru\Database\Model {
     /**
      * @return void
      * @throws \Exception

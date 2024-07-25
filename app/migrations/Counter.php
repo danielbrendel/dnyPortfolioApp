@@ -1,13 +1,13 @@
 <?php
 
 /*
-    Asatru PHP - Migration for VisitorCounter
+    Asatru PHP - Migration for Counter
 */
 
 /**
  * This class specifies a migration
  */
-class VisitorCounter_Migration {
+class Counter_Migration {
     private $database = null;
     private $connection = null;
 
@@ -29,7 +29,7 @@ class VisitorCounter_Migration {
      */
     public function up()
     {
-        $this->database = new Asatru\Database\Migration('VisitorCounter', $this->connection);
+        $this->database = new Asatru\Database\Migration('Counter', $this->connection);
         $this->database->drop();
         $this->database->add('id INT NOT NULL AUTO_INCREMENT PRIMARY KEY');
         $this->database->add('visitor_token VARCHAR(512) NOT NULL');
