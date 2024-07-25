@@ -78,6 +78,12 @@ body {
     }
 }
 
+.window-body menu[role=tablist] {
+    @media screen and (max-width: 435px) {
+        word-break: break-all;
+    }
+}
+
 .window-content-frame {
     position: relative;
     display: inline-block;
