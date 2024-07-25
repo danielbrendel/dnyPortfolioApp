@@ -42,7 +42,7 @@ class IndexController extends BaseController {
 
 		try {
 			$visitcount = Cache::remember('visitor_counter', 60 * 60 * 24, function() {
-				return Counter::getCount();
+				return Utils::countAsString(Counter::getCount());
 			});
 		} catch (\Exception $e) {
 			addLog(ASATRU_LOG_WARNING, $e->getMessage());
