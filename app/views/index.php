@@ -17,13 +17,14 @@
 				<p>Hey there! I am <strong>Daniel Brendel</strong>, an indie software developer and project founder!</p>
 
 				<p>
-					I love creating complex software products in various fields such as web development, game development and desktop application development. 
+					I love creating complex software products in various fields such as web development, game development and application development. 
 					My main languages are PHP and C++ along with various other technologies. I founded various projects and still like to invent more projects.
+					I am an OpenSource advocate and like to promote the idea of FOSS products.
 				</p>
 
 				<p> If you want to work together or want to offer a project/job, please feel free to contact me via the button below.</p>
 				
-				<p>When I am not developing software, I also like to do sports, music and enjoying a tasty Cappuccino.</p>
+				<p>When I am not developing software, I also like to do sports (mostly weight lifting and cardio), listening to music and enjoying a tasty Cappuccino.</p>
 
 				@if ((env('APP_GITHUB_SPONSOR')) || (env('APP_DONATION_KOFI')))
 				<div class="has-spacing">
@@ -236,7 +237,7 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<p>For job and project negotiations, please contact me.</p>
+				<p>For job and project negotiations, please contact me via the button below.</p>
 
 				<a class="btn is-half is-pointer" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i>&nbsp;Contact</a>
 			</div>
@@ -281,7 +282,7 @@
 			<div class="is-centered">&copy; {{ date('Y') }} by {{ env('APP_AUTHOR') }}</div>
 		</div>
 		<div class="status-bar">
-			<p class="status-bar-field">Press F1 for help</p>
+			<p class="status-bar-field"><i>Scientia potentia est</i></p>
 			<p class="status-bar-field status-bar-field-middle">Visitors: {{ $visitcount }}</p>
 			<p class="status-bar-field status-bar-field-right" id="update-current-time"></p>
 		</div>
