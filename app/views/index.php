@@ -257,12 +257,12 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_GITHUB') }}" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_STEAM') }}" target="_blank"><i class="fab fa-steam fa-lg"></i></a>
-				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_ITCHIO') }}" target="_blank"><i class="fab fa-itch-io fa-lg"></i></a>
-				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_YOUTUBE') }}" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
-				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_LINKEDIN') }}" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-				<a class="btn btn-social" href="{{ env('LINK_SOCIAL_MASTODON') }}" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
+				<a class="btn btn-social color-github" href="{{ env('LINK_SOCIAL_GITHUB') }}" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+				<a class="btn btn-social color-steam" href="{{ env('LINK_SOCIAL_STEAM') }}" target="_blank"><i class="fab fa-steam fa-lg"></i></a>
+				<a class="btn btn-social color-itchio" href="{{ env('LINK_SOCIAL_ITCHIO') }}" target="_blank"><i class="fab fa-itch-io fa-lg"></i></a>
+				<a class="btn btn-social color-youtube" href="{{ env('LINK_SOCIAL_YOUTUBE') }}" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+				<a class="btn btn-social color-linkedin" href="{{ env('LINK_SOCIAL_LINKEDIN') }}" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+				<a class="btn btn-social color-mastodon" href="{{ env('LINK_SOCIAL_MASTODON') }}" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
 			</div>
 		</div>
 	</div>
