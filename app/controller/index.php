@@ -41,7 +41,7 @@ class IndexController extends BaseController {
 		$visitcount = 0;
 
 		try {
-			$visitcount = Cache::remember('visitor_counter', 60 * 60 * 24, function() {
+			$visitcount = Cache::remember('visitor_counter', (int)env('APP_CACHE_DURATION', 125), function() {
 				return Utils::countAsString(Counter::getCount());
 			});
 		} catch (\Exception $e) {
