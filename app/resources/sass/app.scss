@@ -287,6 +287,15 @@ table td a:hover {
 
 .blog-post-content-text pre {
     background-color: rgb(180, 180, 180);
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.blog-post-content-text pre img {
+    max-width: 100%;
 }
 
 .blog-post-content-footer {

@@ -21,7 +21,11 @@
 			</div>
 
 			<div class="blog-post-content-text">
+				@if (env('APP_ALLOW_BLOG_HTML'))
+				<pre>{!! $post->get('content') !!}</pre>
+				@else
 				<pre>{{ $post->get('content') }}</pre>
+				@endif
 			</div>
 
 			<div class="blog-post-content-footer">
