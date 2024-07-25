@@ -46,6 +46,34 @@
 	</div>
 </div>
 
+<div class="column is-half" id="column-window-blog">
+	<div class="window">
+		<div class="title-bar">
+			<div class="title-bar-text">Latest Blog Posts</div>
+			<div class="title-bar-controls">
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-blog', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-blog', 'window-maximized');"></button>
+				<button aria-label="Close"></button>
+			</div>
+		</div>
+		<div class="window-body">
+			<a name="blog-list"></a>
+			
+			<div class="sunken-panel">
+				<table class="interactive">
+					<thead>
+						<tr>
+							<th class="is-stretched">Title</th>
+							<th>Published</th>
+						</tr>
+					</thead>
+					<tbody id="blog-posts"></tobdy>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="column is-half"  id="column-window-projects">
 	<div class="window">
 		<div class="title-bar">

@@ -55,6 +55,30 @@
                 }
             };
 
+            window.ajaxRequest = function (method, url, data = {}, successfunc = function(data){}, finalfunc = function(){}, config = {})
+            {
+                let func = window.axios.get;
+                if (method == 'post') {
+                    func = window.axios.post;
+                } else if (method == 'patch') {
+                    func = window.axios.patch;
+                } else if (method == 'delete') {
+                    func = window.axios.delete;
+                }
+
+                func(url, data, config)
+                    .then(function(response){
+                        successfunc(response.data);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+                    .finally(function(){
+                            finalfunc();
+                        }
+                    );
+            };
+
             window.updateDateTime = function(target) {
                 let elem = document.querySelector(target);
                 if (elem) {
@@ -67,9 +91,32 @@
                 }
             }
 
+            window.fetchBlogPosts = function(target) {
+                let elem = document.querySelector(target);
+                if (elem) {
+                    window.ajaxRequest('get', '{{ url('/blog/posts/fetch') }}', {}, function(response) {
+                        if (response.code == 200) {
+                            elem.innerHTML = '';
+
+                            response.data.forEach(function(post, index) {
+                                let tableEntry = `
+                                    <tr>
+                                        <td><a href="` + window.location.origin + '/blog/' + post.slug + `">` + post.title + `</a></td>
+                                        <td>` + post.created_at + `</td>
+                                    </tr>
+                                `;
+
+                                elem.innerHTML += tableEntry;
+                            });
+                        }
+                    });
+                }
+            }
+
             document.addEventListener('DOMContentLoaded', function() {
                 window.switchProjectTab(1);
 
+                window.fetchBlogPosts('#blog-posts');
                 window.updateDateTime('#update-current-time');
             });
         </script>

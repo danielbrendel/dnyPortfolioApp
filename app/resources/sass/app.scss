@@ -57,6 +57,10 @@ body {
     cursor: pointer;
 }
 
+.is-stretched {
+    width: 100%;
+}
+
 .has-spacing {
     margin-top: 30px;
 }
@@ -222,4 +226,93 @@ a.btn-social {
 
 .color-mastodon i {
     color: rgb(105, 105, 185);
+}
+
+table tbody {
+    background-color: rgb(200, 200, 200);
+}
+
+table tr {
+    font-size: 1.2em;
+}
+
+table td a {
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+.blog-post-content {
+    position: relative;
+}
+
+.blog-post-content-header {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-post-content-header-avatar {
+    position: relative;
+    display: inline-block;
+}
+
+.blog-post-content-header-avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.blog-post-content-header-info {
+    position: relative;
+    display: inline-block;
+    top: -14px;
+    margin-left: 10px;
+}
+
+.blog-post-content-header-info-author {
+    font-size: 1.2em;
+}
+
+.blog-post-content-header-info-date {
+    color: rgb(100, 100, 100);
+}
+
+.blog-post-content-text {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.blog-post-content-text pre {
+    background-color: rgb(180, 180, 180);
+}
+
+.blog-post-content-footer {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.blog-post-submit {
+    width: 100%;
+}
+
+.blog-post-submit-input {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.blog-post-submit-title input {
+    width: 97%;
+}
+
+.blog-post-submit-content textarea {
+    width: 97%;
+    min-height: 350px;
+}
+
+.blog-post-submit-action {
+    position: relative;
+    margin-bottom: 10px;
 }
