@@ -46,6 +46,7 @@
 	</div>
 </div>
 
+@if (env('APP_ENABLE_BLOG'))
 <div class="column is-half" id="column-window-blog">
 	<div class="window">
 		<div class="title-bar">
@@ -73,6 +74,7 @@
 		</div>
 	</div>
 </div>
+@endif
 
 <div class="column is-half"  id="column-window-projects">
 	<div class="window">

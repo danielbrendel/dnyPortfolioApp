@@ -5,6 +5,23 @@
 */
 
 class BlogController extends BaseController {
+	const INDEX_LAYOUT = 'layout';
+
+	/**
+	 * Perform base initialization
+	 * 
+	 * @return void
+	 */
+	public function __construct()
+	{
+		parent::__construct(self::INDEX_LAYOUT);
+
+		if (!env('APP_ENABLE_BLOG')) {
+			abort(403);
+			exit();
+		}
+	}
+
     /**
 	 * Handles URL: /blog/posts/fetch
 	 * 
@@ -60,7 +77,7 @@ class BlogController extends BaseController {
 		try {
 			$token = $request->params()->query('token', null);
 
-			if ($token !== env('ADMIN_ACCESS_TOKEN')) {
+			if ($token !== env('APP_ADMIN_ACCESS_TOKEN')) {
 				throw new \Exception('Access denied');
 			}
 
@@ -85,7 +102,7 @@ class BlogController extends BaseController {
 			$title = $request->params()->query('title', null);
 			$content = $request->params()->query('content', null);
 
-			if ($token !== env('ADMIN_ACCESS_TOKEN')) {
+			if ($token !== env('APP_ADMIN_ACCESS_TOKEN')) {
 				throw new \Exception('Access denied');
 			}
 
