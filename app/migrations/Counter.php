@@ -4,9 +4,6 @@
     Asatru PHP - Migration for Counter
 */
 
-/**
- * This class specifies a migration
- */
 class Counter_Migration {
     private $database = null;
     private $connection = null;

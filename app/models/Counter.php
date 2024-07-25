@@ -1,12 +1,9 @@
 <?php
 
 /*
-    Asatru PHP - Model
+    Asatru PHP - Model for Counter
 */
 
-/**
- * This class extends the base model class and represents your associated table
- */ 
 class Counter extends \Asatru\Database\Model {
     /**
      * @return void

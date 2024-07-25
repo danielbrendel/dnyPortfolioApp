@@ -1,8 +1,9 @@
 <?php
 
 /**
- * This class represents your module
+ * A module to implement various utilities
  */
+
 class Utils {
     const COUNT_MILLION = 1000000;
     const COUNT_HUNDREDTHOUSAND = 100000;
