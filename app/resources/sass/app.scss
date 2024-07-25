@@ -62,7 +62,7 @@ body {
 }
 
 .has-spacing div {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .has-spacing a {
@@ -124,12 +124,15 @@ fieldset {
 
 .button {
     position: relative;
+    display: inline-block;
+    min-width: 143px;
     padding-top: 10px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
     color: rgb(250, 250, 250);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
     text-decoration: none;
     border-radius: 5px;
 }
