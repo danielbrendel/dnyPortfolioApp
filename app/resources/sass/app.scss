@@ -294,6 +294,16 @@ table td a:hover {
     word-wrap: break-word;
 }
 
+.blog-post-content-text pre a {
+    color: rgb(190, 90, 15);
+    text-decoration: none;
+}
+
+.blog-post-content-text pre a:hover {
+    color: rgb(190, 90, 15);
+    text-decoration: underline;
+}
+
 .blog-post-content-text pre img {
     max-width: 100%;
 }

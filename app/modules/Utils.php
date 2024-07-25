@@ -9,6 +9,20 @@ class Utils {
     const COUNT_HUNDREDTHOUSAND = 100000;
     const COUNT_TENTHOUSAND = 10000;
     const COUNT_THOUSAND = 1000;
+
+    /**
+     * @return int
+     */
+    public static function getVisitorCount()
+    {
+        try {
+			return Cache::remember('visitor_counter', (int)env('APP_CACHE_DURATION', 125), function() {
+				return Utils::countAsString(Counter::getCount());
+			});
+		} catch (\Exception $e) {
+			return 0;
+		}
+    }
     
     /**
      * @param $count

@@ -51,15 +51,20 @@ class BlogController extends BaseController {
 	 * @param Asatru\Controller\ControllerArg $request
 	 * @return Asatru\View\ViewHandler|Asatru\View\RedirectHandler
 	 */
-	public function post($request)
+	public function view_post($request)
 	{
 		try {
 			$slug = $request->arg('slug');
 
 			$post = Blog::fromSlug($slug);
+			$visitcount = Utils::getVisitorCount();
 
             return parent::view(['content', 'blog/view'], [
-				'post' => $post
+				'post' => $post,
+				'visitcount' => $visitcount,
+				'_meta_title' => $post->get('title') . ' | ' . env('APP_AUTHOR') . ' | Blog',
+				'_meta_description' => str_replace("\r\n", '  ', substr($post->get('content'), 0, 63)),
+				'_meta_url' => url('/blog/' . $post->get('slug'))
 			]);
 		} catch (\Exception $e) {
 			return redirect('/');

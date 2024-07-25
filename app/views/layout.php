@@ -4,6 +4,14 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+        <meta name="author" content="{{ env('APP_AUTHOR') }}">
+        <meta name="description" content="{{ env('APP_DESCRIPTION') }}">
+
+        <meta name="og:title" property="og:title" content="{{ (isset($_meta_title)) ? $_meta_title : env('APP_AUTHOR') }}">
+        <meta name="og:description" property="og:description" content="{{ (isset($_meta_description)) ? $_meta_description : env('APP_DESCRIPTION') }}">
+        <meta name="og:url" property="og:url" content="{{ (isset($_meta_url)) ? $_meta_url : url('/') }}">
+        <meta name="og:image" property="og:image" content="{{ asset('img/logo.png') }}">
+
         <title>Daniel Brendel | Indie Software Developer & Project Founder</title>
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/98.min.css') }}"/>

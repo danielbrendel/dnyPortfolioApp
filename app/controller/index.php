@@ -37,16 +37,7 @@ class IndexController extends BaseController {
 	public function index($request)
 	{
 		$projects = config('projects', false);
-
-		$visitcount = 0;
-
-		try {
-			$visitcount = Cache::remember('visitor_counter', (int)env('APP_CACHE_DURATION', 125), function() {
-				return Utils::countAsString(Counter::getCount());
-			});
-		} catch (\Exception $e) {
-			addLog(ASATRU_LOG_WARNING, $e->getMessage());
-		}
+		$visitcount = Utils::getVisitorCount();
 
 		return parent::view(['content', 'index'], [
 			'projects' => $projects,
