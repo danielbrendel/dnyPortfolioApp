@@ -20,6 +20,12 @@ class IndexController extends BaseController {
 	public function __construct()
 	{
 		parent::__construct(self::INDEX_LAYOUT);
+
+		try {
+			VisitorCounter::addCount();
+		} catch (\Exception $e) {
+			addLog(ASATRU_LOG_WARNING, $e->getMessage());
+		}
 	}
 
 	/**
@@ -32,8 +38,19 @@ class IndexController extends BaseController {
 	{
 		$projects = config('projects', false);
 
+		$visitcount = 0;
+
+		try {
+			$visitcount = Cache::remember('visitor_counter', 60 * 60 * 24, function() {
+				return VisitorCounter::getCount();
+			});
+		} catch (\Exception $e) {
+			addLog(ASATRU_LOG_WARNING, $e->getMessage());
+		}
+
 		return parent::view(['content', 'index'], [
-			'projects' => $projects
+			'projects' => $projects,
+			'visitcount' => $visitcount
 		]);
 	}
 }
