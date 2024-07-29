@@ -60,7 +60,7 @@
 		<div class="window-body">
 			<a name="blog-list"></a>
 			
-			<div class="sunken-panel">
+			<div class="sunken-panel sunken-panel-blog ">
 				<table class="interactive">
 					<thead>
 						<tr>

@@ -335,3 +335,8 @@ table td a:hover {
     position: relative;
     margin-bottom: 10px;
 }
+
+.sunken-panel-blog {
+    max-height: 183px;
+    overflow-y: auto;
+}
