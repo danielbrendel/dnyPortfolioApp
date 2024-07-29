@@ -21,5 +21,6 @@ return [
     array('/blog/posts/submit', 'GET', 'blog@view_submit'),
     array('/blog/posts/submit', 'POST', 'blog@submit'),
     array('/blog/{slug}', 'GET', 'blog@view_post'),
+    array('/sitemap', 'GET', 'index@sitemap'),
     array('$404', 'ANY', 'error404@index')
 ];
