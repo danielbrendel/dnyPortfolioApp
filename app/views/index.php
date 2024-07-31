@@ -293,6 +293,7 @@
 				<a class="btn btn-social color-youtube" href="{{ env('LINK_SOCIAL_YOUTUBE') }}" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
 				<a class="btn btn-social color-linkedin" href="{{ env('LINK_SOCIAL_LINKEDIN') }}" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
 				<a class="btn btn-social color-mastodon" href="{{ env('LINK_SOCIAL_MASTODON') }}" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
+				<a class="btn btn-social color-instagram" href="{{ env('LINK_SOCIAL_INSTAGRAM') }}" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
 			</div>
 		</div>
 	</div>

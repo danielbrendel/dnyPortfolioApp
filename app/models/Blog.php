@@ -46,8 +46,8 @@ class Blog extends \Asatru\Database\Model {
     public static function submit($title, $content)
     {
         try {
-            $lastId = static::raw('SELECT * FROM `@THIS` ORDER BY id DESC')->first()->get('id');
-
+            $lastId = (int)static::raw('SELECT * FROM `@THIS` ORDER BY id DESC')->first()?->get('id');
+            
             $slug = slug(($lastId + 1) . ' ' . $title); 
 
             static::insert('slug', $slug)->insert('title', $title)->insert('content', $content)->go();
