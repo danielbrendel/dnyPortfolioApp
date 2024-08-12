@@ -102,7 +102,7 @@
             window.fetchBlogPosts = function(target) {
                 let elem = document.querySelector(target);
                 if (elem) {
-                    window.ajaxRequest('get', '{{ url('/blog/posts/fetch') }}', {}, function(response) {
+                    window.ajaxRequest('get', '{{ url('/blog/posts/fetch') }}?limit=' + elem.dataset.limit, {}, function(response) {
                         if (response.code == 200) {
                             elem.innerHTML = '';
 

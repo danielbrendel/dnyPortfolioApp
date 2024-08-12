@@ -29,7 +29,7 @@
 			</div>
 
 			<div class="blog-post-content-footer">
-				<a href="{{ url('/#blog-list') }}">Go back</a>
+				<a href="{{ url('/blog') }}">Back to list</a>
 			</div>
 		</div>
 	</div>

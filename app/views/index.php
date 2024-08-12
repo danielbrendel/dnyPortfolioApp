@@ -68,9 +68,11 @@
 							<th>Published</th>
 						</tr>
 					</thead>
-					<tbody id="blog-posts"></tobdy>
+					<tbody id="blog-posts" data-limit="5"></tobdy>
 				</table>
 			</div>
+
+			<p><a href="{{ url('/blog') }}">View more</a></p>
 		</div>
 	</div>
 </div>

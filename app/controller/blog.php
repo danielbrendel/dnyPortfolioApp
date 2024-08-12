@@ -22,6 +22,32 @@ class BlogController extends BaseController {
 		}
 	}
 
+	/**
+	 * Handles URL: /blog
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\ViewHandler|Asatru\View\RedirectHandler
+	 */
+	public function view_list($request)
+	{
+		try {
+			if (!env('APP_ENABLE_BLOG')) {
+				throw new \Exception('Blog feature currently inactive.');
+			}
+
+			$visitcount = Utils::getVisitorCount();
+
+			return parent::view(['content', 'blog/list'], [
+				'visitcount' => $visitcount,
+				'_meta_title' => 'Blog',
+				'_meta_description' => 'Daniel Brendel | Blog',
+				'_meta_url' => url('/blog')
+			]);
+		} catch (\Exception $e) {
+			return redirect('/');
+		}
+	}
+
     /**
 	 * Handles URL: /blog/posts/fetch
 	 * 
@@ -31,7 +57,9 @@ class BlogController extends BaseController {
 	public function fetch($request)
 	{
 		try {
-			$blogposts = Blog::fetch();
+			$limit = (int)$request->params()->query('limit', 0);
+
+			$blogposts = Blog::fetch($limit);
 
             return json([
                 'code' => 200,

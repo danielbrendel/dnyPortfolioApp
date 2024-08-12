@@ -33,6 +33,8 @@ class Sitemap
         $this->sites[] = url('/');
 
         if (env('APP_ENABLE_BLOG')) {
+            $this->sites[] = url('/blog');
+
             $blog_entries = Blog::fetch();
             foreach ($blog_entries as $blog_entry) {
                 $this->sites[] = url('/blog/' . $blog_entry->get('slug'));
