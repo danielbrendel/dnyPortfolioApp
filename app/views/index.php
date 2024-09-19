@@ -192,7 +192,7 @@
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-fw-3" onclick="return false;" checked>
-						<label for="field-row-fw-3">VueJS</label>
+						<label for="field-row-fw-3">Vue</label>
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-fw-4" onclick="return false;" checked>
@@ -209,6 +209,10 @@
 					<div class="field-row">
 						<input type="checkbox" id="field-row-fw-7" onclick="return false;" checked>
 						<label for="field-row-fw-7">Bulma</label>
+					</div>
+					<div class="field-row">
+						<input type="checkbox" id="field-row-fw-8" onclick="return false;" checked>
+						<label for="field-row-fw-8">Phaser</label>
 					</div>
 				</fieldset>
 
