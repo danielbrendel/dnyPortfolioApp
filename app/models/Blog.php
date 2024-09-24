@@ -14,9 +14,9 @@ class Blog extends \Asatru\Database\Model {
     {
         try {
             if ($limit > 0) {
-                return static::raw('SELECT * FROM `@THIS` ORDER BY created_at DESC LIMIT ' . $limit);
+                return static::raw('SELECT * FROM `@THIS` WHERE active = 1 ORDER BY created_at DESC LIMIT ' . $limit);
             } else {
-                return static::raw('SELECT * FROM `@THIS` ORDER BY created_at DESC');
+                return static::raw('SELECT * FROM `@THIS` WHERE active = 1 ORDER BY created_at DESC');
             }
         } catch (\Exception $e) {
             throw $e;
@@ -31,7 +31,7 @@ class Blog extends \Asatru\Database\Model {
     public static function fromSlug($slug)
     {
         try {
-            return static::where('slug', '=', $slug)->first();
+            return static::where('slug', '=', $slug)->where('active', '=', true)->first();
         } catch (\Exception $e) {
             throw $e;
         }
