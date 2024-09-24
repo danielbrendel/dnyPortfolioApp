@@ -15,15 +15,15 @@
                 <input type="hidden" name="token" value="{{ $token }}"/>
 
                 <div class="blog-post-submit-title is-stretched">
-                    <input type="text" name="title" placeholder="Enter a title"/>
+                    <input type="text" name="title" id="blog-post-title" placeholder="Enter a title"/>
                 </div>
 
                 <div class="blog-post-submit-content is-stretched">
-                    <textarea name="content" placeholder="What's on your mind?"></textarea>
+                    <textarea name="content" id="blog-post-content" placeholder="What's on your mind?"></textarea>
                 </div>
 
                 <div class="blog-post-submit-action">
-                    <input type="submit" value="Post"/>
+                    <input type="submit" value="Post"/>&nbsp;&nbsp;<a href="javascript:void(0);" onclick="previewBlogPost(document.getElementById('blog-post-title').value, document.getElementById('blog-post-content').value, '{{ $token }}');">Preview</a>
                 </div>
             </form>
 		</div>

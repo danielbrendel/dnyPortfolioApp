@@ -123,6 +123,30 @@ class BlogController extends BaseController {
 	}
 
 	/**
+	 * Handles URL: /blog/posts/submit/preview
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\RedirectHandler
+	 */
+    public function view_preview($request)
+    {
+		$token = $request->params()->query('token', null);
+
+		if ($token !== env('APP_ADMIN_ACCESS_TOKEN')) {
+			throw new \Exception('Access denied');
+		}
+
+        $title = $request->params()->query('title');
+        $content = $request->params()->query('content');
+
+        return parent::view(['content', 'blog/preview'], [
+			'title' => $title,
+			'content' => $content,
+			'token' => $token
+		]);
+    }
+
+	/**
 	 * Handles URL: /blog/posts/submit
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request

@@ -19,6 +19,7 @@ return [
     array('/', 'GET', 'index@index'),
     array('/blog/posts/fetch', 'ANY', 'blog@fetch'),
     array('/blog/posts/submit', 'GET', 'blog@view_submit'),
+    array('/blog/posts/submit/preview', 'POST', 'blog@view_preview'),
     array('/blog/posts/submit', 'POST', 'blog@submit'),
     array('/blog/{slug}', 'GET', 'blog@view_post'),
     array('/blog', 'GET', 'blog@view_list'),
