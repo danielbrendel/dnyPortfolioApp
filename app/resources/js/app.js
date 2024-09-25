@@ -9,6 +9,11 @@ import './../sass/app.scss';
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+import hljs from 'highlight.js';
+import 'highlight.js/scss/github.scss';
+
+window.hljs = hljs;
+
 window.previewBlogPost = function(title, content, token) {
     const form = document.createElement('form');
     form.method = 'POST';

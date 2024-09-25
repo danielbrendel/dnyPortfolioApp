@@ -126,6 +126,29 @@
 
                 window.fetchBlogPosts('#blog-posts');
                 window.updateDateTime('#update-current-time');
+
+                window.hljs.registerLanguage('aquashell', function() {
+					return {
+						case_insensitive: false,
+						keywords: {
+							keyword: 'global const set if function elseif else for while local result unset call class method member construct destruct require exec run cwd gwd getscriptpath getscriptname textview random sleep gettickcount getsystemerror setsystemerror listlibs print sys pause exit quit',
+							literal: 'bool int float string void true false',
+						},
+						contains: [
+						{
+							className: 'string',
+							begin: '"',
+							end: '"'
+						},
+						hljs.COMMENT(
+							'#',
+							"\n",
+							{}
+						)
+						]
+					}
+				});
+				window.hljs.highlightAll();
             });
         </script>
     </body>

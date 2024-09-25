@@ -88,6 +88,16 @@ body {
     }
 }
 
+.window-body code {
+    background-color: rgb(200, 200, 200);
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px rgb(223, 223, 223), inset 2px 2px rgb(10, 10, 10);
+    padding-top: unset !important;
+}
+
+.hljs-comment {
+    color: rgb(59, 111, 59) !important;
+}
+
 .window-content-frame {
     position: relative;
     display: inline-block;
