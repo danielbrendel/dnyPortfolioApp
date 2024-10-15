@@ -238,6 +238,10 @@
 						<input type="checkbox" id="field-row-tool-5" onclick="return false;" checked>
 						<label for="field-row-tool-5">Docker</label>
 					</div>
+					<div class="field-row">
+						<input type="checkbox" id="field-row-tool-6" onclick="return false;" checked>
+						<label for="field-row-tool-6">AquaShell</label>
+					</div>
 				</fieldset>
 
 				<fieldset>
