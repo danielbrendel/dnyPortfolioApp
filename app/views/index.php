@@ -168,15 +168,19 @@
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-lang-6" onclick="return false;" checked>
-						<label for="field-row-lang-6">Java (Android)</label>
+						<label for="field-row-lang-6">dnyScript</label>
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-lang-7" onclick="return false;" checked>
-						<label for="field-row-lang-7">CSS</label>
+						<label for="field-row-lang-7">Java (Android)</label>
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-lang-8" onclick="return false;" checked>
-						<label for="field-row-lang-8">HTML</label>
+						<label for="field-row-lang-8">CSS</label>
+					</div>
+					<div class="field-row">
+						<input type="checkbox" id="field-row-lang-9" onclick="return false;" checked>
+						<label for="field-row-lang-9">HTML</label>
 					</div>
 				</fieldset>
 
