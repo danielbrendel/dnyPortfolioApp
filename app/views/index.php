@@ -210,10 +210,6 @@
 						<input type="checkbox" id="field-row-fw-7" onclick="return false;" checked>
 						<label for="field-row-fw-7">Bulma</label>
 					</div>
-					<div class="field-row">
-						<input type="checkbox" id="field-row-fw-8" onclick="return false;" checked>
-						<label for="field-row-fw-8">Phaser</label>
-					</div>
 				</fieldset>
 
 				<fieldset>
