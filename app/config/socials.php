@@ -2,37 +2,37 @@
 
 return [
     [
-        'link' => env('LINK_SOCIAL_GITHUB'),
-        'ident' => 'github'
+        'url' => env('LINK_SOCIAL_GITHUB'),
+        'class' => 'github'
     ],
 
     [
-        'link' => env('LINK_SOCIAL_STEAM'),
-        'ident' => 'steam'
+        'url' => env('LINK_SOCIAL_STEAM'),
+        'class' => 'steam'
     ],
 
     [
-        'link' => env('LINK_SOCIAL_ITCHIO'),
-        'ident' => 'itch-io'
+        'url' => env('LINK_SOCIAL_ITCHIO'),
+        'class' => 'itch-io'
     ],
 
     [
-        'link' => env('LINK_SOCIAL_YOUTUBE'),
-        'ident' => 'youtube'
+        'url' => env('LINK_SOCIAL_YOUTUBE'),
+        'class' => 'youtube'
     ],
 
     [
-        'link' => env('LINK_SOCIAL_LINKEDIN'),
-        'ident' => 'linkedin'
+        'url' => env('LINK_SOCIAL_LINKEDIN'),
+        'class' => 'linkedin'
     ],
 
     [
-        'link' => env('LINK_SOCIAL_MASTODON'),
-        'ident' => 'mastodon'
+        'url' => env('LINK_SOCIAL_MASTODON'),
+        'class' => 'mastodon'
     ],
 
     [
-        'link' => env('LINK_SOCIAL_INSTAGRAM'),
-        'ident' => 'instagram'
+        'url' => env('LINK_SOCIAL_INSTAGRAM'),
+        'class' => 'instagram'
     ]
 ];
