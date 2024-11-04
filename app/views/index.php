@@ -300,13 +300,11 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<a class="btn btn-social color-github" href="{{ env('LINK_SOCIAL_GITHUB') }}" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-				<a class="btn btn-social color-steam" href="{{ env('LINK_SOCIAL_STEAM') }}" target="_blank"><i class="fab fa-steam fa-lg"></i></a>
-				<a class="btn btn-social color-itchio" href="{{ env('LINK_SOCIAL_ITCHIO') }}" target="_blank"><i class="fab fa-itch-io fa-lg"></i></a>
-				<a class="btn btn-social color-youtube" href="{{ env('LINK_SOCIAL_YOUTUBE') }}" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
-				<a class="btn btn-social color-linkedin" href="{{ env('LINK_SOCIAL_LINKEDIN') }}" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-				<a class="btn btn-social color-mastodon" href="{{ env('LINK_SOCIAL_MASTODON') }}" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
-				<a class="btn btn-social color-instagram" href="{{ env('LINK_SOCIAL_INSTAGRAM') }}" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+				@foreach (config('socials') as $social)
+					@if ((is_string($social->link)) && (strlen($social->link) > 0))
+						<a class="btn btn-social color-{{ $social->ident }}" href="{{ $social->link }}" target="_blank"><i class="fab fa-{{ $social->ident }} fa-lg"></i></a>
+					@endif
+				@endforeach
 			</div>
 		</div>
 	</div>
