@@ -17,6 +17,11 @@ return [
     ],
 
     [
+        'url' => env('LINK_SOCIAL_MASTODON'),
+        'class' => 'mastodon'
+    ],
+
+    [
         'url' => env('LINK_SOCIAL_YOUTUBE'),
         'class' => 'youtube'
     ],
@@ -24,11 +29,6 @@ return [
     [
         'url' => env('LINK_SOCIAL_LINKEDIN'),
         'class' => 'linkedin'
-    ],
-
-    [
-        'url' => env('LINK_SOCIAL_MASTODON'),
-        'class' => 'mastodon'
     ],
 
     [
