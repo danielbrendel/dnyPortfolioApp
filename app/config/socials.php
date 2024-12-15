@@ -22,6 +22,11 @@ return [
     ],
 
     [
+        'url' => env('LINK_SOCIAL_BLUESKY'),
+        'class' => 'bluesky'
+    ],
+
+    [
         'url' => env('LINK_SOCIAL_YOUTUBE'),
         'class' => 'youtube'
     ],
