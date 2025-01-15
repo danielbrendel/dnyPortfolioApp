@@ -18,9 +18,9 @@
     "prefer-stable": true,
 	"require": {
         "php": "^8.3",
-		"danielbrendel/asatru-php-framework": "^1.2",
+		"danielbrendel/asatru-php-framework": "^1.5",
         "phpmailer/phpmailer": "^6.1",
-        "nesbot/carbon": "^2.0"
+        "nesbot/carbon": "^3.0"
     },
 	"scripts": {
 		"post-root-package-install": [
