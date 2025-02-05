@@ -326,6 +326,11 @@ table td a:hover {
     max-width: 100%;
 }
 
+.blog-post-content-text ul, .blog-post-content-text ol {
+    margin-top: -5px;
+    margin-bottom: -20px;
+}
+
 .blog-post-content-footer {
     position: relative;
     margin-bottom: 10px;
