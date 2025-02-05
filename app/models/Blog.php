@@ -48,7 +48,7 @@ class Blog extends \Asatru\Database\Model {
         try {
             $lastId = (int)static::raw('SELECT * FROM `@THIS` ORDER BY id DESC')->first()?->get('id');
             
-            $slug = slug(($lastId + 1) . ' ' . $title); 
+            $slug = slug(($lastId + 1) . ' ' . preg_replace('/[\x{1F300}-\x{1F6FF}\x{1F900}-\x{1F9FF}]/u', '', $title));
 
             static::insert('slug', $slug)->insert('title', $title)->insert('content', $content)->go();
 
