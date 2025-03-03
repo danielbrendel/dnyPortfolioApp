@@ -23,7 +23,7 @@
 				</table>
 			</div>
 
-            <p><a href="{{ url('/#blog-list') }}">Go Back</a></p>
+            <p><a class="btn btn-fixed-padding" href="{{ url('/#blog-list') }}">Go Back</a></p>
 		</div>
 	</div>
 </div>
