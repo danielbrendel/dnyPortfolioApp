@@ -75,7 +75,7 @@
 				</table>
 			</div>
 
-			<p><a href="{{ url('/blog') }}">View more</a></p>
+			<p><a class="btn btn-fixed-padding" href="{{ url('/blog') }}">View more</a></p>
 		</div>
 	</div>
 </div>

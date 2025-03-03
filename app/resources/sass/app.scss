@@ -73,6 +73,13 @@ body {
     margin-right: 5px;
 }
 
+.btn-fixed-padding {
+    padding-top: 5px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px !important;
+}
+
 .window-body, .window-body button {
     font-family: Arial;
     font-size: 15px;
