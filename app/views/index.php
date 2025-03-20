@@ -14,7 +14,7 @@
 			</div>
 			
 			<div class="window-content-frame window-content-frame-text">
-				<p>Hey there! I am <strong>Daniel Brendel</strong>, an indie software developer and project founder!</p>
+				<p>Hey there! I am <strong>Daniel Brendel</strong>, a senior indie software developer and project founder!</p>
 
 				<p>
 					I love creating complex software products in various fields such as web development, game development and application development. 
