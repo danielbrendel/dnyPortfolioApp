@@ -353,12 +353,26 @@ table td a:hover {
 }
 
 .blog-post-submit-title input {
-    width: 97%;
+    width: 98%;
 }
 
 .blog-post-submit-content textarea {
-    width: 97%;
+    width: 98%;
     min-height: 350px;
+}
+
+.blog-post-submit-checkbox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-post-submit-tags {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.blog-post-submit-tags input {
+    width: 98%;
 }
 
 .blog-post-submit-action {

@@ -158,12 +158,18 @@ class BlogController extends BaseController {
 			$token = $request->params()->query('token', null);
 			$title = $request->params()->query('title', null);
 			$content = $request->params()->query('content', null);
-
+			$sharing = (bool)$request->params()->query('sharing', false);
+			$tags = $request->params()->query('tags', '');
+			
 			if ($token !== env('APP_ADMIN_ACCESS_TOKEN')) {
 				throw new \Exception('Access denied');
 			}
 
 			$post = Blog::submit($title, $content);
+
+			if ($sharing) {
+				Sharing::mastodon($title, url('/blog/' . $post->get('slug')), $tags);
+			}
 
             return redirect('/blog/' . $post->get('slug'));
 		} catch (\Exception $e) {
