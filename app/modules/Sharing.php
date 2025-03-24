@@ -60,7 +60,27 @@ class Sharing
             $password = env('BLUESKY_PASSWORD');
 
             $text = "🚀 I have published a new blog post:\n\n$title\n\n➡️ Read it here:\n$url\n\n$tags";
-            
+            $urlpos = strpos($text, $url);
+            $taglist = explode(' ', $tags);
+            $tagfacet = [];
+
+            foreach ($taglist as $tag) {
+                $tagstart = strpos($text, $tag);
+
+                $tagfacet[] = [
+                    'index' => [
+                        'byteStart' => (int)$tagstart,
+                        'byteEnd' => $tagstart + strlen($tag)
+                    ],
+                    'features' => [
+                        [
+                            '$type' => 'app.bsky.richtext.facet#tag',
+                            'tag' => substr($tag, 1)
+                        ]
+                    ]
+                ];
+            }
+
             $response = Network::remoteRequest($instance . '/xrpc/com.atproto.server.createSession', [
                 'header' => [
                     'Content-Type: application/json'
@@ -76,6 +96,25 @@ class Sharing
             if ((!isset($session->accessJwt)) || (!isset($session->did))) {
                 throw new \Exception('accessJwt or did are missing: ' . print_r($response, true));
             }
+
+            $facets = [
+                [
+                    'index' => [
+                        'byteStart' => (int)$urlpos,
+                        'byteEnd' => $urlpos + strlen($url)
+                    ],
+                    'features' => [
+                        [
+                            '$type' => 'app.bsky.richtext.facet#link',
+                            'uri' => $url
+                        ]
+                    ]
+                ]
+            ];
+
+            if (strlen($tags) > 0) {
+                $facets = array_merge($facets, $tagfacet);
+            }
             
             $response = Network::remoteRequest($instance . '/xrpc/com.atproto.repo.createRecord', [
                 'header' => [
@@ -88,11 +127,12 @@ class Sharing
                     'record' => [
                         'type' => 'app.bsky.feed.post',
                         'text' => $text,
-                        'createdAt' => gmdate("Y-m-d\TH:i:s\Z")
+                        'createdAt' => gmdate("Y-m-d\TH:i:s\Z"),
+                        'facets' => $facets
                     ]
                 ])
             ]);
-
+            
             if (!isset($response['data'])) {
                 throw new \Exception('Request failed: ' . print_r($response, true));
             }
