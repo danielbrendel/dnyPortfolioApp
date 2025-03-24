@@ -16,8 +16,8 @@ class Sharing
     public static function mastodon($title, $url, $tags = '')
     {
         try {
-            $server_instance = env('MASTODONBOT_SERVER_INSTANCE');
-            $access_token = env('MASTODONBOT_ACCESS_TOKEN');
+            $server_instance = env('MASTODON_SERVER_INSTANCE');
+            $access_token = env('MASTODON_ACCESS_TOKEN');
 
             $text = "🚀 I have published a new blog post:\n\n$title\n\n➡️ Read it here:\n$url\n\n$tags";
 
