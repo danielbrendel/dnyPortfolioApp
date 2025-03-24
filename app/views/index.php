@@ -142,7 +142,7 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<p>I have profound practical experience in the following fields of technology</p>
+				<p>I have profound practical experience using the following technologies</p>
 
 				<fieldset>
 					<legend>Languages</legend>
@@ -191,6 +191,10 @@
 						<label for="field-row-fw-1">Laravel</label>
 					</div>
 					<div class="field-row">
+						<input type="checkbox" id="field-row-fw-1" onclick="return false;" checked>
+						<label for="field-row-fw-1">AsatruPHP</label>
+					</div>
+					<div class="field-row">
 						<input type="checkbox" id="field-row-fw-2" onclick="return false;" checked>
 						<label for="field-row-fw-2">PHPUnit</label>
 					</div>
@@ -233,6 +237,10 @@
 					<div class="field-row">
 						<input type="checkbox" id="field-row-tool-4" onclick="return false;" checked>
 						<label for="field-row-tool-4">npm</label>
+					</div>
+					<div class="field-row">
+						<input type="checkbox" id="field-row-tool-4" onclick="return false;" checked>
+						<label for="field-row-tool-4">nodejs</label>
 					</div>
 					<div class="field-row">
 						<input type="checkbox" id="field-row-tool-5" onclick="return false;" checked>
