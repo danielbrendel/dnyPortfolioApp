@@ -85,6 +85,10 @@ class BlogController extends BaseController {
 			$slug = $request->arg('slug');
 
 			$post = Blog::fromSlug($slug);
+			if (!$post) {
+				throw new \Exception('Post not found: ' . $slug);
+			}
+
 			$visitcount = Utils::getVisitorCount();
 
             return parent::view(['content', 'blog/view'], [
