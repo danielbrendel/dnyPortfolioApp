@@ -62,24 +62,7 @@ class Sharing
             $text = "🚀 I have published a new blog post:\n\n$title\n\n➡️ Read it here:\n$url\n\n$tags";
             $urlpos = strpos($text, $url);
             $taglist = explode(' ', $tags);
-            $tagfacet = [];
-
-            foreach ($taglist as $tag) {
-                $tagstart = strpos($text, $tag);
-
-                $tagfacet[] = [
-                    'index' => [
-                        'byteStart' => (int)$tagstart,
-                        'byteEnd' => $tagstart + strlen($tag)
-                    ],
-                    'features' => [
-                        [
-                            '$type' => 'app.bsky.richtext.facet#tag',
-                            'tag' => substr($tag, 1)
-                        ]
-                    ]
-                ];
-            }
+            $tagfacets = [];
 
             $response = Network::remoteRequest($instance . '/xrpc/com.atproto.server.createSession', [
                 'header' => [
@@ -113,7 +96,24 @@ class Sharing
             ];
 
             if (strlen($tags) > 0) {
-                $facets = array_merge($facets, $tagfacet);
+                foreach ($taglist as $tag) {
+                    $tagstart = strpos($text, $tag);
+    
+                    $tagfacets[] = [
+                        'index' => [
+                            'byteStart' => (int)$tagstart,
+                            'byteEnd' => $tagstart + strlen($tag)
+                        ],
+                        'features' => [
+                            [
+                                '$type' => 'app.bsky.richtext.facet#tag',
+                                'tag' => substr($tag, 1)
+                            ]
+                        ]
+                    ];
+                }
+
+                $facets = array_merge($facets, $tagfacets);
             }
             
             $response = Network::remoteRequest($instance . '/xrpc/com.atproto.repo.createRecord', [
