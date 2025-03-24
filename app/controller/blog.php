@@ -168,7 +168,7 @@ class BlogController extends BaseController {
 			$post = Blog::submit($title, $content);
 
 			if ($sharing) {
-				Sharing::mastodon($title, url('/blog/' . $post->get('slug')), $tags);
+				Sharing::all($title, url('/blog/' . $post->get('slug')), $tags);
 			}
 
             return redirect('/blog/' . $post->get('slug'));
