@@ -25,7 +25,7 @@
         <div class="content">
             {%content%}
         </div>
-		<script src="{{ asset('js/app.js') }}"></script>
+		<script src="{{ asset('js/app.js', true) }}"></script>
         <script>
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
             window.switchProjectTab = function(which) {
