@@ -47,4 +47,25 @@ class Utils {
             throw $e;
         }
     }
+
+    /**
+     * @param $file
+     * @return mixed|null
+     */
+    public static function getImageExt($file)
+    {
+        $imagetypes = [
+            'png' => IMAGETYPE_PNG,
+            'jpg' => IMAGETYPE_JPEG,
+            'gif' => IMAGETYPE_GIF
+        ];
+
+        foreach ($imagetypes as $ext => $type) {
+            if (exif_imagetype($file) === $type) {
+                return $ext;
+            }
+        }
+
+        return null;
+    }
 }

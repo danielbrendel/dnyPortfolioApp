@@ -32,6 +32,7 @@ class Blog_Migration {
         $this->database->add('slug VARCHAR(512) NOT NULL');
         $this->database->add('title VARCHAR(512) NOT NULL');
         $this->database->add('content TEXT NOT NULL');
+        $this->database->add('metaimg VARCHAR(512) NULL');
         $this->database->add('active BOOLEAN NOT NULL DEFAULT 1');
         $this->database->add('updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP');
         $this->database->add('created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP');

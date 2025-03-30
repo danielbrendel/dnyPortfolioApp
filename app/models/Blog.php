@@ -50,7 +50,23 @@ class Blog extends \Asatru\Database\Model {
             
             $slug = slug(($lastId + 1) . ' ' . preg_replace('/[\x{1F300}-\x{1F6FF}\x{1F900}-\x{1F9FF}]/u', '', $title));
 
-            static::insert('slug', $slug)->insert('title', $title)->insert('content', $content)->go();
+            $metaimg = null;
+
+            if ((isset($_FILES['metaimg'])) && ($_FILES['metaimg']['error'] === UPLOAD_ERR_OK)) {
+                $file_ext = Utils::getImageExt($_FILES['metaimg']['tmp_name']);
+
+                if ($file_ext === null) {
+                    throw new \Exception('File is not a valid image');
+                }
+
+                $file_name = md5(random_bytes(55) . date('Y-m-d H:i:s'));
+
+                move_uploaded_file($_FILES['metaimg']['tmp_name'], public_path('/img/uploads/' . $file_name . '.' . $file_ext));
+
+                $metaimg = $file_name . '.' . $file_ext;
+            }
+
+            static::insert('slug', $slug)->insert('title', $title)->insert('content', $content)->insert('metaimg', $metaimg)->go();
 
             return static::where('slug', '=', $slug)->first();
         } catch (\Exception $e) {

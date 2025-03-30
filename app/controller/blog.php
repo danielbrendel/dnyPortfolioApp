@@ -96,7 +96,8 @@ class BlogController extends BaseController {
 				'visitcount' => $visitcount,
 				'_meta_title' => $post->get('title') . ' | ' . env('APP_AUTHOR') . ' | Blog',
 				'_meta_description' => str_replace("\r\n", '  ', substr($post->get('content'), 0, 63)) . '...',
-				'_meta_url' => url('/blog/' . $post->get('slug'))
+				'_meta_url' => url('/blog/' . $post->get('slug')),
+				'_meta_image' => $post->get('metaimg')
 			]);
 		} catch (\Exception $e) {
 			return redirect('/');

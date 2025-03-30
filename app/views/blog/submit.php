@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="window-body blog-post-submit">
-			<form method="POST" action="{{ url('/blog/posts/submit') }}">
+			<form method="POST" action="{{ url('/blog/posts/submit') }}" enctype="multipart/form-data">
                 @csrf
 
                 <input type="hidden" name="token" value="{{ $token }}"/>
@@ -20,6 +20,10 @@
 
                 <div class="blog-post-submit-content is-stretched">
                     <textarea name="content" id="blog-post-content" placeholder="What's on your mind?"></textarea>
+                </div>
+
+				<div class="blog-post-submit-metaimg is-stretched">
+                    <span>Meta preview image</span> <span><input type="file" name="metaimg" accept="image/png, image/jpeg"/></span>
                 </div>
 
 				<div class="blog-post-submit-checkbox field-row">
