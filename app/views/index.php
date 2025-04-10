@@ -25,8 +25,9 @@
 				<p> If you want to work together or want to negotiate a project/job, please feel free to contact me via the button below.</p>
 				
 				<p>
-					When I am not developing software, I also like to do sports (mostly weight lifting and cardio), blogging about visits of medieval markets
-					and fantasy fairs, playing video games, listening to music and enjoying a tasty Cappuccino.
+					I also like to do sports (mostly weight lifting and cardio), playing video games, attending fairs of the nerd culture, 
+					listening to music and enjoying a tasty coffee. I like to read about various scientific topics and I'm also interested
+					in various philosophical debates.
 				</p>
 
 				@if ((env('APP_GITHUB_SPONSOR')) || (env('APP_DONATION_KOFI')))
