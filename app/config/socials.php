@@ -34,10 +34,5 @@ return [
     [
         'url' => env('LINK_SOCIAL_LINKEDIN'),
         'class' => 'linkedin'
-    ],
-
-    [
-        'url' => env('LINK_SOCIAL_INSTAGRAM'),
-        'class' => 'instagram'
     ]
 ];

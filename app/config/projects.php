@@ -20,9 +20,6 @@ return [
         'description' => 
             'Mittelalter Events was a german social network for medieval market fans, fantasy fans and LARPers. It featured upcoming events, gallery, forums, market place, messaging and many more.',
         'links' => [
-            /*'Homepage' => env('PL_MITTELALTEREVENTS_HOMEPAGE'),
-            'Android App' => env('PL_MITTELALTEREVENTS_ANDROIDAPP'),
-            'Instagram' => env('PL_MITTELALTEREVENTS_INSTAGRAM')*/
         ]
     ],
 
