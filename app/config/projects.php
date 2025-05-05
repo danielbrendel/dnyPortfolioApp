@@ -72,8 +72,11 @@ return [
             That\'s why Casual Desktop Game has been created. To bring back the old fun in a new and modern shape - which means downloadable community content and other community features. Thus the game is freely available to download and play via Steam.
             Casual Desktop Game features AngelScript to create tools/entities.',
         'links' => [
-            'Steam' => env('PL_CDG_STEAM'),
             'Homepage' => env('PL_CDG_HOMEPAGE'),
+            'Steam' => env('PL_CDG_STEAM'),
+            'itch.io' => env('PL_CDG_ITCHIO'),
+            'IndieDB' => env('PL_CDG_INDIEDB'),
+            'Game Jolt' => env('PL_CDG_GAMEJOLT')
         ]
     ],
 
@@ -86,7 +89,9 @@ return [
             The game is based on the Casual Game Engine, a top-down 2D game engine.',
         'links' => [
             'Steam' => env('PL_CPW_STEAM'),
-            'Homepage' => env('PL_CPW_HOMEPAGE'),
+            'itch.io' => env('PL_CPW_ITCHIO'),
+            'IndieDB' => env('PL_CPW_INDIEDB'),
+            'Game Jolt' => env('PL_CPW_GAMEJOLT')
         ]
     ],
 
@@ -105,7 +110,10 @@ return [
         'description' => 
             'Hyper Frenzy is a free arena-styled singleplayer 2D space shooter using top-down perspective. Fight in different modes against bots, collect various items and use one of the plenty weapons to defeat your opponents. Create your own maps and gametypes.',
         'links' => [
-            'Steam' => env('PL_HFG_STEAM')
+            'Steam' => env('PL_HFG_STEAM'),
+            'itch.io' => env('PL_HFG_ITCHIO'),
+            'IndieDB' => env('PL_HFG_INDIEDB'),
+            'Game Jolt' => env('PL_HFG_GAMEJOLT')
         ]
     ],
 
