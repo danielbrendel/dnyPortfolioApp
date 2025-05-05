@@ -17,9 +17,11 @@
 				<p>Hey there! I am <strong>Daniel Brendel</strong>, a senior indie software developer and project founder!</p>
 
 				<p>
-					I love creating complex software products in various fields such as web development, game development and application development. 
-					My main languages are PHP and C++ along with various other technologies. I founded various projects and still like to invent more projects.
-					I am an OpenSource advocate and like to promote the idea of FOSS products.
+					I love creating complex software products across a range of fields, including web development, game development and application development. 
+					While I work with many programming languages, PHP and C++ are my main ones. 
+					Over the years, I've founded various projects and am excited to create more. 
+					I have strong expertise in designing and building complex software ecosystems. 
+					I'm furthermore an open-source advocate and passionate about promoting the values of Free and Open-Source Software.
 				</p>
 
 				<p> If you want to work together or want to negotiate a project/job, please feel free to contact me via the button below.</p>

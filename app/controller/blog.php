@@ -90,7 +90,7 @@ class BlogController extends BaseController {
 			}
 
 			$visitcount = Utils::getVisitorCount();
-			$viewers = Utils::getViewerCount();
+			$viewers = Utils::getViewerCount($slug);
 
             return parent::view(['content', 'blog/view'], [
 				'post' => $post,

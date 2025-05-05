@@ -16,10 +16,19 @@ return [
     ],
 
     [
-        'name' => 'Mittelalter-Events',
+        'name' => 'Actifisys',
         'description' => 
-            'Mittelalter Events was a german social network for medieval market fans, fantasy fans and LARPers. It featured upcoming events, gallery, forums, market place, messaging and many more.',
+            'Actifisys is a social network that revolves around activities and events. The system lets users create and join activities. Users can set themselves interested in an activity or join them. Activities whose activity date is in the future are listed in a feed. Users can comment on activities, send private messages, manage their favorites and receive notifications. There is also a forum, gallery and market place available.',
         'links' => [
+            'GitHub' => env('PL_ACTIFISYS_GITHUB')
+        ]
+    ],
+
+    [
+        'name' => 'Danigram',
+        'description' => 'Danigram is a social network system. Users can register and share posts consisting of formatted text and/or images/videos using hashtags. Users can comment on posts, like posts, comments and hashtags and mention users. Users can add favorites for hashtags and users. There is also profile management, member search, forum, stories, private messaging, notification system, e-mail system and more. The system comes with a friendly installer.',
+        'links' => [
+            'GitHub' => env('PL_DANIGRAM_GITHUB')
         ]
     ],
 
@@ -126,4 +135,12 @@ return [
             'Documentation' => env('PL_ASATRUPHP_DOCUMENTATION'),
         ]
     ],
+
+    [
+        'name' => 'CorvusChat',
+        'description' => 'C++ rich-featured chat server system featuring chat-rooms (channels), private messaging, MOTD, server browser, administration, RCON, plugin system, self-updater and more.',
+        'links' => [
+            'GitHub' => env('PL_CORVUSCHAT_GITHUB')
+        ]
+    ]
 ];
