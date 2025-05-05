@@ -29,7 +29,8 @@
 			</div>
 
 			<div class="blog-post-content-footer">
-				<a href="{{ url('/blog') }}">Back to list</a>
+				<span><a href="{{ url('/blog') }}">Back to list</a></span>
+				<span><i class="fas fa-eye"></i>&nbsp;{{ $viewers }}</span>
 			</div>
 		</div>
 	</div>

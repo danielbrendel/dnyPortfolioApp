@@ -30,6 +30,7 @@ class Counter_Migration {
         $this->database->drop();
         $this->database->add('id INT NOT NULL AUTO_INCREMENT PRIMARY KEY');
         $this->database->add('visitor_token VARCHAR(512) NOT NULL');
+        $this->database->add('request_uri VARCHAR(1024) NULL');
         $this->database->add('updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP');
         $this->database->add('created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP');
         $this->database->create();

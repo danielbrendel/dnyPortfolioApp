@@ -90,10 +90,12 @@ class BlogController extends BaseController {
 			}
 
 			$visitcount = Utils::getVisitorCount();
+			$viewers = Utils::getViewerCount();
 
             return parent::view(['content', 'blog/view'], [
 				'post' => $post,
 				'visitcount' => $visitcount,
+				'viewers' => $viewers,
 				'_meta_title' => $post->get('title') . ' | ' . env('APP_AUTHOR') . ' | Blog',
 				'_meta_description' => str_replace("\r\n", '  ', substr($post->get('content'), 0, 63)) . '...',
 				'_meta_url' => url('/blog/' . $post->get('slug')),

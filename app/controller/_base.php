@@ -22,6 +22,12 @@ class BaseController extends Asatru\Controller\Controller {
 		if ($layout !== '') {
 			$this->layout = $layout;
 		}
+
+		try {
+			Counter::addCount();
+		} catch (\Exception $e) {
+			addLog(ASATRU_LOG_WARNING, $e->getMessage());
+		}
 	}
 
 	/**

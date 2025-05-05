@@ -23,6 +23,20 @@ class Utils {
 			return 0;
 		}
     }
+
+    /**
+     * @return int
+     */
+    public static function getViewerCount()
+    {
+        try {
+			return Cache::remember('viewer_counter', (int)env('APP_CACHE_DURATION', 125), function() {
+				return Utils::countAsString(Counter::getForRequestUri($_SERVER['REQUEST_URI']));
+			});
+		} catch (\Exception $e) {
+			return 0;
+		}
+    }
     
     /**
      * @param $count

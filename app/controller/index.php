@@ -20,12 +20,6 @@ class IndexController extends BaseController {
 	public function __construct()
 	{
 		parent::__construct(self::INDEX_LAYOUT);
-
-		try {
-			Counter::addCount();
-		} catch (\Exception $e) {
-			addLog(ASATRU_LOG_WARNING, $e->getMessage());
-		}
 	}
 
 	/**
