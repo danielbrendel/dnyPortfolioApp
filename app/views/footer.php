@@ -12,7 +12,7 @@
 			<div class="is-centered">&copy; {{ date('Y') }} by {{ env('APP_AUTHOR') }}</div>
 		</div>
 		<div class="status-bar">
-			<p class="status-bar-field"><i>Scientia potentia est</i></p>
+			<p class="status-bar-field"><i>{{ env('APP_SLOGAN') }}</i></p>
 			<p class="status-bar-field status-bar-field-middle">Visitors: {{ $visitcount }}</p>
 			<p class="status-bar-field status-bar-field-right" id="update-current-time"></p>
 		</div>
