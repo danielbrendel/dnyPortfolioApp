@@ -12,7 +12,7 @@
         <meta name="og:url" property="og:url" content="{{ (isset($_meta_url)) ? $_meta_url : url('/') }}">
         <meta name="og:image" property="og:image" content="{{ (isset($_meta_image)) ? asset('img/uploads/' . $_meta_image) : asset('img/logo.png') }}">
 
-        <title>Daniel Brendel | Indie Software Developer & Project Founder</title>
+        <title>{{ env('APP_TITLE') }}</title>
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/98.min.css') }}"/>
 
