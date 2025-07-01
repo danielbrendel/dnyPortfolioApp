@@ -34,6 +34,7 @@ class Shoutbox_Migration {
         $this->database->add('id INT NOT NULL AUTO_INCREMENT PRIMARY KEY');
         $this->database->add('username VARCHAR(512) NOT NULL');
         $this->database->add('message TEXT NOT NULL');
+        $this->database->add('used BOOLEAN NOT NULL DEFAULT 0');
         $this->database->add('updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP');
         $this->database->add('created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP');
         $this->database->create();
