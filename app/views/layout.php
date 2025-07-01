@@ -121,6 +121,26 @@
                 }
             }
 
+            window.queryShout = function(target) {
+                let container = document.querySelector(target);
+                if (container) {
+                    window.ajaxRequest('get', '{{ url('/shoutbox/query') }}', {}, function(response) {
+                        if (response.code == 200) {
+                            let tableEntry = `
+                                <tr>
+                                    <td>` + response.shout.username + `</td>
+                                    <td>` + response.shout.message + `</td>
+                                </tr>
+                            `;
+
+                            container.children[0].innerHTML += tableEntry;
+
+                            container.scrollTop = container.scrollHeight 
+                        }
+                    });
+                }
+            }
+
             document.addEventListener('DOMContentLoaded', function() {
                 window.switchProjectTab(1);
 
@@ -149,6 +169,10 @@
 					}
 				});
 				window.hljs.highlightAll();
+
+                window.shoutboxInterval = setInterval(() => {
+                    window.queryShout('.sunken-panel-shoutbox');
+                }, 4000);
             });
         </script>
     </body>

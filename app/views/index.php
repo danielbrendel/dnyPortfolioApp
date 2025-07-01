@@ -329,4 +329,39 @@
 	</div>
 </div>
 
+<div class="column is-half" id="column-window-shoutbox">
+	<div class="window">
+		<div class="title-bar">
+			<div class="title-bar-text">Shoutbox</div>
+			<div class="title-bar-controls">
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-shoutbox', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-shoutbox', 'window-maximized');"></button>
+				<button aria-label="Close"></button>
+			</div>
+		</div>
+		<div class="window-body">
+			<div class="is-centered">
+				<div class="sunken-panel sunken-panel-shoutbox">
+					<table class="interactive">
+						<thead>
+							<tr>
+								<th>Username</th>
+								<th class="is-stretched">Message</th>
+							</tr>
+						</thead>
+						<tbody id="shoutbox-messages">
+							@foreach ($shouts as $shout)
+								<tr>
+                                    <td>{{ $shout->get('username') }}</td>
+                                    <td>{{ $shout->get('message') }}</td>
+                                </tr>
+							@endforeach
+						</tobdy>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 @include('footer.php')

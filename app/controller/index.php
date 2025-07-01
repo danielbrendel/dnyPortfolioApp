@@ -31,10 +31,12 @@ class IndexController extends BaseController {
 	public function index($request)
 	{
 		$projects = config('projects', false);
+		$shouts = Shoutbox::pickMessages(10);
 		$visitcount = Utils::getVisitorCount();
 
 		return parent::view(['content', 'index'], [
 			'projects' => $projects,
+			'shouts' => $shouts,
 			'visitcount' => $visitcount
 		]);
 	}
