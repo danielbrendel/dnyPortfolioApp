@@ -329,6 +329,7 @@
 	</div>
 </div>
 
+@if (env('APP_ENABLE_SHOUTBOX'))
 <div class="column is-half" id="column-window-shoutbox">
 	<div class="window">
 		<div class="title-bar">
@@ -363,5 +364,6 @@
 		</div>
 	</div>
 </div>
+@endif
 
 @include('footer.php')

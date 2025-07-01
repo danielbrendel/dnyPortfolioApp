@@ -170,9 +170,11 @@
 				});
 				window.hljs.highlightAll();
 
+                @if (env('APP_ENABLE_SHOUTBOX'))
                 window.shoutboxInterval = setInterval(() => {
                     window.queryShout('.sunken-panel-shoutbox');
                 }, 4000);
+                @endif
             });
         </script>
     </body>
