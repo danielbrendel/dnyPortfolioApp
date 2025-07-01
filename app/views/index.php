@@ -341,26 +341,26 @@
 			</div>
 		</div>
 		<div class="window-body">
-			<div class="is-centered">
-				<div class="sunken-panel sunken-panel-shoutbox">
-					<table class="interactive">
-						<thead>
+			<div class="sunken-panel sunken-panel-shoutbox">
+				<table class="interactive">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th class="is-stretched">Message</th>
+						</tr>
+					</thead>
+					<tbody id="shoutbox-messages">
+						@foreach ($shouts as $shout)
 							<tr>
-								<th>Username</th>
-								<th class="is-stretched">Message</th>
+								<td>{{ $shout->get('username') }}</td>
+								<td>{{ $shout->get('message') }}</td>
 							</tr>
-						</thead>
-						<tbody id="shoutbox-messages">
-							@foreach ($shouts as $shout)
-								<tr>
-                                    <td>{{ $shout->get('username') }}</td>
-                                    <td>{{ $shout->get('message') }}</td>
-                                </tr>
-							@endforeach
-						</tobdy>
-					</table>
-				</div>
+						@endforeach
+					</tobdy>
+				</table>
 			</div>
+
+			<p><a class="btn btn-fixed-padding" href="javascript:void(0);" onclick="clearInterval(window.shoutboxInterval); this.parentNode.remove();">Stop updates</a></p>
 		</div>
 	</div>
 </div>
