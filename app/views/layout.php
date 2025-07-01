@@ -173,7 +173,7 @@
                 @if (env('APP_ENABLE_SHOUTBOX'))
                 window.shoutboxInterval = setInterval(() => {
                     window.queryShout('.sunken-panel-shoutbox');
-                }, 4000);
+                }, {{ env('APP_SHOUTBOX_DELAY', 5000) }});
                 @endif
             });
         </script>
