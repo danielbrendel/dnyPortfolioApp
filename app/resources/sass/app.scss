@@ -402,6 +402,10 @@ table td a:hover {
 }
 
 .sunken-panel-shoutbox {
-    max-height: 200px;
+    max-height: 190px;
     overflow-y: auto;
+}
+
+.sunken-panel-shoutbox table.interactive > tbody > tr {
+    cursor: default;
 }
