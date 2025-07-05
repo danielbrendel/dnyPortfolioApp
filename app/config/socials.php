@@ -12,23 +12,8 @@ return [
     ],
 
     [
-        'url' => env('LINK_SOCIAL_ITCHIO'),
-        'class' => 'itch-io'
-    ],
-
-    [
-        'url' => env('LINK_SOCIAL_MASTODON'),
-        'class' => 'mastodon'
-    ],
-
-    [
         'url' => env('LINK_SOCIAL_BLUESKY'),
         'class' => 'bluesky'
-    ],
-
-    [
-        'url' => env('LINK_SOCIAL_YOUTUBE'),
-        'class' => 'youtube'
     ],
 
     [
