@@ -321,7 +321,7 @@
 			<div class="is-centered">
 				@foreach (config('socials') as $social)
 					@if ((is_string($social->url)) && (strlen($social->url) > 0))
-						<a class="btn btn-social color-{{ $social->class }}" href="{{ $social->url }}" target="_blank"><i class="fab fa-{{ $social->class }} fa-lg"></i></a>
+						<a class="btn btn-social color-{{ $social->class }}" href="{{ $social->url }}" target="_blank"><i class="fab fa-{{ $social->class }} fa-lg"></i>&nbsp;{{ $social->name }}</a>
 					@endif
 				@endforeach
 			</div>

@@ -213,10 +213,9 @@ a.btn:not(:disabled):active {
 }
 
 a.btn-social {
-    min-width: 55px;
+    min-width: 95px;
     padding-top: 12px;
     @media screen and (max-width: 555px) {
-        min-width: 95px;
         margin-bottom: 3px;
     }
 }
