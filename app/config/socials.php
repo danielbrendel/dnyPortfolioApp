@@ -23,5 +23,17 @@ return [
         'name' => 'LinkedIn',
         'url' => env('LINK_SOCIAL_LINKEDIN'),
         'class' => 'linkedin'
+    ],
+
+    [
+        'name' => 'YouTube',
+        'url' => env('LINK_SOCIAL_YOUTUBE'),
+        'class' => 'youtube'
+    ],
+
+    [
+        'name' => 'itch.io',
+        'url' => env('LINK_SOCIAL_ITCHIO'),
+        'class' => 'itch-io'
     ]
 ];
