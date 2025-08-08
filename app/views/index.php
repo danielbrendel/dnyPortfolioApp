@@ -14,22 +14,26 @@
 			</div>
 			
 			<div class="window-content-frame window-content-frame-text">
-				<p>Hey there! I am <strong>Daniel Brendel</strong>, a senior indie software developer and project founder!</p>
+				<p>Hey there! I'm <strong>Daniel Brendel</strong>, a senior indie software developer and project founder!</p>
 
 				<p>
-					I love creating complex software products across a range of fields, including web development, game development and application development. 
+					I love creating complex software products across a range of fields, including web development, game development, and application development. 
 					While I work with many programming languages, PHP and C++ are my main ones. 
 					Over the years, I've founded various projects and am excited to create more. 
 					I have strong expertise in designing and building complex software ecosystems. 
-					I'm furthermore an open-source advocate and passionate about promoting the values of Free and Open-Source Software.
+					I'm also an open-source advocate and passionate about promoting the values of Free and Open-Source Software.
 				</p>
 
-				<p> If you want to work together or want to negotiate a project/job, please feel free to contact me via the button below.</p>
+				<p> If you want to discuss a potential project or job, please feel free to contact me via the button below.</p>
 				
 				<p>
-					I also like to do sports (mostly weight lifting and cardio), playing video games, attending fairs of the nerd culture, 
-					listening to music and enjoying a tasty coffee. I like to read about various scientific topics and I'm also interested
+					Outside of my profession, I enjoy sports (mostly weightlifting and cardio), playing video games, attending nerd-culture conventions, 
+					listening to music and savoring a good coffee. I like to read about various scientific topics and I'm also interested
 					in various philosophical debates.
+				</p>
+
+				<p>
+					Furthermore, having been diagnosed with NPD, I advocate for mental health awareness.
 				</p>
 
 				@if ((env('APP_GITHUB_SPONSOR')) || (env('APP_DONATION_KOFI')))
