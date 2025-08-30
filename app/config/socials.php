@@ -26,14 +26,14 @@ return [
     ],
 
     [
-        'name' => 'YouTube',
-        'url' => env('LINK_SOCIAL_YOUTUBE'),
-        'class' => 'youtube'
-    ],
-
-    [
         'name' => 'itch.io',
         'url' => env('LINK_SOCIAL_ITCHIO'),
         'class' => 'itch-io'
+    ],
+
+    [
+        'name' => 'YouTube',
+        'url' => env('LINK_SOCIAL_YOUTUBE'),
+        'class' => 'youtube'
     ]
 ];
