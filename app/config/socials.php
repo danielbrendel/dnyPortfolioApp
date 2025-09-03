@@ -35,5 +35,11 @@ return [
         'name' => 'YouTube',
         'url' => env('LINK_SOCIAL_YOUTUBE'),
         'class' => 'youtube'
+    ],
+
+    [
+        'name' => 'Discord',
+        'url' => env('LINK_SOCIAL_DISCORD'),
+        'class' => 'discord'
     ]
 ];
