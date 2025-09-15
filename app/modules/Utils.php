@@ -38,6 +38,32 @@ class Utils {
 			return -1;
 		}
     }
+
+    /**
+     * @return array
+     */
+    public static function getPopularBlogPosts($limit = 5)
+    {
+        try {
+            $counts = [];
+
+            $posts = Blog::fetch();
+            foreach ($posts as $post) {
+                $vc = static::getViewerCount($post->get('slug'));
+                $counts[$post->get('slug')] = intval($vc);
+            }
+
+            arsort($counts);
+
+            if ($limit) {
+                return array_slice($counts, 0, $limit);
+            }
+
+            return $counts;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
     
     /**
      * @param $count

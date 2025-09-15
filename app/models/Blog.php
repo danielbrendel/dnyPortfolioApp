@@ -38,6 +38,24 @@ class Blog extends \Asatru\Database\Model {
     }
 
     /**
+     * @param $limit
+     * @return mixed
+     * @throws \Exception
+     */
+    public static function getRandomPosts($limit = 0)
+    {
+        try {
+            if ($limit > 0) {
+                return static::raw('SELECT * FROM `@THIS` ORDER BY RAND() LIMIT ' . $limit);
+            } else {
+                return static::raw('SELECT * FROM `@THIS` ORDER BY RAND()');
+            }
+        } catch (\Exception $e) {
+            throw $e;
+        } 
+    }
+
+    /**
      * @param $title
      * @param $content
      * @return mixed
