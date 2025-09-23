@@ -41,4 +41,23 @@ class BaseController extends Asatru\Controller\Controller {
 	{
 		return view($this->layout, $yields, $attr);
 	}
+
+	/**
+	 * Immediate response helper
+	 * 
+	 * @param $content
+	 * @param $http_code
+	 * @param $restype
+	 * @return void
+	 */
+	public function respond(mixed $content, int $http_code = 200, string $restype = ''): never
+	{
+		if (strlen($restype) > 0) {
+			header('Content-Type: ' . $restype);
+		}
+
+		http_response_code($http_code);
+
+		exit($content);
+	}
 }

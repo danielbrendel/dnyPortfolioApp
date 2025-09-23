@@ -6,6 +6,22 @@
 
 class ServicesController extends BaseController {
     /**
+	 * Perform base initialization
+	 * 
+	 * @return void
+	 */
+	public function __construct()
+	{
+        try {
+            $apikey = $_GET['token'] ?? '';
+
+            ApiKeys::verify($apikey);
+        } catch (\Exception $e) {
+            $this->respond(json_encode(['code' => 403, 'msg' => $e->getMessage()]), 403, 'application/json');
+        }
+	}
+
+    /**
 	 * Handles URL: /services/netaddr
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request
