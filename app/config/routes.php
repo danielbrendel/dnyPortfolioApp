@@ -24,6 +24,8 @@ return [
     array('/blog/{slug}', 'GET', 'blog@view_post'),
     array('/blog', 'GET', 'blog@view_list'),
     array('/shoutbox/query', 'GET', 'shoutbox@query'),
+    array('/services/netaddr', 'ANY', 'services@netaddr'),
+    array('/services/mcsrv', 'ANY', 'services@mcsrv'),
     array('/sitemap', 'GET', 'index@sitemap'),
     array('$404', 'ANY', 'error404@index')
 ];

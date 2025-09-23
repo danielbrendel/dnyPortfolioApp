@@ -88,4 +88,71 @@ class Network
             throw $e;
         }
     }
+
+    /**
+     * @param array $contents
+     * @return string
+     */
+    public static function toNetworkableIni(array $contents)
+    {
+        $result = '';
+
+        foreach ($contents as $section => $pairs) {
+            $result .= '[' . $section . ']' . PHP_EOL;
+
+            foreach ($pairs as $key => $value) {
+                $result .= $key . '=' . $value . PHP_EOL;
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param $host
+     * @param $port
+     * @param $protocol
+     * @param $timeout
+     * @return mixed
+     */
+    public static function getMinecraftServerStatus($host, $port, $protocol = 760, $timeout = 3)
+    {
+        $socket = @fsockopen($host, $port, $errno, $errstr, $timeout);
+        if (!$socket) {
+            return false;
+        }
+
+        $data = '';
+        $data .= Utils::writeVarInt(0x00);
+        $data .= Utils::writeVarInt($protocol);
+        $data .= Utils::writeVarInt(strlen($host)) . $host;
+        $data .= pack('n', $port);
+        $data .= Utils::writeVarInt(1);
+
+        $packet = Utils::writeVarInt(strlen($data)) . $data;
+        fwrite($socket, $packet);
+
+        $data = Utils::writeVarInt(0x00);
+        $packet = Utils::writeVarInt(strlen($data)) . $data;
+        fwrite($socket, $packet);
+
+        $length = Utils::readVarInt($socket);
+        $packetId = Utils::readVarInt($socket);
+
+        if ($packetId !== 0x00) {
+            fclose($socket);
+            return false;
+        }
+
+        $jsonLength = Utils::readVarInt($socket);
+        $json = '';
+
+        while (strlen($json) < $jsonLength) {
+            $json .= fread($socket, $jsonLength - strlen($json));
+        }
+
+        fclose($socket);
+
+        return json_decode($json, true);
+    }
 }

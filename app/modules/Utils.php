@@ -109,4 +109,48 @@ class Utils {
 
         return null;
     }
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public static function writeVarInt($value)
+    {
+        $out = '';
+
+        while (true) {
+            if (($value & ~0x7F) === 0) {
+                $out .= chr($value);
+
+                return $out;
+            }
+
+            $out .= chr(($value & 0x7F) | 0x80);
+            $value >>= 7;
+        }
+    }
+
+    /**
+     * @param $socket
+     * @return int
+     * @throws \Exception
+     */
+    public static function readVarInt($socket)
+    {
+        $numRead = 0;
+        $result = 0;
+
+        do {
+            $byte = ord(fread($socket, 1));
+            $result |= ($byte & 0x7F) << (7 * $numRead);
+
+            $numRead++;
+
+            if ($numRead > 5) {
+                throw new \Exception('VarInt too big');
+            }
+        } while (($byte & 0x80) === 0x80);
+        
+        return $result;
+    }
 }
