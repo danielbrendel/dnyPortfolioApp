@@ -45,21 +45,21 @@ class Utils {
     public static function getPopularBlogPosts($limit = 5)
     {
         try {
-            $counts = [];
-
-            $posts = Blog::fetch();
-            foreach ($posts as $post) {
-                $vc = static::getViewerCount($post->get('slug'));
-                $counts[$post->get('slug')] = intval($vc);
+            $posts = Blog::fetch()->asArray();
+            foreach ($posts as $key => &$post) {
+                $vc = Counter::getForRequestUri('/blog/' . $post['slug']);
+                $posts[$key]['views'] = intval($vc);
             }
 
-            arsort($counts);
+            usort($posts, function($item1, $item2) {
+                return $item2['views'] <=> $item1['views'];
+            });
 
             if ($limit) {
-                return array_slice($counts, 0, $limit);
+                $posts = array_slice($posts, 0, $limit);
             }
 
-            return $counts;
+            return $posts;
         } catch (\Exception $e) {
             return [];
         }

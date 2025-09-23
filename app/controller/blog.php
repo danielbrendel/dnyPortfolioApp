@@ -58,12 +58,23 @@ class BlogController extends BaseController {
 	{
 		try {
 			$limit = (int)$request->params()->query('limit', 0);
+			$type = $request->params()->query('type', 'default');
 
-			$blogposts = Blog::fetch($limit);
+			$blogposts = null;
+
+			if ($type === 'default') {
+				$blogposts = Blog::fetch($limit)?->asArray();
+			} else if ($type === 'popular') {
+				$blogposts = Utils::getPopularBlogPosts($limit);
+			} else if ($type === 'random') {
+				$blogposts = Blog::getRandomPosts($limit)?->asArray();
+			} else {
+				throw new \Exception('Unknown fetch type: ' . $type);
+			}
 
             return json([
                 'code' => 200,
-                'data' => $blogposts->asArray()
+                'data' => $blogposts
             ]);
 		} catch (\Exception $e) {
 			return json([

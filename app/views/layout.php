@@ -33,6 +33,8 @@
                 window.switchProjectTab(1);
 
                 window.fetchBlogPosts('#blog-posts');
+                window.fetchBlogPosts('#popular-posts', 'popular');
+                window.fetchBlogPosts('#random-posts', 'random');
                 window.updateDateTime('#update-current-time');
 
                 window.hljs.registerLanguage('aquashell', function() {

@@ -85,10 +85,10 @@ window.updateDateTime = function(target) {
     }
 };
 
-window.fetchBlogPosts = function(target) {
+window.fetchBlogPosts = function(target, type = 'default') {
     let elem = document.querySelector(target);
     if (elem) {
-        window.ajaxRequest('get', window.location.origin + '/blog/posts/fetch?limit=' + elem.dataset.limit, {}, function(response) {
+        window.ajaxRequest('get', window.location.origin + '/blog/posts/fetch?limit=' + elem.dataset.limit + '&type=' + type, {}, function(response) {
             if (response.code == 200) {
                 elem.innerHTML = '';
 

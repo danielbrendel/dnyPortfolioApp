@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="window-body">
-            <p>List of my personal blog postings.</p>
+            <p><i class="far fa-list-alt"></i>&nbsp;List of my personal blog postings.</p>
 
             <div class="sunken-panel sunken-panel-blog ">
 				<table class="interactive">
@@ -20,6 +20,34 @@
 						</tr>
 					</thead>
 					<tbody id="blog-posts" data-limit="0"></tobdy>
+				</table>
+			</div>
+
+			<p class="has-spacing-sm"><i class="fas fa-chart-line"></i>&nbsp;Popular blog posts</p>
+
+            <div class="sunken-panel sunken-panel-blog ">
+				<table class="interactive">
+					<thead>
+						<tr>
+							<th class="is-stretched">Title</th>
+							<th>Published</th>
+						</tr>
+					</thead>
+					<tbody id="popular-posts" data-limit="5"></tobdy>
+				</table>
+			</div>
+
+			<p class="has-spacing-sm"><i class="fas fa-random"></i>&nbsp;Random blog posts</p>
+
+            <div class="sunken-panel sunken-panel-blog ">
+				<table class="interactive">
+					<thead>
+						<tr>
+							<th class="is-stretched">Title</th>
+							<th>Published</th>
+						</tr>
+					</thead>
+					<tbody id="random-posts" data-limit="5"></tobdy>
 				</table>
 			</div>
 
