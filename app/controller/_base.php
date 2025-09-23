@@ -48,7 +48,7 @@ class BaseController extends Asatru\Controller\Controller {
 	 * @param $content
 	 * @param $http_code
 	 * @param $restype
-	 * @return void
+	 * @return never
 	 */
 	public function respond(mixed $content, int $http_code = 200, string $restype = ''): never
 	{
