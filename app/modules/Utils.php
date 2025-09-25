@@ -111,6 +111,19 @@ class Utils {
     }
 
     /**
+     * @param $content
+     * @return string
+     */
+    public static function descriptify($content)
+    {
+        $content = str_replace("\r\n", '  ', $content);
+        $content = strip_tags($content);
+        $content = substr($content, 0, 63) . '...';
+
+        return $content;
+    }
+
+    /**
      * @param $value
      * @return string
      */
