@@ -224,6 +224,12 @@ a.btn-social {
     }
 }
 
+a.btn-highlight {
+    background-color: rgb(73, 140, 209);
+    color: rgb(250, 250, 250);
+    box-shadow: inset -1px -1px rgb(10, 10, 10), inset 1px 1px rgb(100, 150, 230), inset -2px -2px grey, inset 2px 2px rgb(100, 150, 230);
+}
+
 .color-github i {
     color: rgb(0, 0, 0);
 }
@@ -252,6 +258,10 @@ a.btn-social {
     color: rgb(134, 100, 230);
 }
 
+.color-yellow {
+    color: rgb(255, 220, 0);
+}
+
 table tbody {
     background-color: rgb(200, 200, 200);
 }
@@ -265,6 +275,65 @@ table td a {
 }
 
 table td a:hover {
+    text-decoration: underline;
+}
+
+.projects {
+    position: relative;
+}
+
+.project {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    @media screen and (max-width: 423px) {
+        width: 95%;
+    }
+    height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.project-overlay {
+    position: absolute;
+    display: none;
+    @media screen and (max-width: 1087px) {
+        display: inherit;
+    }
+    left: 0;
+    bottom: 0;
+    width: 91.5%;
+    @media screen and (max-width: 423px) {
+        width: 89.5%;
+    }
+    height: 40px;
+    padding: 15px;
+    background-color: rgba(250, 250, 250, 0.67);
+}
+
+.project-info {
+    font-size: 0.9em;
+}
+
+.project-info-title {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    margin-bottom: 4px;
+}
+
+.project-info-link {
+    margin-top: 4px;
+}
+
+.project-info-link a {
+    text-decoration: none;
+}
+
+.project-info-link a:hover {
     text-decoration: underline;
 }
 

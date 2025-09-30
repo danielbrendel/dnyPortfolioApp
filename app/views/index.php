@@ -99,39 +99,10 @@
 			</div>
 		</div>
 		<div class="window-body">
-			<menu role="tablist" class="multirows">
-				@for ($i = 0; $i < count($projects) / 2; $i++)
-				<li role="tab" id="role-project-{{ $i + 1 }}" aria-selected="false"><a href="javascript:void(0);" onclick="window.switchProjectTab({{ $i + 1 }});">{{ $projects[$i]['name'] }}</a></li>
-				@endfor
-			</menu>
-			<menu role="tablist" class="multirows">
-				@for ($i = count($projects) / 2; $i < count($projects); $i++)
-				<li role="tab" id="role-project-{{ $i + 1 }}" aria-selected="false"><a href="javascript:void(0);" onclick="window.switchProjectTab({{ $i + 1 }});">{{ $projects[$i]['name'] }}</a></li>
-				@endfor
-			</menu>
-			<div class="window" role="tabpanel">
-				<div class="window-body">
-					@for ($i = 0; $i < count($projects); $i++)
-					<div id="tab-project-{{ $i + 1 }}" class="is-hidden">
-						<p>
-							{{ $projects[$i]['description'] }}
-						</p>
+			<div class="is-centered">
+				<p>You can go to my project showcase via the button below.</p>
 
-						<p>
-							<?php $linkcnt = 0; ?>
-							@foreach ($projects[$i]['links'] as $project_key => $project_link)
-								<a href="{{ $project_link }}">{{ $project_key }}</a>
-
-								@if ($linkcnt < count($projects[$i]['links']) - 1)
-									&nbsp;|&nbsp;
-								@endif
-
-								<?php $linkcnt++; ?>
-							@endforeach
-						</p>
-					</div>
-					@endforeach
-				</div>
+				<a class="btn btn-highlight is-half is-pointer" href="{{ url('/projects') }}"><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</a>
 			</div>
 		</div>
 	</div>

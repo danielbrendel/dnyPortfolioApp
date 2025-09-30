@@ -31,6 +31,7 @@ class Sitemap
         $this->sites = [];
 
         $this->sites[] = url('/');
+        $this->sites[] = url('/projects');
 
         if (env('APP_ENABLE_BLOG')) {
             $this->sites[] = url('/blog');
