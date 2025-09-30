@@ -4,9 +4,6 @@
     Asatru PHP - Model
 */
 
-/**
- * This class extends the base model class and represents your associated table
- */ 
 class Projects extends \Asatru\Database\Model {
     /**
      * @return mixed
@@ -15,7 +12,7 @@ class Projects extends \Asatru\Database\Model {
     public static function getAll()
     {
         try {
-            return static::raw('SELECT * FROM `@THIS`');
+            return static::raw('SELECT * FROM `@THIS` WHERE active = 1 ORDER BY weight DESC');
         } catch (\Exception $e) {
             throw $e;
         }
