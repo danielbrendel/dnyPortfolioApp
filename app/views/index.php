@@ -100,7 +100,20 @@
 		</div>
 		<div class="window-body">
 			<div class="is-centered">
-				<p>You can go to my project showcase via the button below.</p>
+				<p>Check out the project showcase to see my most notable projects.</p>
+
+				<div class="projects">
+				@foreach ($sneakpeek as $project)
+					<div class="project" style="background-image: url('{{ asset('img/projects/' . $project->get('preview')) }}');" onmouseover="this.children[0].style.display = 'block';" onmouseout="this.children[0].style.display = 'none';">
+						<div class="project-overlay">
+							<div class="project-info">
+								<div class="project-info-title">{{ $project->get('title') }}</div>
+								<div class="project-info-tagline">{{ $project->get('tagline') }}</div>
+							</div>
+						</div>
+					</div>
+				@endforeach
+				</div>
 
 				<a class="btn btn-highlight is-half is-pointer" href="{{ url('/projects') }}"><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</a>
 			</div>

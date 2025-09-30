@@ -11,6 +11,8 @@
 		<div class="window-body">
             <h1><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</h1>
 
+            <p>Here is a list of my most notable projects.</p>
+
             <div class="projects">
             @foreach ($projects as $project)
                 <a href="{{ url('/projects/view/' . $project->get('slug')) }}">

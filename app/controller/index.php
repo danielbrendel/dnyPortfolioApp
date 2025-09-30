@@ -30,10 +30,12 @@ class IndexController extends BaseController {
 	 */
 	public function index($request)
 	{
+		$sneakpeek = Projects::getSneakPeek();
 		$shouts = Shoutbox::pickMessages(10);
 		$visitcount = Utils::getVisitorCount();
 
 		return parent::view(['content', 'index'], [
+			'sneakpeek' => $sneakpeek,
 			'shouts' => $shouts,
 			'visitcount' => $visitcount
 		]);

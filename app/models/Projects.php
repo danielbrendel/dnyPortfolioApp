@@ -31,4 +31,17 @@ class Projects extends \Asatru\Database\Model {
             throw $e;
         }
     }
+
+    /**
+     * @return mixed
+     * @throws \Exception
+     */
+    public static function getSneakPeek()
+    {
+        try {
+            return static::raw('SELECT * FROM `@THIS` WHERE active = 1 ORDER BY RAND() LIMIT 2');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
