@@ -33,6 +33,11 @@ class Sitemap
         $this->sites[] = url('/');
         $this->sites[] = url('/projects');
 
+        $projects = Projects::getAll();
+        foreach ($projects as $project) {
+            $this->sites[] = url('/projects/view/' . $project->get('slug'));
+        }
+
         if (env('APP_ENABLE_BLOG')) {
             $this->sites[] = url('/blog');
 
