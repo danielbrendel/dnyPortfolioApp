@@ -14,6 +14,12 @@ return [
     ],
 
     [
+        'name' => 'itch.io',
+        'url' => env('LINK_SOCIAL_ITCHIO'),
+        'class' => 'itch-io'
+    ],
+
+    [
         'name' => 'Bluesky',
         'url' => env('LINK_SOCIAL_BLUESKY'),
         'class' => 'bluesky'
@@ -23,18 +29,6 @@ return [
         'name' => 'LinkedIn',
         'url' => env('LINK_SOCIAL_LINKEDIN'),
         'class' => 'linkedin'
-    ],
-
-    [
-        'name' => 'itch.io',
-        'url' => env('LINK_SOCIAL_ITCHIO'),
-        'class' => 'itch-io'
-    ],
-
-    [
-        'name' => 'YouTube',
-        'url' => env('LINK_SOCIAL_YOUTUBE'),
-        'class' => 'youtube'
     ],
 
     [
