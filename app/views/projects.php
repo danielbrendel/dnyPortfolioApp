@@ -13,7 +13,7 @@
 
             <div class="projects">
             @foreach ($projects as $project)
-                <div class="project" style="background-image: url('{{ asset('img/projects/' . $project->get('preview')) }}');" onmouseover="this.children[0].style.display = 'block';" onmouseout="this.children[0].style.display = 'none';">>
+                <div class="project" style="background-image: url('{{ asset('img/projects/' . $project->get('preview')) }}');" onmouseover="this.children[0].style.display = 'block';" onmouseout="this.children[0].style.display = 'none';">
                     <div class="project-overlay">
                         <div class="project-info">
                             <div class="project-info-title">{{ $project->get('title') }}</div>
