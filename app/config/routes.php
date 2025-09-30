@@ -17,7 +17,8 @@
 
 return [
     array('/', 'GET', 'index@index'),
-    array('/projects', 'GET', 'index@projects'),
+    array('/projects', 'GET', 'projects@view_list'),
+    array('/projects/view/{slug}', 'GET', 'projects@view_project'),
     array('/blog/posts/fetch', 'ANY', 'blog@fetch'),
     array('/blog/posts/submit', 'GET', 'blog@view_submit'),
     array('/blog/posts/submit/preview', 'POST', 'blog@view_preview'),

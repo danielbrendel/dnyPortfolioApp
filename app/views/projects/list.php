@@ -13,18 +13,20 @@
 
             <div class="projects">
             @foreach ($projects as $project)
-                <div class="project" style="background-image: url('{{ asset('img/projects/' . $project->get('preview')) }}');" onmouseover="this.children[0].style.display = 'block';" onmouseout="this.children[0].style.display = 'none';">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <div class="project-info-title">{{ $project->get('title') }}</div>
-                            <div class="project-info-link"><a href="{{ $project->get('link_url') }}">{{ $project->get('link_label') }}</a></div>
+                <a href="{{ url('/projects/view/' . $project->get('slug')) }}">
+                    <div class="project" style="background-image: url('{{ asset('img/projects/' . $project->get('preview')) }}');" onmouseover="this.children[0].style.display = 'block';" onmouseout="this.children[0].style.display = 'none';">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <div class="project-info-title">{{ $project->get('title') }}</div>
+                                <div class="project-info-tagline">{{ $project->get('tagline') }}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             @endforeach
             </div>
 
-            <p><a class="btn btn-fixed-padding" href="{{ url('/#blog-list') }}">Go Back</a></p>
+            <p><a class="btn btn-fixed-padding" href="{{ url('/') }}">Go Back</a></p>
 		</div>
 	</div>
 </div>

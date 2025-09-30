@@ -40,23 +40,6 @@ class IndexController extends BaseController {
 	}
 
 	/**
-	 * Handles URL: /projects
-	 * 
-	 * @param Asatru\Controller\ControllerArg $request
-	 * @return Asatru\View\ViewHandler
-	 */
-	public function projects($request)
-	{
-		$projects = Projects::getAll();
-		$visitcount = Utils::getVisitorCount();
-
-		return parent::view(['content', 'projects'], [
-			'projects' => $projects,
-			'visitcount' => $visitcount
-		]);
-	}
-
-	/**
 	 * Handles URL: /sitemap
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request

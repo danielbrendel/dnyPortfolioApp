@@ -19,13 +19,14 @@
         <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}"/>
 
         <script src="{{ asset('js/fontawesome.js') }}"></script>
+        <script src="{{ asset('js/app.js', true) }}"></script>
     </head>
 
     <body>
         <div class="content">
             {%content%}
         </div>
-		<script src="{{ asset('js/app.js', true) }}"></script>
+		
         <script>
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
             

@@ -17,4 +17,18 @@ class Projects extends \Asatru\Database\Model {
             throw $e;
         }
     }
+
+    /**
+     * @param $slug
+     * @return mixed
+     * @throws \Exception
+     */
+    public static function fromSlug($slug)
+    {
+        try {
+            return static::raw('SELECT * FROM `@THIS` WHERE slug = ?', [$slug])->first();
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
