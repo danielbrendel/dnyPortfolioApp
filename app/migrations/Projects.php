@@ -31,7 +31,8 @@ class Projects_Migration {
         $this->database->add('id INT NOT NULL AUTO_INCREMENT PRIMARY KEY');
         $this->database->add('title VARCHAR(512) NOT NULL');
         $this->database->add('preview VARCHAR(512) NOT NULL');
-        $this->database->add('link VARCHAR(512) NOT NULL');
+        $this->database->add('link_url VARCHAR(512) NOT NULL');
+        $this->database->add('link_label VARCHAR(512) NOT NULL');
         $this->database->add('weight INT NOT NULL');
         $this->database->add('active BOOLEAN NOT NULL DEFAULT 1');
         $this->database->add('updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP');

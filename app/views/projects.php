@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="window-body">
-            <h2><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</h2>
+            <h1><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</h1>
 
             <div class="projects">
             @foreach ($projects as $project)
@@ -17,7 +17,7 @@
                     <div class="project-overlay">
                         <div class="project-info">
                             <div class="project-info-title">{{ $project->get('title') }}</div>
-                            <div class="project-info-link"><a href="{{ $project->get('link') }}">{{ str_replace('https://', '', $project->get('link')) }}</a></div>
+                            <div class="project-info-link"><a href="{{ $project->get('link_url') }}">{{ $project->get('link_label') }}</a></div>
                         </div>
                     </div>
                 </div>

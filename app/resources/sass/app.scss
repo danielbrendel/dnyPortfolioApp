@@ -278,6 +278,11 @@ table td a:hover {
     text-decoration: underline;
 }
 
+#column-window-project-showcase h1 {
+    font-size: 2.0em;
+    margin-bottom: 35px;
+}
+
 .projects {
     position: relative;
 }
@@ -316,7 +321,7 @@ table td a:hover {
     }
     height: 40px;
     padding: 15px;
-    background-color: rgba(250, 250, 250, 0.67);
+    background-color: rgba(250, 250, 250, 0.8);
 }
 
 .project-info {
