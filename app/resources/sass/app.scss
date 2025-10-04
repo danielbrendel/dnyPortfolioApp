@@ -292,6 +292,18 @@ table td a:hover {
     position: relative;
 }
 
+.projects a {
+    text-decoration: none;
+}
+
+.projects a:hover {
+    text-decoration: none;
+}
+
+.projects a:focus {
+    outline: none;
+}
+
 .project {
     position: relative;
     display: inline-block;
