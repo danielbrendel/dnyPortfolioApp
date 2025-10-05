@@ -22,6 +22,243 @@ class ServicesController extends BaseController {
 	}
 
     /**
+	 * Handles URL: /services/endpoints/list
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return mixed
+	 */
+    public function endpoint_list($request)
+    {
+        try {
+            $response = null;
+
+            $format = $request->params()->query('format', 'json');
+            if (is_string($format)) {
+                $format = strtolower($format);
+            }
+
+            $data = [];
+            $data['metadata']['status'] = 0;
+
+            $endpoints = Endpoints::getAll();
+            $data['metadata']['endpoints'] = count($endpoints);
+
+            foreach ($endpoints as $endpoint) {
+                $data['ep' . strval($endpoint->get('id'))] = [
+                    'title' => $endpoint->get('title'),
+                    'description' => $endpoint->get('description'),
+                    'host' => $endpoint->get('host')
+                ];
+            }
+
+            $data['metadata']['status'] = 200;
+
+            if ($format === 'json') {
+                $response = json($data);
+            } else if ($format === 'ini') {
+                $response = Network::toNetworkableIni($data);
+            } else if ($format === 'txt') {
+                $response = text($data);
+            } else {
+                throw new \Exception('Unknown format: ' . $format);
+            }
+
+            return $response;
+        } catch (\Exception $e) {
+            return json([
+                'code' => 500,
+                'msg' => $e->getMessage()
+            ]);
+        }
+    }
+
+    /**
+	 * Handles URL: /services/endpoints/quantity
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return mixed
+	 */
+    public function endpoint_quantity($request)
+    {
+        try {
+            $response = null;
+
+            $format = $request->params()->query('format', 'json');
+            if (is_string($format)) {
+                $format = strtolower($format);
+            }
+
+            $data = [];
+            $data['metadata']['quantity'] = Endpoints::getQuantity();
+            $data['metadata']['status'] = 200;
+
+            if ($format === 'json') {
+                $response = json($data);
+            } else if ($format === 'ini') {
+                $response = Network::toNetworkableIni($data);
+            } else if ($format === 'txt') {
+                $response = text($data);
+            } else {
+                throw new \Exception('Unknown format: ' . $format);
+            }
+
+            return $response;
+        } catch (\Exception $e) {
+            return json([
+                'code' => 500,
+                'msg' => $e->getMessage()
+            ]);
+        }
+    }
+    /**
+	 * Handles URL: /services/endpoints/status/specific
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return mixed
+	 */
+    public function endpoint_status_specific($request)
+    {
+        try {
+            $response = null;
+
+            $format = $request->params()->query('format', 'json');
+            if (is_string($format)) {
+                $format = strtolower($format);
+            }
+
+            $ident = $request->params()->query('ident');
+
+            $data = [];
+            $data['metadata']['status'] = 0;
+
+            $endpoint = Endpoints::getById($ident);
+
+            $title = $endpoint->get('title');
+            $description = $endpoint->get('description');
+            $host = $endpoint->get('host');
+            $contype = $endpoint->get('contype');
+
+            $status = false;
+
+            if ($contype === 'http') {
+                $status = Cache::remember('status_endpoint_' . $ident, env('APP_STATUS_EP_CACHING', 200), function() use ($host) {
+                    return Network::getHttpStatus($host);
+                });
+            } else if ($contype === 'socket') {
+                $status = Cache::remember('status_endpoint_' . $ident, env('APP_STATUS_EP_CACHING', 200), function() use ($host) {
+                    $tokens = explode(':', $host);
+
+                    return Network::getSocketStatus($tokens[0], $tokens[1]);
+                });
+            } else {
+                throw new \Exception('Invalid connection type \'' . $contype . '\' for entry #' . $ident);
+            }
+
+            $data['endpoint'] = [
+                'title' => $title,
+                'description' => $description,
+                'host' => $host,
+                'contype' => $contype,
+                'status' => strval((int)$status)
+            ];
+
+            $data['metadata']['status'] = 200;
+
+            if ($format === 'json') {
+                $response = json($data);
+            } else if ($format === 'ini') {
+                $response = Network::toNetworkableIni($data);
+            } else if ($format === 'txt') {
+                $response = text($data);
+            } else {
+                throw new \Exception('Unknown format: ' . $format);
+            }
+
+            return $response;
+        } catch (\Exception $e) {
+            return json([
+                'code' => 500,
+                'msg' => $e->getMessage()
+            ]);
+        }
+    }
+
+    /**
+	 * Handles URL: /services/endpoints/status/all
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return mixed
+	 */
+    public function endpoint_status_all($request)
+    {
+        try {
+            $response = null;
+
+            $format = $request->params()->query('format', 'json');
+            if (is_string($format)) {
+                $format = strtolower($format);
+            }
+
+            $data = [];
+            $data['metadata']['status'] = 0;
+
+            $endpoints = Endpoints::getAll();
+            $data['metadata']['endpoints'] = count($endpoints);
+
+            foreach ($endpoints as $endpoint) {
+                $ident = $endpoint->get('id');
+                $title = $endpoint->get('title');
+                $description = $endpoint->get('description');
+                $host = $endpoint->get('host');
+                $contype = $endpoint->get('contype');
+
+                $status = false;
+
+                if ($contype === 'http') {
+                    $status = Cache::remember('status_endpoint_' . $ident, env('APP_STATUS_EP_CACHING', 200), function() use ($host) {
+                        return Network::getHttpStatus($host);
+                    });
+                } else if ($contype === 'socket') {
+                    $status = Cache::remember('status_endpoint_' . $ident, env('APP_STATUS_EP_CACHING', 200), function() use ($host) {
+                        $tokens = explode(':', $host);
+
+                        return Network::getSocketStatus($tokens[0], $tokens[1]);
+                    });
+                } else {
+                    throw new \Exception('Invalid connection type \'' . $contype . '\' for entry #' . $ident);
+                }
+
+                $data['ep' . strval($ident)] = [
+                    'title' => $title,
+                    'description' => $description,
+                    'host' => $host,
+                    'contype' => $contype,
+                    'status' => strval((int)$status)
+                ];
+            }
+
+            $data['metadata']['status'] = 200;
+
+            if ($format === 'json') {
+                $response = json($data);
+            } else if ($format === 'ini') {
+                $response = Network::toNetworkableIni($data);
+            } else if ($format === 'txt') {
+                $response = text($data);
+            } else {
+                throw new \Exception('Unknown format: ' . $format);
+            }
+
+            return $response;
+        } catch (\Exception $e) {
+            return json([
+                'code' => 500,
+                'msg' => $e->getMessage()
+            ]);
+        }
+    }
+
+    /**
 	 * Handles URL: /services/netaddr
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request

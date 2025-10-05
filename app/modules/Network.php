@@ -90,6 +90,52 @@ class Network
     }
 
     /**
+     * @param $url
+     * @return int
+     * @throws \Exception
+     */
+    public static function getHttpStatus($url)
+    {
+        try {
+            $curl = curl_init();
+
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+            $output = curl_exec($curl);
+            $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+            curl_close($curl);
+
+            return $code;
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    /**
+     * @param $host
+     * @param $port
+     * @return bool
+     * @throws \Exception
+     */
+    public static function getSocketStatus($host, $port)
+    {
+        try {
+            $socket = @fsockopen($host, $port, $errno, $errstr, 5);
+            if ($socket) {
+                fclose($socket);
+
+                return true;
+            }
+
+            return false;
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    /**
      * @param array $contents
      * @return string
      */
