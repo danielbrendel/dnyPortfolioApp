@@ -349,4 +349,59 @@ class ServicesController extends BaseController {
             ]);
         }
     }
+
+    /**
+	 * Handles URL: /services/ko-fi/webhook
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\JsonHandler
+	 */
+    public function kofi_webhook($request)
+    {
+        try {
+            if (!env('KOFI_ENABLE', false)) {
+                throw new \Exception('Service is currently inactive');
+            }
+
+            $data = $request->params()->query('data');
+
+            $donation = json_decode($data);
+
+            if ($donation->verification_token !== env('KOFI_VERIFICATION_TOKEN')) {
+                throw new \Exception('Invalid verification token specified!');
+            }
+
+            if ($donation->is_public) {
+                $bot_token = env('KOFI_BOTTOKEN');
+                $bot_channel = env('KOFI_CHANNEL');
+
+                $header = [
+                    'Content-Type: application/json',
+                    'Authorization: Bot ' . $bot_token
+                ];
+
+                if (($donation->is_subscription_payment) && ($donation->is_first_subscription_payment)) {
+                    $post = [
+                        'content' => $donation->from_name . " just made a monthly subscription via Ko-Fi! 💚\n\n" . (isset($donation->message) ? $donation->message : "(No message specified)") . "\n\nWant to support me, too? Here you go:\n➡️ " . env('APP_DONATION_KOFI') . "\n"
+                    ];
+                } else {
+                    $post = [
+                        'content' => $donation->from_name . " just made a " . (($donation->is_subscription_payment) ? "recurring" : "") . " donation via Ko-Fi! 💚\n\n" . (isset($donation->message) ? $donation->message : "(No message specified)") . "\n\nWant to support me, too? Here you go:\n➡️ " . env('APP_DONATION_KOFI') . "\n"
+                    ];
+                }
+
+                $result = Network::remoteRequest('https://discord.com/api/v10/channels/' . $bot_channel . '/messages', [
+                    'header' => $header,
+                    'post' => json_encode($post)
+                ]);
+            }
+
+            return json(['code' => 200]);
+        } catch (\Exception $e) {
+            return json([
+                'code' => 500,
+                'msg' => $e->getMessage()
+            ]);
+        }
+    }
 }

@@ -32,6 +32,7 @@ return [
     array('/services/endpoints/status/all', 'ANY', 'services@endpoint_status_all'),
     array('/services/netaddr', 'ANY', 'services@netaddr'),
     array('/services/mcsrv', 'ANY', 'services@mcsrv'),
+    array('/services/ko-fi/webhook', 'POST', 'services@kofi_webhook'),
     array('/sitemap', 'GET', 'index@sitemap'),
     array('$404', 'ANY', 'error404@index')
 ];
