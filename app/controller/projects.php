@@ -23,23 +23,6 @@ class ProjectsController extends BaseController {
 	}
 
     /**
-	 * Handles URL: /projects
-	 * 
-	 * @param Asatru\Controller\ControllerArg $request
-	 * @return Asatru\View\ViewHandler
-	 */
-	public function view_list($request)
-	{
-		$projects = Projects::getAll();
-		$visitcount = Utils::getVisitorCount();
-
-		return parent::view(['content', 'projects/list'], [
-			'projects' => $projects,
-			'visitcount' => $visitcount
-		]);
-	}
-
-    /**
 	 * Handles URL: /projects/view/{slug}
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request

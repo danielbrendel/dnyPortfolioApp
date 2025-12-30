@@ -5,7 +5,7 @@
 			<div class="title-bar-controls">
 				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-blog-post-view', 'window-minimized');"></button>
 				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-blog-post-view', 'window-maximized');"></button>
-				<button aria-label="Close"></button>
+				<button aria-label="Close" onclick="location.href = '{{ url('/') }}';"></button>
 			</div>
 		</div>
 		<div class="window-body blog-post-content">
@@ -29,11 +29,9 @@
 			</div>
 
 			<div class="blog-post-content-footer">
-				<span><a href="{{ url('/blog') }}">Back to list</a></span>
+				<span><a href="{{ url('/') }}">Close</a></span>
 				<span><i class="fas fa-eye"></i>&nbsp;{{ $viewers }}</span>
 			</div>
 		</div>
 	</div>
 </div>
-
-@include('footer.php')

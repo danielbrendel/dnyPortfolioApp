@@ -38,6 +38,148 @@ window.ajaxRequest = function (method, url, data = {}, successfunc = function(da
         );
 };
 
+window.registerWidget = function(ident, title, icon) {
+    let root = document.querySelector('.widgets');
+    if (!root) {
+        console.error('Fatal error: widget root element not found.');
+        return;
+    }
+
+    root.innerHTML += `
+        <div class="widgets-item" id="desktop-widget-` + ident + `" onclick="window.openWidget('#` + ident + `');">
+            <div class="widgets-item-icon">
+                <img src="` + window.location.origin + '/img/icons/' + icon + `" alt="icon"/>
+            </div>
+
+            <div class="widgets-item-title">
+                ` + title + `
+            </div>
+        </div>
+    `;
+};
+
+window.openWidget = function(which, onOpenCallback = function(){}) {
+    let elem = document.querySelector(which);
+    if (!elem) {
+        console.error('Element not found: ' + which);
+        return;
+    }
+
+    if (elem.classList.contains('is-hidden')) {
+        elem.classList.remove('is-hidden');
+    }
+
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const windowWidth = elem.offsetWidth;
+    const windowHeight = elem.offsetHeight;
+
+    elem.style.position = 'fixed';
+    elem.style.top = (screenHeight / 2 - windowHeight / 2).toString() + 'px';
+    elem.style.left = (screenWidth / 2 - windowWidth / 2).toString() + 'px';
+
+    onOpenCallback();
+
+    window.setWidgetToTop(which);
+};
+
+window.setWidgetToTop = function(which) {
+    let elem = document.querySelector(which);
+    if (!elem) {
+        console.error('Element not found: ' + which);
+        return;
+    }
+
+    let others = document.querySelectorAll('.window');
+    for (let i = 0; i < others.length; i++) {
+        others[i].parentElement.style.zIndex = 'unset';
+    }
+
+    elem.style.zIndex = '999';
+};
+
+window.closeWidget = function(which, onCloseCallback = function(){}) {
+    let elem = document.querySelector(which);
+    if (!elem) {
+        console.error('Element not found: ' + which);
+        return;
+    }
+
+    if (!elem.classList.contains('is-hidden')) {
+        elem.classList.add('is-hidden');
+    }
+
+    onCloseCallback();
+};
+
+window.startMenuCallbacks = [];
+window.addStartMenuItem = function(title, icon, callback = function() {}) {
+    let root = document.querySelector('.menu');
+    if (!root) {
+        console.error('Fatal error: start menu root element not found.');
+        return;
+    }
+
+    const ident = window.startMenuCallbacks.length;
+
+    root.innerHTML += `
+        <div class="menu-item" onclick="window.startMenuCallbacks[` + ident + `]();">
+            <div class="menu-item-icon">
+                <img src="` + window.location.origin + '/img/icons/' + icon + `" alt="icon"/>
+            </div>
+
+            <div class="menu-item-title">
+                ` + title + `
+            </div>
+        </div>
+    `;
+
+    window.startMenuCallbacks.push(function() { callback(); window.closeActiveStartMenu(); });
+};
+
+window.addStartMenuDelimiter = function() {
+    let root = document.querySelector('.menu');
+    if (!root) {
+        console.error('Fatal error: start menu root element not found.');
+        return;
+    }
+
+    root.innerHTML += `<div class="menu-delimiter"><hr/></div>`;
+};
+
+window.toggleStartMenu = function() {
+    let root = document.querySelector('.menu');
+    if (!root) {
+        console.error('Fatal error: start menu root element not found.');
+        return;
+    }
+
+    root.classList.toggle('is-hidden');
+
+    let button = document.querySelector('.startmenu');
+    if (button) {
+        button.classList.toggle('set-active');
+    }
+};
+
+window.closeActiveStartMenu = function() {
+    let root = document.querySelector('.menu');
+    if (!root) {
+        console.error('Fatal error: start menu root element not found.');
+        return;
+    }
+
+    if (!root.classList.contains('is-hidden')) {
+        let button = document.querySelector('.startmenu');
+        if (button) {
+            button.classList.remove('set-active');
+        }
+
+        root.classList.add('is-hidden');
+    }
+};
+
 window.switchProjectTab = function(which) {
     for (let i = 1; i <= window.maxProjects; i++) {
         let elHide = document.getElementById('tab-project-' + i);

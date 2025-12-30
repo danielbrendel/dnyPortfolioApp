@@ -1,7 +1,9 @@
 html, body {
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -436,6 +438,8 @@ table td a:hover {
 
 .blog-post-content-text {
     position: relative;
+    height: 72vh;
+    overflow-y: scroll;
     margin-bottom: 20px;
 }
 
@@ -564,4 +568,148 @@ table td a:hover {
 
 .sunken-panel-shoutbox table.interactive > tbody > tr {
     cursor: default;
+}
+
+.taskbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.taskbar-body {
+    margin: unset !important;
+}
+
+.taskbar button {
+    height: 32px;
+    margin-top: -2px;
+    margin-right: -3px;
+}
+
+.taskbar button.set-active {
+    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
+}
+
+.taskbar-body img {
+    position: relative;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.taskbar-section-apps {
+    position: relative;
+    display: inline-block;
+}
+
+.taskbar-section-status {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.taskbar-section-status .status-bar-field {
+    height: 27px;
+    padding-top: 3px;
+    padding-left: 15px;
+}
+
+.taskbar-section-status .status-bar-label {
+    padding-right: 20px;
+}
+
+.status-bar-label {
+    top: -1px;
+}
+
+.taskbar .has-side-spacing {
+    margin-left: 1px;
+    margin-right: 10px;
+}
+
+.startmenu {
+    position: relative;
+    top: 3px;
+}
+
+.startmenu img {
+    top: 2px;
+}
+
+.startmenu strong {
+    position: relative;
+    top: -2px;
+}
+
+.taskbar .is-mobile-hidden {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.widgets {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    text-align: center;
+}
+
+.widgets-item {
+    margin-top: 1px;
+    padding: 10px;
+}
+
+.widgets-item:hover {
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.widgets-item-icon {
+}
+
+.widgets-item-title {
+}
+
+.menu {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    min-width: 200px;
+    padding: 15px;
+}
+
+.menu-item {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: rgba(100, 100, 100, 0.2);
+    border-radius: 5px;
+}
+
+.menu-item-icon {
+    display: inline-block;
+}
+
+.menu-item-title {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    margin-left: 5px;
+    font-size: 1.5em;
+}
+
+.menu-delimiter hr {
+    color: rgb(235, 235, 235);
+}
+
+.stay-in-viewport {
+    height: 87vh;
+    overflow-y: scroll;
 }

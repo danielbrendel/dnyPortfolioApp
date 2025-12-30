@@ -17,14 +17,12 @@
 
 return [
     array('/', 'GET', 'index@index'),
-    array('/projects', 'GET', 'projects@view_list'),
     array('/projects/view/{slug}', 'GET', 'projects@view_project'),
     array('/blog/posts/fetch', 'ANY', 'blog@fetch'),
     array('/blog/posts/submit', 'GET', 'blog@view_submit'),
     array('/blog/posts/submit/preview', 'POST', 'blog@view_preview'),
     array('/blog/posts/submit', 'POST', 'blog@submit'),
     array('/blog/{slug}', 'GET', 'blog@view_post'),
-    array('/blog', 'GET', 'blog@view_list'),
     array('/shoutbox/query', 'GET', 'shoutbox@query'),
     array('/services/endpoints/list', 'ANY', 'services@endpoint_list'),
     array('/services/endpoints/quantity', 'ANY', 'services@endpoint_quantity'),

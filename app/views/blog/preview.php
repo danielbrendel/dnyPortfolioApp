@@ -5,7 +5,7 @@
 			<div class="title-bar-controls">
 				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-blog-post-view', 'window-minimized');"></button>
 				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-blog-post-view', 'window-maximized');"></button>
-				<button aria-label="Close"></button>
+				<button aria-label="Close" onclick="location.href = '{{ url('/') }}';"></button>
 			</div>
 		</div>
 		<div class="window-body blog-post-content">

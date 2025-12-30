@@ -1,11 +1,11 @@
-<div class="column is-half" id="column-window-blog-post-list">
+<div class="column is-half is-hidden" id="column-window-blog">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">Blog</div>
 			<div class="title-bar-controls">
-				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-blog-post-list', 'window-minimized');"></button>
-				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-blog-post-list', 'window-maximized');"></button>
-				<button aria-label="Close"></button>
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-blog', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-blog', 'window-maximized');"></button>
+				<button aria-label="Close" onclick="window.closeWidget('#column-window-blog');"></button>
 			</div>
 		</div>
 		<div class="window-body">
@@ -37,23 +37,7 @@
 				</table>
 			</div>
 
-			<p class="has-spacing-sm"><i class="fas fa-random"></i>&nbsp;Random blog posts</p>
-
-            <div class="sunken-panel sunken-panel-blog ">
-				<table class="interactive">
-					<thead>
-						<tr>
-							<th class="is-stretched">Title</th>
-							<th>Published</th>
-						</tr>
-					</thead>
-					<tbody id="random-posts" data-limit="5"></tobdy>
-				</table>
-			</div>
-
-            <p><a class="btn btn-fixed-padding" href="{{ url('/#blog-list') }}">Go Back</a></p>
+			<p><a class="btn btn-fixed-padding" href="javascript:void(0);" onclick="window.closeWidget('#column-window-blog');">Close</a></p>
 		</div>
 	</div>
 </div>
-
-@include('footer.php')

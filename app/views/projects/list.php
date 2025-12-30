@@ -1,15 +1,15 @@
-<div class="column is-half" id="column-window-project-showcase">
+<div class="column is-half is-hidden" id="column-window-projects">
 	<div class="window">
 		<div class="title-bar">
 			<div class="title-bar-text">Project Showcase</div>
 			<div class="title-bar-controls">
-				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-project-showcase', 'window-minimized');"></button>
-				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-project-showcase', 'window-maximized');"></button>
-				<button aria-label="Close"></button>
+				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-projects', 'window-minimized');"></button>
+				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-projects', 'window-maximized');"></button>
+				<button aria-label="Close" onclick="window.closeWidget('#column-window-projects');"></button>
 			</div>
 		</div>
-		<div class="window-body">
-            <h1><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</h1>
+		<div class="window-body stay-in-viewport">
+            <strong><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</strong>
 
             <p>Here is a list of my most notable projects.</p>
 
@@ -28,9 +28,7 @@
             @endforeach
             </div>
 
-            <p><a class="btn btn-fixed-padding" href="{{ url('/') }}">Go Back</a></p>
+            <p><a class="btn btn-fixed-padding" href="javascript:void(0);" onclick="window.closeWidget('#column-window-projects');">Close</a></p>
 		</div>
 	</div>
 </div>
-
-@include('footer.php')

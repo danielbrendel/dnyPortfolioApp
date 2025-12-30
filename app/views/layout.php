@@ -27,9 +27,14 @@
     </head>
 
     <body>
+        @include('widgets.php')
+
         <div class="content">
             {%content%}
         </div>
+
+        @include('menu.php')
+        @include('taskbar.php')
 		
         <script>
             @if (env('APP_ENABLE_PWA'))
@@ -46,9 +51,33 @@
             };
             @endif
 
+            window.initDesktop = function() {
+                window.registerWidget('column-window-about', 'About', 'about.png');
+                @if (env('APP_ENABLE_BLOG'))
+                window.registerWidget('column-window-blog', 'Blog', 'blog.png');
+                @endif
+                window.registerWidget('column-window-projects', 'Projects', 'projects.png');
+                window.registerWidget('column-window-technologies', 'Tech Stack', 'tech.png');
+                @if (env('APP_ENABLE_SHOUTBOX'))
+                window.registerWidget('column-window-shoutbox', 'Shoutbox', 'shoutbox.png');
+                @endif
+
+                window.openWidget('#column-window-about');
+
+                window.addStartMenuItem('Contact', 'mail.png', function() { window.location.href = 'mailto:{{ env('APP_CONTACT') }}'; });
+                window.addStartMenuDelimiter();
+                @foreach (config('socials') as $social)
+					@if ((is_string($social->url)) && (strlen($social->url) > 0))
+                        window.addStartMenuItem('{{ $social->name }}', '{{ $social->icon }}', function() { window.open('{{ $social->url }}'); });
+					@endif
+				@endforeach
+            };
+
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
             
             document.addEventListener('DOMContentLoaded', function() {
+                window.initDesktop();
+
                 window.switchProjectTab(1);
 
                 window.fetchBlogPosts('#blog-posts');

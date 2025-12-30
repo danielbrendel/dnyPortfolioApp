@@ -5,10 +5,10 @@
 			<div class="title-bar-controls">
 				<button aria-label="Minimize" onclick="window.toggleWindowSize('#column-window-project-details', 'window-minimized');"></button>
 				<button aria-label="Maximize" onclick="window.toggleWindowSize('#column-window-project-details', 'window-maximized');"></button>
-				<button aria-label="Close"></button>
+				<button aria-label="Close" onclick="location.href = '{{ url('/') }}';"></button>
 			</div>
 		</div>
-		<div class="window-body project-details">
+		<div class="window-body project-details stay-in-viewport">
             <h1>{{ $project->get('title') }}</h1>
 
             <h2>{{ $project->get('tagline') }}</h2>
@@ -23,9 +23,7 @@
                 @endforeach
             </div>
 
-            <p><a class="btn btn-fixed-padding" href="{{ url('/projects') }}">Go Back</a></p>
+            <p><a class="btn btn-fixed-padding" href="{{ url('/') }}">Close</a></p>
 		</div>
 	</div>
 </div>
-
-@include('footer.php')
