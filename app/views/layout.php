@@ -83,6 +83,7 @@
             
             document.addEventListener('DOMContentLoaded', function() {
                 window.initDesktop();
+                window.setDraggableWindows();
 
                 window.switchProjectTab(1);
 

@@ -232,6 +232,35 @@ window.toggleWindowSize = function(wnd, style, repos = true) {
     }
 };
 
+window.setDraggableWindows = function() {
+    const elems = document.querySelectorAll('.title-bar');
+    for (let i = 0; i < elems.length; i++) {
+        const el = elems[i].parentElement.parentElement;
+
+        el.offsetX = 0;
+        el.offsetY = 0;
+        el.style.position = 'absolute';
+
+        const onMouseMove = function(event) {
+            el.style.left = (event.clientX - el.offsetX).toString() + 'px';
+            el.style.top = (event.clientY - el.offsetY).toString() + 'px';
+        };
+
+        const onMouseUp = function () {
+            document.removeEventListener("mousemove", onMouseMove);
+            document.removeEventListener("mouseup", onMouseUp);
+        };
+
+        el.addEventListener("mousedown", (event) => {
+            el.offsetX = event.clientX - el.offsetLeft;
+            el.offsetY = event.clientY - el.offsetTop;
+
+            document.addEventListener("mousemove", onMouseMove);
+            document.addEventListener("mouseup", onMouseUp);
+        });        
+    }
+};
+
 window.updateDateTime = function(target) {
     let elem = document.querySelector(target);
     if (elem) {
