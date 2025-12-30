@@ -38,6 +38,16 @@ window.ajaxRequest = function (method, url, data = {}, successfunc = function(da
         );
 };
 
+window.setDesktopStyle = function(key, value) {
+    let root = document.querySelector('.widgets');
+    if (!root) {
+        console.error('Fatal error: widget root element not found.');
+        return;
+    }
+
+    root.style[key] = value;
+};
+
 window.registerWidget = function(ident, title, icon) {
     let root = document.querySelector('.widgets');
     if (!root) {
@@ -69,6 +79,13 @@ window.openWidget = function(which, onOpenCallback = function(){}) {
         elem.classList.remove('is-hidden');
     }
 
+    window.setWidgetCentered(elem);
+    window.setWidgetToTop(which);
+
+    onOpenCallback();
+};
+
+window.setWidgetCentered = function(elem) {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
@@ -78,10 +95,6 @@ window.openWidget = function(which, onOpenCallback = function(){}) {
     elem.style.position = 'fixed';
     elem.style.top = (screenHeight / 2 - windowHeight / 2).toString() + 'px';
     elem.style.left = (screenWidth / 2 - windowWidth / 2).toString() + 'px';
-
-    onOpenCallback();
-
-    window.setWidgetToTop(which);
 };
 
 window.setWidgetToTop = function(which) {
@@ -208,10 +221,14 @@ window.switchProjectTab = function(which) {
     }
 };
 
-window.toggleWindowSize = function(wnd, style) {
+window.toggleWindowSize = function(wnd, style, repos = true) {
     let elem = document.querySelector(wnd);
     if (elem) {
         elem.classList.toggle(style);
+
+        if (repos) {
+            window.setWidgetCentered(elem);
+        }
     }
 };
 
@@ -263,7 +280,7 @@ window.queryShout = function(target) {
 
                 container.children[0].innerHTML += tableEntry;
 
-                container.scrollTop = container.scrollHeight 
+                container.scrollTop = container.scrollHeight;
             }
         });
     }
@@ -290,4 +307,41 @@ window.previewBlogPost = function(title, content, token) {
 
     document.body.appendChild(form);
     form.submit();
+};
+
+window.runCode = function(src, output) {
+    let elem = document.querySelector(output);
+    if (elem) {
+        const origConLog = console.log;
+        const origConWarn = console.warn;
+        const origConErr = console.error;
+
+        console.log = function(...args) {
+            elem.innerHTML += args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ') + "<br/>";
+            origConLog.apply(console, args); 
+        };
+
+        console.warn = function(...args) {
+            elem.innerHTML += '<font color="#cccc00">' + args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ') + '</font>' + "<br/>";
+            origConWarn.apply(console, args); 
+        };
+
+        console.error = function(...args) {
+            elem.innerHTML += '<font color="#cc0000">' + args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ') + '</font>' + "<br/>";
+            origConErr.apply(console, args); 
+        };
+
+        try {
+            const ev = eval(src);
+            elem.innerHTML += ev + "<br/>";
+        } catch (err) {
+            elem.innerHTML += '<font color="#cc0000">' + err + '</font>' + "<br/>";
+        }
+
+        console.log = origConLog;
+        console.warn = origConWarn;
+        console.error = origConErr;
+
+        elem.scrollTop = elem.scrollHeight;
+    }
 };

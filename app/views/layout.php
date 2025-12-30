@@ -52,14 +52,20 @@
             @endif
 
             window.initDesktop = function() {
+                window.setDesktopStyle('max-width', '100px');
+
                 window.registerWidget('column-window-about', 'About', 'about.png');
                 @if (env('APP_ENABLE_BLOG'))
-                window.registerWidget('column-window-blog', 'Blog', 'blog.png');
+                window.registerWidget('column-window-blog', 'Blog Posts', 'blog.png');
                 @endif
                 window.registerWidget('column-window-projects', 'Projects', 'projects.png');
                 window.registerWidget('column-window-technologies', 'Tech Stack', 'tech.png');
                 @if (env('APP_ENABLE_SHOUTBOX'))
                 window.registerWidget('column-window-shoutbox', 'Shoutbox', 'shoutbox.png');
+                @endif
+                @if (env('APP_ENABLE_TERMINAL'))
+                window.registerWidget('column-window-terminal', 'Terminal', 'terminal.png');
+                document.getElementById('terminal-code-result').innerHTML += 'Browser terminal started' + "<br/>" + navigator.userAgent + "<br/>" + 'Current time: ' + (new Date()).toLocaleString() + "<br/><br/>";
                 @endif
 
                 window.openWidget('#column-window-about');

@@ -3,3 +3,4 @@
 @include('widgets/projects.php')
 @include('widgets/tech.php')
 @include('widgets/shoutbox.php')
+@include('widgets/terminal.php')
