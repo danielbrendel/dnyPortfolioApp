@@ -14,5 +14,5 @@
 */
 
 return [
-    array('test:cmd', 'Add your description here', 'TestCommand'),
+    array('make:manifest', 'Create manifest from environment data', 'MakeManifestCommand'),
 ];

@@ -1,1 +1,1 @@
-# Personal portfolio homepage - using retro style!
+# Personal portfolio homepage

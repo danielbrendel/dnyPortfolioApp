@@ -14,6 +14,10 @@
 
         <title>{{ env('APP_TITLE') }}</title>
 
+        @if (env('APP_ENABLE_PWA'))
+        <link rel="manifest" href="{{ asset('manifest.json') }}"/>
+        @endif
+
         <link rel="stylesheet" type="text/css" href="{{ asset('css/98.min.css') }}"/>
 
         <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}"/>
@@ -28,6 +32,20 @@
         </div>
 		
         <script>
+            @if (env('APP_ENABLE_PWA'))
+            window.onload = function() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('./serviceworker.js', { scope: '/' })
+                        .then(function(registration){
+                            window.serviceWorkerEnabled = true;
+                        }).catch(function(err){
+                            window.serviceWorkerEnabled = false;
+                            console.error(err);
+                        });
+                }
+            };
+            @endif
+
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
             
             document.addEventListener('DOMContentLoaded', function() {
