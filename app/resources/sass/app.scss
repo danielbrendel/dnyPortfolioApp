@@ -682,7 +682,25 @@ table td a:hover {
     bottom: 35px;
     left: 0;
     min-width: 200px;
+    background-color: rgb(150, 150, 150);
+}
+
+.menu-label {
+    display: inline-block;
+    width: 50px;
+    height: 100%;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 3.0em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.menu-actions {
+    display: inline-block;
+    width: 150px;
     padding: 15px;
+    background-color: rgb(200, 200, 200);
 }
 
 .menu-item {

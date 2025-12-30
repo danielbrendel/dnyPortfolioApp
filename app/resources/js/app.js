@@ -128,7 +128,7 @@ window.closeWidget = function(which, onCloseCallback = function(){}) {
 
 window.startMenuCallbacks = [];
 window.addStartMenuItem = function(title, icon, callback = function() {}) {
-    let root = document.querySelector('.menu');
+    let root = document.querySelector('.menu-actions');
     if (!root) {
         console.error('Fatal error: start menu root element not found.');
         return;
@@ -152,7 +152,7 @@ window.addStartMenuItem = function(title, icon, callback = function() {}) {
 };
 
 window.addStartMenuDelimiter = function() {
-    let root = document.querySelector('.menu');
+    let root = document.querySelector('.menu-actions');
     if (!root) {
         console.error('Fatal error: start menu root element not found.');
         return;
