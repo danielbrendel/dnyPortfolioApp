@@ -68,7 +68,7 @@
                 @endif
                 @if (env('APP_ENABLE_TERMINAL'))
                 window.registerWidget('column-window-terminal', 'Terminal', 'terminal.png');
-                document.getElementById('terminal-code-result').innerHTML += 'Browser terminal started' + "<br/>" + navigator.userAgent + "<br/>" + 'Current time: ' + (new Date()).toLocaleString() + "<br/><br/>";
+                document.getElementById('terminal-code-result').innerHTML += 'Browser terminal started' + "<br/>" + navigator.userAgent + "<br/>" + 'Session timestamp: ' + (Date.now()).toString() + "<br/><br/>";
                 @endif
                 window.registerWidget('column-window-settings', 'Settings', 'settings.png');
 
