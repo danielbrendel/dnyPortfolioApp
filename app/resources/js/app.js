@@ -289,15 +289,16 @@ window.toggleWindowSize = function(wnd, style, repos = true) {
 window.setDraggableWindows = function() {
     const elems = document.querySelectorAll('.title-bar');
     for (let i = 0; i < elems.length; i++) {
-        const el = elems[i].parentElement.parentElement;
+        const parent = elems[i].parentElement.parentElement;
+        const bar = elems[i];
 
-        el.offsetX = 0;
-        el.offsetY = 0;
-        el.style.position = 'absolute';
+        parent.offsetX = 0;
+        parent.offsetY = 0;
+        parent.style.position = 'absolute';
 
         const onMouseMove = function(event) {
-            el.style.left = (event.clientX - el.offsetX).toString() + 'px';
-            el.style.top = (event.clientY - el.offsetY).toString() + 'px';
+            parent.style.left = (event.clientX - parent.offsetX).toString() + 'px';
+            parent.style.top = (event.clientY - parent.offsetY).toString() + 'px';
         };
 
         const onMouseUp = function () {
@@ -305,9 +306,9 @@ window.setDraggableWindows = function() {
             document.removeEventListener("mouseup", onMouseUp);
         };
 
-        el.addEventListener("mousedown", (event) => {
-            el.offsetX = event.clientX - el.offsetLeft;
-            el.offsetY = event.clientY - el.offsetTop;
+        bar.addEventListener("mousedown", (event) => {
+            parent.offsetX = event.clientX - parent.offsetLeft;
+            parent.offsetY = event.clientY - parent.offsetTop;
 
             document.addEventListener("mousemove", onMouseMove);
             document.addEventListener("mouseup", onMouseUp);
