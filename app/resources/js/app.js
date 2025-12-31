@@ -16,8 +16,9 @@ window.hljs = hljs;
 
 window.publicApiToken = '';
 
-const SETTINGS_DEFAULT_TEXT_COLOR = '#000000';
-const SETTINGS_DEFAULT_BACKGROUND_COLOR = '#82aed7';
+const SETTINGS_DEFAULT_TEXT_COLOR = '#ffffff';
+const SETTINGS_DEFAULT_TEXT_EMPHASIS = '1';
+const SETTINGS_DEFAULT_BACKGROUND_COLOR = '#82acd7';
 const SETTINGS_DEFAULT_BACKGROUND_IMAGE = 'none';
 const SETTINGS_DEFAULT_SOUND_ENABLE = '1';
 
@@ -66,6 +67,9 @@ window.loadSettings = function() {
     const textcolor = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
     document.querySelector('#settings-dialog-style-text-color').value = textcolor;
 
+    const textemphasis = window.readSetting('style-text-emphasis', SETTINGS_DEFAULT_TEXT_EMPHASIS);
+    document.querySelector('#settings-dialog-style-text-emphasis').checked = (parseInt(textemphasis)) ? true : false;
+
     const backgroundcolor = window.readSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
     document.querySelector('#settings-dialog-style-background-color').value = backgroundcolor;
     
@@ -78,10 +82,17 @@ window.loadSettings = function() {
 
 window.applySettings = function() {
     const colorText = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    const emphasisText = window.readSetting('style-text-emphasis', SETTINGS_DEFAULT_TEXT_EMPHASIS);
     
     let colElems = document.querySelectorAll('.widgets-item-title');
     for (let i = 0; i < colElems.length; i++) {
         colElems[i].style.color = colorText;
+
+        if (parseInt(emphasisText)) {
+            colElems[i].style.textShadow = 'rgb(0, 0, 0) 1px 1px 1px, rgb(0, 0, 0) 1px 1px 2px';
+        } else {
+            colElems[i].style.textShadow = 'unset';
+        }
     }
 
     const colorBackground = window.readSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
@@ -98,6 +109,7 @@ window.applySettings = function() {
 
 window.resetSettings = function() {
     window.saveSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR, false);
+    window.saveSetting('style-text-emphasis', SETTINGS_DEFAULT_TEXT_EMPHASIS, false)
     window.saveSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR, false);
     window.saveSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE, false);
     window.saveSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE, false);
