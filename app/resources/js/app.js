@@ -319,7 +319,7 @@ window.updateDateTime = function(target) {
     let elem = document.querySelector(target);
     if (elem) {
         let dt = new Date();
-        elem.innerText = ('0' + dt.getHours()).slice(-2) + ':' + ('0' + dt.getMinutes()).slice(-2) + ':' + ('0' + dt.getSeconds()).slice(-2);
+        elem.innerText = ('0' + dt.getHours()).slice(-2) + ':' + ('0' + dt.getMinutes()).slice(-2);
 
         setTimeout(function() {
             window.updateDateTime(target);
