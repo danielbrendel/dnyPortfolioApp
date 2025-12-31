@@ -58,20 +58,23 @@
                 window.setDesktopStyle('max-width', '100px');
                 window.loadSettings();
 
-                window.registerWidget('column-window-about', 'About', 'about.png');
+                window.registerWidget('column-window-about', 'About Me', 'about.png');
                 @if (env('APP_ENABLE_BLOG'))
                 window.registerWidget('column-window-blog', 'Blog Posts', 'blog.png');
                 @endif
-                window.registerWidget('column-window-projects', 'Projects', 'projects.png');
+                window.registerWidget('column-window-projects', 'My Projects', 'projects.png');
                 window.registerWidget('column-window-technologies', 'Tech Stack', 'tech.png');
                 @if (env('APP_ENABLE_SHOUTBOX'))
                 window.registerWidget('column-window-shoutbox', 'Shoutbox', 'shoutbox.png');
                 @endif
                 @if (env('APP_ENABLE_TERMINAL'))
                 window.registerWidget('column-window-terminal', 'Terminal', 'terminal.png');
-                document.getElementById('terminal-code-result').innerHTML += 'Welcome to the system terminal' + "<br/>" + '=========================' + "<br/><br/>" + '&gt;&nbsp;' + navigator.userAgent + "<br/>" + '&gt;&nbsp;Session timestamp: ' + (Date.now()).toString() + "<br/>" + '&gt;&nbsp;System locale: ' + navigator.language.toUpperCase() + ' (' + Intl.DateTimeFormat().resolvedOptions().timeZone + ')' + "<br/><br/>";
+                document.getElementById('terminal-code-result').innerHTML += 'Welcome to the system terminal' + "<br/>" + '=========================' + "<br/><br/>" + '&gt;&nbsp;' + navigator.userAgent + "<br/>" + '&gt;&nbsp;Session timestamp: ' + (Date.now()).toString() + "<br/>" + '&gt;&nbsp;System locale: ' + navigator.language + ' (' + Intl.DateTimeFormat().resolvedOptions().timeZone + ')' + "<br/><br/>";
                 @endif
                 window.registerWidget('column-window-settings', 'Settings', 'settings.png');
+                @if (env('APP_ENABLE_SERVICES'))
+                window.registerWidget('column-window-services', 'Services', 'services.png');
+                @endif
 
                 window.addStartMenuItem('Contact', 'mail.png', function() { window.location.href = 'mailto:{{ env('APP_CONTACT') }}'; });
                 window.addStartMenuDelimiter();
@@ -96,6 +99,8 @@
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
             
             document.addEventListener('DOMContentLoaded', function() {
+                window.publicApiToken = '{{ env('APP_PUBLIC_API_TOKEN') }}';
+
                 window.initDesktop();
                 window.setDraggableWindows();
 
@@ -133,6 +138,10 @@
                 window.shoutboxInterval = setInterval(() => {
                     window.queryShout('.sunken-panel-shoutbox');
                 }, {{ env('APP_SHOUTBOX_DELAY', 5000) }});
+                @endif
+
+                @if (env('APP_ENABLE_SERVICES'))
+                window.queryEndpointStatuses();
                 @endif
 
                 let initialVisit = parseInt(window.readSetting('initial-visit', '0'));

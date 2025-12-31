@@ -13,8 +13,8 @@ class ServicesController extends BaseController {
 	public function __construct()
 	{
         try {
-            $apikey = $_GET['token'] ?? '';
-
+            $apikey = parent::param('token', '');
+            
             ApiKeys::verify($apikey);
         } catch (\Exception $e) {
             $this->respond(json_encode(['code' => 403, 'msg' => $e->getMessage()]), 403, 'application/json');

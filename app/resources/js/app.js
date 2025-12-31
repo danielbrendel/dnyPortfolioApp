@@ -14,6 +14,8 @@ import 'highlight.js/scss/github.scss';
 
 window.hljs = hljs;
 
+window.publicApiToken = '';
+
 const SETTINGS_DEFAULT_TEXT_COLOR = '#000000';
 const SETTINGS_DEFAULT_BACKGROUND_COLOR = '#82aed7';
 const SETTINGS_DEFAULT_BACKGROUND_IMAGE = 'none';
@@ -157,7 +159,7 @@ window.openWidget = function(which, onOpenCallback = function(){}) {
 
 window.setWidgetCentered = function(elem) {
     const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
+    const screenHeight = window.innerHeight - 35;
 
     const windowWidth = elem.offsetWidth;
     const windowHeight = elem.offsetHeight;
@@ -179,7 +181,7 @@ window.setWidgetToTop = function(which) {
         others[i].parentElement.style.zIndex = 'unset';
     }
 
-    elem.style.zIndex = '999';
+    elem.style.zIndex = '100';
 };
 
 window.closeWidget = function(which, onCloseCallback = function(){}) {
@@ -381,6 +383,8 @@ window.setDraggableWindows = function() {
 
             document.addEventListener("mousemove", onMouseMove);
             document.addEventListener("mouseup", onMouseUp);
+
+            window.setWidgetToTop('#' + parent.id);
         });        
     }
 };
@@ -479,6 +483,57 @@ window.previewBlogPost = function(title, content, token) {
 
     document.body.appendChild(form);
     form.submit();
+};
+
+window.queryEndpointStatuses = function(callback = function(){}, notifyOnSuccess = false) {
+    window.ajaxRequest('post', window.location.origin + '/services/endpoints/status/all?token=' + window.publicApiToken, {}, function(response) {
+        if (response.metadata.status == 200) {
+            window.clearEndpointsTable();
+
+            const quantity = response.metadata.endpoints;
+            for (let i = 0; i < quantity; i++) {
+                const ep = response['ep' + (i + 1).toString()];
+                window.addEndpointStatusToTable(ep.title, ep.description, ep.host, ep.status);
+            }
+
+            if (notifyOnSuccess) {
+                window.notify('Endpoint statuses', 'Successfully fetched endpoint statuses', 'success');
+            }
+        } else {
+            window.notify('Request error', 'Failed to query endpoint statuses', 'error');
+        }
+
+        callback();
+    });
+};
+
+window.addEndpointStatusToTable = function(name, description, host, status) {
+    const table = document.querySelector('#services-endpoints');
+    if (!table) {
+        console.error('Required data table not found');
+        return;
+    }
+
+    const html = `
+        <tr>
+            <td>` + name + `</td>
+            <td>` + description + `</td>
+            <td>` + host + `</td>
+            <td class="align-right">` + status + `</td>
+        </tr>
+    `;
+
+    table.innerHTML += html;
+};
+
+window.clearEndpointsTable = function() {
+    const table = document.querySelector('#services-endpoints');
+    if (!table) {
+        console.error('Required data table not found');
+        return;
+    }
+
+    table.innerHTML = '';
 };
 
 window.runCode = function(src, output) {

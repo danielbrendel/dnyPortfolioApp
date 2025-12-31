@@ -5,3 +5,4 @@
 @include('widgets/shoutbox.php')
 @include('widgets/terminal.php')
 @include('widgets/settings.php')
+@include('widgets/services.php')
