@@ -12,36 +12,38 @@
 			</div>
 		</div>
 		<div class="window-body">
-            <div class="sunken-panel sunken-panel-applets">
-                @if ((isset($applets)) && (is_countable($applets)))
-                    @foreach ($applets as $applet)
-                        <div class="applet-item" id="applet-{{ $applet->id }}" onclick="window.displayAppletDetails({{ $applet->id }});">
-                            <div class="applet-data">
-                                <input type="hidden" id="applet-name-{{ $applet->id }}" value="{{ $applet->name }}"/>
-                                <input type="hidden" id="applet-version-{{ $applet->id }}" value="{{ $applet->version }}"/>
-                                <input type="hidden" id="applet-description-{{ $applet->id }}" value="{{ $applet->description }}"/>
-                                <input type="hidden" id="applet-author-{{ $applet->id }}" value="{{ $applet->author }}"/>
-                                <input type="hidden" id="applet-resource-{{ $applet->id }}" value="{{ $applet->resource }}"/>
-                            </div>
+            <div class="sunken-panel-applets-wrapper">
+                <div class="sunken-panel sunken-panel-applets-content">
+                    @if ((isset($applets)) && (is_countable($applets)))
+                        @foreach ($applets as $applet)
+                            <div class="applet-item" id="applet-{{ $applet->id }}" onclick="window.displayAppletDetails({{ $applet->id }});">
+                                <div class="applet-data">
+                                    <input type="hidden" id="applet-name-{{ $applet->id }}" value="{{ $applet->name }}"/>
+                                    <input type="hidden" id="applet-version-{{ $applet->id }}" value="{{ $applet->version }}"/>
+                                    <input type="hidden" id="applet-description-{{ $applet->id }}" value="{{ $applet->description }}"/>
+                                    <input type="hidden" id="applet-author-{{ $applet->id }}" value="{{ $applet->author }}"/>
+                                    <input type="hidden" id="applet-resource-{{ $applet->id }}" value="{{ $applet->resource }}"/>
+                                </div>
 
-                            <div class="applet-icon">
-                                @if ((strpos($applet->icon, 'http://') !== 0) && (strpos($applet->icon, 'https://') !== 0))
-                                <img src="{{ asset('img/icons/' . $applet->icon) }}" alt="icon"/>
-                                @else
-                                <img src="{{ $applet->icon }}" alt="icon"/>
-                                @endif
-                            </div>
+                                <div class="applet-icon">
+                                    @if ((strpos($applet->icon, 'http://') !== 0) && (strpos($applet->icon, 'https://') !== 0))
+                                    <img src="{{ asset('img/icons/' . $applet->icon) }}" alt="icon"/>
+                                    @else
+                                    <img src="{{ $applet->icon }}" alt="icon"/>
+                                    @endif
+                                </div>
 
-                            <div class="applet-name" id="applet-name-{{ Utils::ruleify($applet->name) }}">{{ $applet->name }}</div>
-                        </div>
-                    @endforeach
-                @endif
-			</div>
+                                <div class="applet-name" id="applet-name-{{ Utils::ruleify($applet->name) }}">{{ $applet->name }}</div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
 
             <div class="applet-details">
                 <div class="applet-info">Select an applet to view details</div>
                 <div class="applet-action is-hidden">
-                    <div class="applet-install is-hidden" onclick="window.downloadApplet(document.getElementById('applet-action-install-name').value, document.getElementById('applet-action-install-resource').value); window.unselectAllApplets(); this.classList.add('is-hidden');">
+                    <div class="applet-install is-hidden" onclick="window.downloadApplet(document.getElementById('applet-action-install-name').value, document.getElementById('applet-action-install-resource').value); this.classList.add('is-hidden');">
                         <input type="hidden" id="applet-action-install-name"/>
                         <input type="hidden" id="applet-action-install-resource"/>
 
