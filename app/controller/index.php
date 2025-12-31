@@ -39,7 +39,8 @@ class IndexController extends BaseController {
 			'projects' => $projects,
 			'shouts' => $shouts,
 			'visitcount' => $visitcount,
-			'backgrounds' => $backgrounds
+			'backgrounds' => $backgrounds,
+			'widget' => 'about'
 		]);
 	}
 

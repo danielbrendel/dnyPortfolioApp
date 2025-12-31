@@ -1,0 +1,7 @@
+@include('widgets/about.php')
+@include('widgets/blog.php')
+@include('widgets/projects.php')
+@include('widgets/tech.php')
+@include('widgets/shoutbox.php')
+@include('widgets/terminal.php')
+@include('widgets/settings.php')

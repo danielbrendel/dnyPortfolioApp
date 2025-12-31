@@ -8,12 +8,12 @@
 				<button aria-label="Close" onclick="window.closeWidget('#column-window-projects');"></button>
 			</div>
 		</div>
-		<div class="window-body stay-in-viewport">
+		<div class="window-body">
             <strong><i class="fas fa-star color-yellow"></i>&nbsp;Project Showcase</strong>
 
             <p>Here is a list of my most notable projects.</p>
 
-            <div class="projects">
+            <div class="projects sunken-panel sunken-panel-projects">
             @foreach ($projects as $project)
                 <a href="{{ url('/projects/view/' . $project->get('slug')) }}">
                     <div class="project" style="background-image: url('{{ asset('img/projects/' . $project->get('preview')) }}');" onmouseover="this.children[0].style.display = 'block';" onmouseout="this.children[0].style.display = 'none';">

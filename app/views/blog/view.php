@@ -1,3 +1,5 @@
+@include('widgets/_all.php')
+
 <div class="column is-half" id="column-window-blog-post-view">
 	<div class="window">
 		<div class="title-bar">
@@ -29,9 +31,15 @@
 			</div>
 
 			<div class="blog-post-content-footer">
-				<span><a href="{{ url('/') }}">Close</a></span>
+				<span><a class="btn btn-fixed-padding" href="{{ url('/?widget=blog') }}">Close</a></span>
 				<span><i class="fas fa-eye"></i>&nbsp;{{ $viewers }}</span>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		window.setWidgetCentered(document.querySelector('#column-window-blog-post-view'));
+	});
+</script>

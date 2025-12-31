@@ -305,6 +305,14 @@ table td a:hover {
     position: relative;
 }
 
+.sunken-panel-projects {
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 10px;
+    background-color: rgb(150, 150, 150);
+}
+
 .projects a {
     text-decoration: none;
 }
@@ -330,11 +338,7 @@ table td a:hover {
     margin-bottom: 20px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-}
-
-.project:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
 .project-overlay {
@@ -352,6 +356,8 @@ table td a:hover {
     height: 40px;
     padding: 15px;
     background-color: rgba(250, 250, 250, 0.8);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .project-info {
@@ -375,6 +381,13 @@ table td a:hover {
     font-size: 1.0em;
 }
 
+.sunken-panel-project-details {
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(200, 200,  200);
+}
+
 .project-details h1 {
     font-size: 2.5em;
     margin-bottom: 5px;
@@ -395,9 +408,8 @@ table td a:hover {
     font-size: 1.2em;
     color: rgb(50, 50, 50);
     background-color: rgb(200, 200, 200);
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 30px;
-    box-shadow: inset -1px -1px #fff, inset 1px 1px rgb(10, 10, 10), inset -2px -2px rgb(223, 223, 223), inset 2px 2px grey;
 }
 
 .project-details img {
@@ -409,6 +421,7 @@ table td a:hover {
     font-size: 1.5em;
     margin-top: 25px;
     margin-bottom: 30px;
+    padding: 10px;
 }
 
 .blog-post-content {
@@ -449,8 +462,8 @@ table td a:hover {
 
 .blog-post-content-text {
     position: relative;
-    height: 72vh;
-    overflow-y: scroll;
+    height: 59vh;
+    overflow-y: auto;
     margin-bottom: 20px;
 }
 

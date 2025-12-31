@@ -72,8 +72,6 @@
                 @endif
                 window.registerWidget('column-window-settings', 'Settings', 'settings.png');
 
-                window.openWidget('#column-window-about');
-
                 window.addStartMenuItem('Contact', 'mail.png', function() { window.location.href = 'mailto:{{ env('APP_CONTACT') }}'; });
                 window.addStartMenuDelimiter();
                 @foreach (config('socials') as $social)
@@ -85,6 +83,12 @@
                 window.addStartMenuItem('Settings', 'settings.png', function() { window.openWidget('#column-window-settings'); });
 
                 window.applySettings();
+
+                @if (isset($_GET['widget']))
+                window.openWidget('#column-window-{{ $_GET['widget'] }}');
+                @elseif (isset($widget))
+                window.openWidget('#column-window-{{ $widget }}');
+                @endif
             };
 
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};
@@ -97,7 +101,6 @@
 
                 window.fetchBlogPosts('#blog-posts');
                 window.fetchBlogPosts('#popular-posts', 'popular');
-                window.fetchBlogPosts('#random-posts', 'random');
                 window.updateDateTime('#update-current-time');
 
                 window.hljs.registerLanguage('aquashell', function() {
