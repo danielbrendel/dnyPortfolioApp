@@ -247,6 +247,44 @@ window.closeActiveStartMenu = function() {
     }
 };
 
+window.notify = function(title, message, icon = 'info', duration = 5000) {
+    const root = document.querySelector('.notifications');
+    if (!root) {
+        console.error('Parent notification element not found');
+        return;
+    }
+
+    const ident = 'notification-item-' + parseInt(Date.now());
+
+    const html = `
+        <div class="notification" id="` + ident + `">
+            <div class="notification-icon"><img src="` + window.location.origin + '/img/icons/' + icon + `.png" alt="icon"/></div>
+            
+            <div class="notification-info">
+                <div class="notification-info-title">` + title + `</div>
+                <div class="notification-info-message">` + message + `</div>
+            </div>
+        </div>
+    `;
+
+    root.innerHTML += html;
+
+    window.playAudio('notification.wav');
+
+    setTimeout(function() { 
+        let el = document.getElementById(ident);
+        if (el) {
+            el.style.transition = '1.0s';
+            el.style.opacity = '0';
+            el.style.visibility = 'hidden';
+
+            setTimeout(function() {
+                el.remove();
+            }, 2000);
+        }
+    }, duration);
+};
+
 window.switchProjectTab = function(which) {
     for (let i = 1; i <= window.maxProjects; i++) {
         let elHide = document.getElementById('tab-project-' + i);

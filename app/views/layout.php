@@ -37,6 +37,7 @@
 
         @include('menu.php')
         @include('taskbar.php')
+        @include('notifications.php')
 		
         <script>
             @if (env('APP_ENABLE_PWA'))
@@ -131,6 +132,14 @@
                     window.queryShout('.sunken-panel-shoutbox');
                 }, {{ env('APP_SHOUTBOX_DELAY', 5000) }});
                 @endif
+
+                let initialVisit = parseInt(window.readSetting('initial-visit', '0'));
+                if (!initialVisit) {
+                    setTimeout(function() {
+                        window.notify('Hello there!', 'Welcome to my portfolio website!', 'info', 10000);
+                        window.saveSetting('initial-visit', '1');
+                    }, 3500);
+                }
             });
         </script>
     </body>
