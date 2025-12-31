@@ -15,6 +15,7 @@ import 'highlight.js/scss/github.scss';
 window.hljs = hljs;
 
 const SETTINGS_DEFAULT_TEXT_COLOR = '#000000';
+const SETTINGS_DEFAULT_BACKGROUND_COLOR = '#82aed7';
 const SETTINGS_DEFAULT_BACKGROUND_IMAGE = 'none';
 const SETTINGS_DEFAULT_SOUND_ENABLE = '1';
 
@@ -56,35 +57,42 @@ window.readSetting = function(key, fallback = null) {
 };
 
 window.loadSettings = function() {
-    const color = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
-    document.querySelector('#settings-dialog-style-text-color').value = color;
+    const textcolor = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    document.querySelector('#settings-dialog-style-text-color').value = textcolor;
+
+    const backgroundcolor = window.readSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
+    document.querySelector('#settings-dialog-style-background-color').value = backgroundcolor;
     
-    const background = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
-    document.querySelector('#settings-dialog-style-background-image').value = background;
+    const backgroundimage = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    document.querySelector('#settings-dialog-style-background-image').value = backgroundimage;
 
     const sndenable = window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE);
     document.querySelector('#settings-dialog-sound-enable').checked = parseInt(sndenable);
 };
 
 window.applySettings = function() {
-    const color = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    const colorText = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
     
     let colElems = document.querySelectorAll('.widgets-item-title');
     for (let i = 0; i < colElems.length; i++) {
-        colElems[i].style.color = color;
+        colElems[i].style.color = colorText;
     }
 
-    const background = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    const colorBackground = window.readSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
+    const backgroundImage = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+
     let bgElem = document.querySelector('.desktop');
-    if (background === 'none') {
+    bgElem.style.backgroundColor = colorBackground;
+    if (backgroundImage === 'none') {
         bgElem.style.backgroundImage = 'unset';
     } else {
-        bgElem.style.backgroundImage = `url('${window.location.origin}/img/backgrounds/${background}')`;
+        bgElem.style.backgroundImage = `url('${window.location.origin}/img/backgrounds/${backgroundImage}')`;
     }
 };
 
 window.resetSettings = function() {
     window.saveSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    window.saveSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
     window.saveSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
     window.saveSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE);
 

@@ -11,11 +11,15 @@
 		<div class="window-body">
             <p>Here you can adjust your preferences</p>
 
-            <fieldset>
+            <fieldset class="settings-fieldset">
                 <legend>Appearance</legend>
                 <div class="field-row">
                     <label>Text color</label>
                     <input id="settings-dialog-style-text-color" type="color" value="#000000" onchange="window.saveSetting('style-text-color', this.value); window.applySettings();"/>
+                </div>
+                <div class="field-row">
+                    <label>Background color</label>
+                    <input id="settings-dialog-style-background-color" type="color" value="#82aed7" onchange="window.saveSetting('style-background-color', this.value); window.applySettings();"/>
                 </div>
                 <div class="field-row">
                     <label>Background image</label>
@@ -30,7 +34,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="settings-fieldset">
                 <legend>Sound</legend>
                 <div class="field-row">
                     <input type="checkbox" id="settings-dialog-sound-enable" onchange="window.saveSetting('sound-enable', ((this.checked) ? '1' : '0')); window.applySettings();">
