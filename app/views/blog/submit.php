@@ -1,3 +1,5 @@
+@include('widgets/_all.php')
+
 <div class="column is-half" id="column-window-blog-post-submit">
 	<div class="window">
 		<div class="title-bar">

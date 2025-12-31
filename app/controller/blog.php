@@ -77,10 +77,22 @@ class BlogController extends BaseController {
 			$visitcount = Utils::getVisitorCount();
 			$viewers = Utils::getViewerCount($slug);
 
+			$projects = Projects::getAll();
+
+			$backgrounds = Utils::getBackgroundImageList();
+
+			$applets = null;
+			if (env('APP_ENABLE_APPLETS')) {
+				$applets = Applets::getList();
+			}
+
             return parent::view(['content', 'blog/view'], [
 				'post' => $post,
 				'visitcount' => $visitcount,
 				'viewers' => $viewers,
+				'projects' => $projects,
+				'backgrounds' => $backgrounds,
+				'applets' => $applets,
 				'_meta_title' => $post->get('title') . ' | ' . env('APP_AUTHOR') . ' | Blog',
 				'_meta_description' => Utils::descriptify($post->get('content')),
 				'_meta_url' => url('/blog/' . $post->get('slug')),
@@ -106,8 +118,24 @@ class BlogController extends BaseController {
 				throw new \Exception('Access denied');
 			}
 
+			$projects = Projects::getAll();
+			$shouts = Shoutbox::pickMessages(10);
+			$visitcount = Utils::getVisitorCount();
+
+			$backgrounds = Utils::getBackgroundImageList();
+
+			$applets = null;
+			if (env('APP_ENABLE_APPLETS')) {
+				$applets = Applets::getList();
+			}
+
 			return parent::view(['content', 'blog/submit'], [
-				'token' => $token
+				'token' => $token,
+				'projects' => $projects,
+				'shouts' => $shouts,
+				'visitcount' => $visitcount,
+				'backgrounds' => $backgrounds,
+				'applets' => $applets
 			]);
 		} catch (\Exception $e) {
 			return redirect('/');

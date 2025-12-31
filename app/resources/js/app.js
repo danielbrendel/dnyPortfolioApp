@@ -118,17 +118,27 @@ window.setDesktopStyle = function(key, value) {
     root.style[key] = value;
 };
 
-window.registerWidget = function(ident, title, icon) {
+window.registerWidget = function(ident, title, icon, appletId = null) {
     let root = document.querySelector('.widgets');
     if (!root) {
         console.error('Fatal error: widget root element not found.');
         return;
     }
 
+    let imageAsset = icon;
+    if ((!imageAsset.includes('http://')) && (!imageAsset.includes('https://'))) {
+        imageAsset = window.location.origin + '/img/icons/' + imageAsset;
+    }
+
+    let appendIfApplet = '';
+    if (appletId !== null) {
+        appendIfApplet = `, window.applets[` + appletId + `].instance.onShow`;
+    }
+
     root.innerHTML += `
-        <div class="widgets-item" id="desktop-widget-` + ident + `" onclick="window.openWidget('#` + ident + `');">
+        <div class="widgets-item" id="desktop-widget-` + ident + `" onclick="window.openWidget('#` + ident + `'` + appendIfApplet + `);">
             <div class="widgets-item-icon">
-                <img src="` + window.location.origin + '/img/icons/' + icon + `" alt="icon"/>
+                <img src="` + imageAsset + `" alt="icon"/>
             </div>
 
             <div class="widgets-item-title">
@@ -151,6 +161,7 @@ window.openWidget = function(which, onOpenCallback = function(){}) {
 
     window.setWidgetCentered(elem);
     window.setWidgetToTop(which);
+    window.setDraggableWindows();
 
     window.playAudio('open.wav');
 
@@ -516,10 +527,10 @@ window.addEndpointStatusToTable = function(name, description, host, status) {
 
     const html = `
         <tr>
-            <td>` + name + `</td>
+            <td><strong>` + name + `</strong></td>
             <td>` + description + `</td>
-            <td>` + host + `</td>
-            <td class="align-right">` + status + `</td>
+            <td><a href="` + host + `" target="_blank">` + host + `</a></td>
+            <td class="align-right color-dark-orange">` + status + `</td>
         </tr>
     `;
 

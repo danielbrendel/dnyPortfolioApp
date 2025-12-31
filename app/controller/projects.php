@@ -39,9 +39,18 @@ class ProjectsController extends BaseController {
 
 		$visitcount = Utils::getVisitorCount();
 
+		$backgrounds = Utils::getBackgroundImageList();
+
+		$applets = null;
+		if (env('APP_ENABLE_APPLETS')) {
+			$applets = Applets::getList();
+		}
+
 		return parent::view(['content', 'projects/view'], [
 			'project' => $project,
-			'visitcount' => $visitcount
+			'visitcount' => $visitcount,
+			'backgrounds' => $backgrounds,
+			'applets' => $applets
 		]);
 	}
 }

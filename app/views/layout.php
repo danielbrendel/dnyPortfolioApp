@@ -55,7 +55,6 @@
             @endif
 
             window.initDesktop = function() {
-                window.setDesktopStyle('max-width', '100px');
                 window.loadSettings();
 
                 window.registerWidget('column-window-about', 'About Me', 'about.png');
@@ -75,6 +74,10 @@
                 @if (env('APP_ENABLE_SERVICES'))
                 window.registerWidget('column-window-services', 'Services', 'services.png');
                 @endif
+                @if (env('APP_ENABLE_APPLETS'))
+                window.registerWidget('column-window-applets', 'Applets', 'applets.png');
+                window.bootApplets();
+                @endif
 
                 window.addStartMenuItem('Contact', 'mail.png', function() { window.location.href = 'mailto:{{ env('APP_CONTACT') }}'; });
                 window.addStartMenuDelimiter();
@@ -84,6 +87,9 @@
 					@endif
 				@endforeach
                 window.addStartMenuDelimiter();
+                @if (env('APP_ENABLE_APPLETS'))
+                window.addStartMenuItem('Applets', 'applets.png', function() { window.openWidget('#column-window-applets'); });
+                @endif
                 window.addStartMenuItem('Settings', 'settings.png', function() { window.openWidget('#column-window-settings'); });
                 window.addStartMenuItem('Reset', 'reset.png', function() { window.resetSettings(); window.closeAllWidgets(); });
 
@@ -141,7 +147,7 @@
                 @endif
 
                 @if (env('APP_ENABLE_SERVICES'))
-                window.queryEndpointStatuses();
+                setTimeout(function() { window.queryEndpointStatuses(); }, 3500);
                 @endif
 
                 let initialVisit = parseInt(window.readSetting('initial-visit', '0'));

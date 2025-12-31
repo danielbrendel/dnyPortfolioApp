@@ -172,6 +172,38 @@ class Utils {
     }
 
     /**
+     * @param string $expression
+     * @param string $delimiter
+     * @return string
+     */
+    public static function pascalify($expression, $delimiter = ' ')
+    {
+        $tokens = explode($delimiter, $expression);
+
+        foreach ($tokens as $key => &$token) {
+            $tokens[$key] = ucfirst($token);
+        }
+
+        return implode('', $tokens);
+    }
+
+    /**
+     * @param string $expression
+     * @param string $delimiter
+     * @return string
+     */
+    public static function ruleify($expression, $delimiter = ' ')
+    {
+        $tokens = explode($delimiter, $expression);
+
+        foreach ($tokens as $key => &$token) {
+            $tokens[$key] = strtolower($token);
+        }
+
+        return implode('-', $tokens);
+    }
+
+    /**
      * @param $value
      * @return string
      */

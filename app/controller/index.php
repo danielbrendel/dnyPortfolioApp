@@ -35,11 +35,18 @@ class IndexController extends BaseController {
 		$visitcount = Utils::getVisitorCount();
 		$backgrounds = Utils::getBackgroundImageList();
 
+		$applets = null;
+
+		if (env('APP_ENABLE_APPLETS')) {
+			$applets = Applets::getList();
+		}
+		
 		return parent::view(['content', 'index'], [
 			'projects' => $projects,
 			'shouts' => $shouts,
 			'visitcount' => $visitcount,
 			'backgrounds' => $backgrounds,
+			'applets' => $applets,
 			'widget' => 'about'
 		]);
 	}

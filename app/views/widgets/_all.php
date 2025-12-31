@@ -6,3 +6,4 @@
 @include('widgets/terminal.php')
 @include('widgets/settings.php')
 @include('widgets/services.php')
+@include('widgets/applets.php')
