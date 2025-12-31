@@ -4,3 +4,4 @@
 @include('widgets/tech.php')
 @include('widgets/shoutbox.php')
 @include('widgets/terminal.php')
+@include('widgets/settings.php')

@@ -27,10 +27,12 @@
     </head>
 
     <body>
-        @include('widgets.php')
+        <div class="desktop" onclick="window.closeActiveStartMenu();">
+            @include('widgets.php')
 
-        <div class="content">
-            {%content%}
+            <div class="content">
+                {%content%}
+            </div>
         </div>
 
         @include('menu.php')
@@ -53,6 +55,7 @@
 
             window.initDesktop = function() {
                 window.setDesktopStyle('max-width', '100px');
+                window.loadSettings();
 
                 window.registerWidget('column-window-about', 'About', 'about.png');
                 @if (env('APP_ENABLE_BLOG'))
@@ -67,6 +70,7 @@
                 window.registerWidget('column-window-terminal', 'Terminal', 'terminal.png');
                 document.getElementById('terminal-code-result').innerHTML += 'Browser terminal started' + "<br/>" + navigator.userAgent + "<br/>" + 'Current time: ' + (new Date()).toLocaleString() + "<br/><br/>";
                 @endif
+                window.registerWidget('column-window-settings', 'Settings', 'settings.png');
 
                 window.openWidget('#column-window-about');
 
@@ -77,6 +81,10 @@
                         window.addStartMenuItem('{{ $social->name }}', '{{ $social->icon }}', function() { window.open('{{ $social->url }}'); });
 					@endif
 				@endforeach
+                window.addStartMenuDelimiter();
+                window.addStartMenuItem('Settings', 'settings.png', function() { window.openWidget('#column-window-settings'); });
+
+                window.applySettings();
             };
 
             window.maxProjects = {{ (isset($projects) ? count($projects) : 0) }};

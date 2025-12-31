@@ -14,6 +14,10 @@ import 'highlight.js/scss/github.scss';
 
 window.hljs = hljs;
 
+const SETTINGS_DEFAULT_TEXT_COLOR = '#000000';
+const SETTINGS_DEFAULT_BACKGROUND_IMAGE = 'none';
+const SETTINGS_DEFAULT_SOUND_ENABLE = '1';
+
 window.ajaxRequest = function (method, url, data = {}, successfunc = function(data){}, finalfunc = function(){}, config = {})
 {
     let func = window.axios.get;
@@ -36,6 +40,56 @@ window.ajaxRequest = function (method, url, data = {}, successfunc = function(da
                 finalfunc();
             }
         );
+};
+
+window.saveSetting = function(key, value) {
+    localStorage.setItem(key, value);
+};
+
+window.readSetting = function(key, fallback = null) {
+    const result = localStorage.getItem(key);
+    if (result === null) {
+        return fallback;
+    }
+
+    return result;
+};
+
+window.loadSettings = function() {
+    const color = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    document.querySelector('#settings-dialog-style-text-color').value = color;
+    
+    const background = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    document.querySelector('#settings-dialog-style-background-image').value = background;
+
+    const sndenable = window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE);
+    document.querySelector('#settings-dialog-sound-enable').checked = parseInt(sndenable);
+};
+
+window.applySettings = function() {
+    const color = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    
+    let colElems = document.querySelectorAll('.widgets-item-title');
+    for (let i = 0; i < colElems.length; i++) {
+        colElems[i].style.color = color;
+    }
+
+    const background = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    let bgElem = document.querySelector('.desktop');
+    if (background === 'none') {
+        bgElem.style.backgroundImage = 'unset';
+    } else {
+        bgElem.style.backgroundImage = `url('${window.location.origin}/img/backgrounds/${background}')`;
+    }
+};
+
+window.resetSettings = function() {
+    window.saveSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    window.saveSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    window.saveSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE);
+
+    window.loadSettings();
+    window.applySettings();
 };
 
 window.setDesktopStyle = function(key, value) {
@@ -373,4 +427,16 @@ window.runCode = function(src, output) {
 
         elem.scrollTop = elem.scrollHeight;
     }
+};
+
+window.playAudio = function(soundfile) {
+    const sndEnabled = parseInt(window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE));
+    if (!sndEnabled) {
+        return;
+    }
+
+    let audio = new Audio(window.location.origin + '/sounds/' + soundfile);
+    audio.onloadeddata = function() {
+        audio.play();
+    };
 };

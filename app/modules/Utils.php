@@ -64,6 +64,33 @@ class Utils {
             return [];
         }
     }
+
+    /**
+     * @return array
+     */
+    public static function getBackgroundImageList()
+    {
+        try {
+            return json_decode(Cache::remember('background_images', (int)env('APP_CACHE_DURATION', 125), function() {
+                $list = [];
+
+				$files = scandir(public_path() . '/img/backgrounds');
+                foreach ($files as $file) {
+                    if (substr($file, 0, 1) === '.') {
+                        continue;
+                    }
+
+                    if (static::isValidImage(public_path() . '/img/backgrounds/' . $file)) {
+                        $list[] = $file;
+                    }
+                }
+
+                return json_encode($list);
+			}));
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
     
     /**
      * @param $count
@@ -108,6 +135,27 @@ class Utils {
         }
 
         return null;
+    }
+
+    /**
+     * @param $file
+     * @return bool
+     */
+    public static function isValidImage($file)
+    {
+        $imagetypes = [
+            IMAGETYPE_PNG,
+            IMAGETYPE_JPEG,
+            IMAGETYPE_GIF
+        ];
+
+        foreach ($imagetypes as $type) {
+            if (exif_imagetype($file) === $type) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

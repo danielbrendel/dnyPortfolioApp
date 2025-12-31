@@ -31,6 +31,15 @@ body {
     margin-bottom: 15px;
 }
 
+.desktop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 .is-full {
     width: 90%;
 }
@@ -718,6 +727,11 @@ table td a:hover {
 
 .menu-item-icon {
     display: inline-block;
+}
+
+.menu-item-icon img {
+    width: 32px;
+    height: 32px;
 }
 
 .menu-item-title {

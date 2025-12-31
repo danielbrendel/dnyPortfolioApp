@@ -33,11 +33,13 @@ class IndexController extends BaseController {
 		$projects = Projects::getAll();
 		$shouts = Shoutbox::pickMessages(10);
 		$visitcount = Utils::getVisitorCount();
+		$backgrounds = Utils::getBackgroundImageList();
 
 		return parent::view(['content', 'index'], [
 			'projects' => $projects,
 			'shouts' => $shouts,
-			'visitcount' => $visitcount
+			'visitcount' => $visitcount,
+			'backgrounds' => $backgrounds
 		]);
 	}
 
