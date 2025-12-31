@@ -102,6 +102,7 @@
 
                 window.fetchBlogPosts('#blog-posts');
                 window.fetchBlogPosts('#popular-posts', 'popular');
+                window.updateAudioIndicator('#taskbar-audio-icon', '#taskbar-audio-label');
                 window.updateDateTime('#update-current-time');
 
                 window.hljs.registerLanguage('aquashell', function() {

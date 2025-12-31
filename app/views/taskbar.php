@@ -14,6 +14,11 @@
                         <div class="is-inline-block">{{ $visitcount }} visitors</div>
                     </div>
 
+                    <div class="is-inline-block has-side-spacing">
+                        <div class="is-inline-block"><img src="" alt="icon" id="taskbar-audio-icon"/></div>
+                        <div class="is-inline-block" id="taskbar-audio-label"></div>
+                    </div>
+
                     <div class="is-inline-block">
                         <div class="is-inline-block"><img src="{{ asset('img/icons/clock.png') }}" alt="icon"/></div>
                         <div class="is-inline-block" id="update-current-time">#update-current-time</div>

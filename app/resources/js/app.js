@@ -354,6 +354,25 @@ window.setDraggableWindows = function() {
     }
 };
 
+window.updateAudioIndicator = function(icon, label) {
+    const elIcon = document.querySelector(icon);
+    const elLabel = document.querySelector(label);
+
+    const sndenable = parseInt(window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE));
+    
+    if (sndenable) {
+        elIcon.src = window.location.origin + '/img/icons/audio_on.png';
+        elLabel.innerText = 'On';
+    } else {
+        elIcon.src = window.location.origin + '/img/icons/audio_off.png';
+        elLabel.innerText = 'Off';
+    }
+
+    setTimeout(function() {
+        window.updateAudioIndicator(icon, label);
+    }, 1000);
+};
+
 window.updateDateTime = function(target) {
     let elem = document.querySelector(target);
     if (elem) {
