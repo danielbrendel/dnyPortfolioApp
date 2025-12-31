@@ -1,13 +1,13 @@
-# Daniel Brendel Portfolio Homepage
+# Daniel Brendel Portfolio App
 
-<img src="public/img/screenshot.png" alt="screenshot"/>
+<img src="public/img/preview.png" alt="screenshot"/>
 
 ## Information
 
 (C) 2019 - 2025 by Daniel Brendel
 
 **Version**: 1.0\
-**Codename**: dnyPortfolioHomepage\
+**Codename**: dnyPortfolioApp\
 **Contact**: dbrendel1988(at)gmail(dot)com\
 **GitHub**: https://github.com/danielbrendel/
 
@@ -16,7 +16,7 @@
 <img src="https://img.shields.io/badge/nostalgic-Yes-green" alt="nostalgic-yes"/>
 
 ## Description
-This is my personal portfolio homepage designed as a [web desktop](https://en.wikipedia.org/wiki/Web_desktop). Its GUI resembles old Windows versions for the maximum nostalgic experience. The project also features an applet system, so you can manage applets from web resources dynamically.
+This is my personal portfolio application designed as a [web desktop](https://en.wikipedia.org/wiki/Web_desktop). Its GUI resembles old Windows versions for the maximum nostalgic experience. The project also features an applet system, so you can manage applets from web resources dynamically.
 
 ## Tech stack
 
@@ -40,3 +40,8 @@ The following technologies are used for this project.
 
 - PHP ^8.3
 - MariaDB ^11.4
+
+
+## Disclaimer
+
+This project uses Windows 9x icons from [win98icons.alexmeub.com](https://win98icons.alexmeub.com) (C) by Microsoft Corporation.

@@ -34,6 +34,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -932,28 +933,30 @@ table td a:hover {
     visibility: hidden;
 }
 
-.applet-download {
+.applet-install {
     position: relative;
     top: 3px;
     padding: 10px;
     background-color: rgb(150, 150, 150);
     border: 1px solid rgb(123, 123, 123);
     border-radius: 5px;
+    box-shadow: inset -1px -1px rgb(10, 10, 10), inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px rgb(223, 223, 223);
     cursor: pointer;
 }
 
-.applet-download:hover {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+.applet-install:active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px rgb(10, 10, 10), inset -2px -2px rgb(223, 223, 223), inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
 }
 
-.applet-download-icon {
+.applet-install-icon {
     position: relative;
     display: inline-block;
     top: 5px;
     margin-right: 5px;
 }
 
-.applet-download-label {
+.applet-install-label {
     position: relative;
     display: inline-block;
     top: -5px;
@@ -970,11 +973,13 @@ table td a:hover {
     background-color: rgb(150, 150, 150);
     border: 1px solid rgb(123, 123, 123);
     border-radius: 5px;
+    box-shadow: inset -1px -1px rgb(10, 10, 10), inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px rgb(223, 223, 223);
     cursor: pointer;
 }
 
-.applet-uninstall:hover {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+.applet-uninstall:active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px rgb(10, 10, 10), inset -2px -2px rgb(223, 223, 223), inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
 }
 
 .applet-uninstall-icon {

@@ -25,7 +25,11 @@
                             </div>
 
                             <div class="applet-icon">
+                                @if ((strpos($applet->icon, 'http://') !== 0) && (strpos($applet->icon, 'https://') !== 0))
                                 <img src="{{ asset('img/icons/' . $applet->icon) }}" alt="icon"/>
+                                @else
+                                <img src="{{ $applet->icon }}" alt="icon"/>
+                                @endif
                             </div>
 
                             <div class="applet-name" id="applet-name-{{ Utils::ruleify($applet->name) }}">{{ $applet->name }}</div>
@@ -37,15 +41,15 @@
             <div class="applet-details">
                 <div class="applet-info">Select an applet to view details</div>
                 <div class="applet-action is-hidden">
-                    <div class="applet-download is-hidden" onclick="window.downloadApplet(document.getElementById('applet-action-download-name').value, document.getElementById('applet-action-download-resource').value); window.unselectAllApplets(); this.classList.add('is-hidden');">
-                        <input type="hidden" id="applet-action-download-name"/>
-                        <input type="hidden" id="applet-action-download-resource"/>
+                    <div class="applet-install is-hidden" onclick="window.downloadApplet(document.getElementById('applet-action-install-name').value, document.getElementById('applet-action-install-resource').value); window.unselectAllApplets(); this.classList.add('is-hidden');">
+                        <input type="hidden" id="applet-action-install-name"/>
+                        <input type="hidden" id="applet-action-install-resource"/>
 
-                        <div class="applet-download-icon">
+                        <div class="applet-install-icon">
                             <img src="{{ asset('img/icons/download.png') }}" alt="icon"/>
                         </div>
 
-                        <div class="applet-download-label">Install</div>
+                        <div class="applet-install-label">Install</div>
                     </div>
 
                     <div class="applet-uninstall is-hidden" onclick="window.removeApplet(document.getElementById('applet-action-uninstall-name').value); window.unselectAllApplets(); this.classList.add('is-hidden');">
@@ -101,10 +105,10 @@
         if (!exists) {
             action.children[0].classList.toggle('is-hidden');
 
-            let dlres = document.getElementById('applet-action-download-resource');
+            let dlres = document.getElementById('applet-action-install-resource');
             dlres.value = resource;
 
-            let dlname = document.getElementById('applet-action-download-name');
+            let dlname = document.getElementById('applet-action-install-name');
             dlname.value = name;
         } else {
             action.children[1].classList.toggle('is-hidden');
@@ -176,13 +180,15 @@
 
             let transformName = window.transformPascalCase(name);
             window.initApplet(window[transformName], firsttime);
+
+            window.applySettings();
         };
 
         document.head.appendChild(embed);
     };
 
     window.downloadApplet = function(name, resource) {
-        let label = document.querySelector('.applet-download-label');
+        let label = document.querySelector('.applet-install-label');
         const origLabel = label.innerHTML;
         label.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp;' + label.innerHTML;
 
@@ -197,7 +203,7 @@
                 indicator.innerHTML = '<img src="' + window.location.origin + '/img/icons/success.png" alt="icon"/>&nbsp;' + indicator.innerHTML;
             }
 
-            window.notify('Applet download', 'Successfully downloaded applet.', 'download');
+            window.notify('Applet installation', 'Successfully downloaded and installed applet.', 'download');
         });
     };
 
@@ -231,7 +237,7 @@
         const transformedName = window.transformRuleCase(name);
     
         for (let i = 0; i < window.applets.length; i++) {
-            if (window.applets[i].name === transformedName) {
+            if (window.transformRuleCase(window.applets[i].name) === transformedName) {
                 window.applets[i].instance.onRemove();
                 window.applets.splice(i, 1);
                 break;

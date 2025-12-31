@@ -10,7 +10,7 @@
         <meta name="og:title" property="og:title" content="{{ (isset($_meta_title)) ? $_meta_title : env('APP_AUTHOR') }}">
         <meta name="og:description" property="og:description" content="{{ (isset($_meta_description)) ? $_meta_description : env('APP_DESCRIPTION') }}">
         <meta name="og:url" property="og:url" content="{{ (isset($_meta_url)) ? $_meta_url : url('/') }}">
-        <meta name="og:image" property="og:image" content="{{ (isset($_meta_image)) ? asset('img/uploads/' . $_meta_image) : asset('img/logo.png') }}">
+        <meta name="og:image" property="og:image" content="{{ (isset($_meta_image)) ? asset('img/uploads/' . $_meta_image) : asset('img/preview.png') }}">
 
         <title>{{ env('APP_TITLE') }}</title>
 
@@ -153,7 +153,7 @@
                 let initialVisit = parseInt(window.readSetting('initial-visit', '0'));
                 if (!initialVisit) {
                     setTimeout(function() {
-                        window.notify('Hello there!', 'Welcome to my portfolio website', 'info', 10000);
+                        window.notify('Hello there!', 'Welcome to my portfolio app', 'info', 10000);
                         window.saveSetting('initial-visit', '1', false);
                     }, 3500);
                 }
