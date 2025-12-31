@@ -310,7 +310,7 @@ window.notify = function(title, message, icon = 'info', duration = 5000) {
             el.style.visibility = 'hidden';
 
             setTimeout(function() {
-                el.remove();
+                root.removeChild(document.getElementById(ident));
             }, 2000);
         }
     }, duration);
@@ -505,7 +505,11 @@ window.runCode = function(src, output) {
 
         try {
             const ev = eval(src);
-            elem.innerHTML += ev + "<br/>";
+            if (typeof ev !== 'undefined') {
+                elem.innerHTML += ev + "<br/>";
+            } else {
+                elem.innerHTML += '<font color="#d1cf47">' + src + '</font>' + "<br/>";
+            }
         } catch (err) {
             elem.innerHTML += '<font color="#cc0000">' + err + '</font>' + "<br/>";
             window.notify('Exception', err, 'error');
@@ -529,4 +533,8 @@ window.playAudio = function(soundfile) {
     audio.onloadeddata = function() {
         audio.play();
     };
+};
+
+window.echo = function(...args) {
+    console.log.apply(console, args);
 };
