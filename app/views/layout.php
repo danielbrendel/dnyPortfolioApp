@@ -82,6 +82,7 @@
 				@endforeach
                 window.addStartMenuDelimiter();
                 window.addStartMenuItem('Settings', 'settings.png', function() { window.openWidget('#column-window-settings'); });
+                window.addStartMenuItem('Reset', 'reset.png', function() { window.resetSettings(); window.closeAllWidgets(); });
 
                 window.applySettings();
 
@@ -137,8 +138,8 @@
                 let initialVisit = parseInt(window.readSetting('initial-visit', '0'));
                 if (!initialVisit) {
                     setTimeout(function() {
-                        window.notify('Hello there!', 'Welcome to my portfolio website!', 'info', 10000);
-                        window.saveSetting('initial-visit', '1');
+                        window.notify('Hello there!', 'Welcome to my portfolio website', 'info', 10000);
+                        window.saveSetting('initial-visit', '1', false);
                     }, 3500);
                 }
             });

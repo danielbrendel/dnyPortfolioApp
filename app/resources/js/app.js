@@ -43,8 +43,12 @@ window.ajaxRequest = function (method, url, data = {}, successfunc = function(da
         );
 };
 
-window.saveSetting = function(key, value) {
+window.saveSetting = function(key, value, notify = true) {
     localStorage.setItem(key, value);
+
+    if (notify) {
+        window.notify('Settings updated', 'Successfully updated ' + key + ' to ' + value, 'success');
+    }
 };
 
 window.readSetting = function(key, fallback = null) {
@@ -91,13 +95,15 @@ window.applySettings = function() {
 };
 
 window.resetSettings = function() {
-    window.saveSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
-    window.saveSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
-    window.saveSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
-    window.saveSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE);
+    window.saveSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR, false);
+    window.saveSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR, false);
+    window.saveSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE, false);
+    window.saveSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE, false);
 
     window.loadSettings();
     window.applySettings();
+
+    window.notify('System reset', 'All settings have been reset!', 'success');
 };
 
 window.setDesktopStyle = function(key, value) {
@@ -190,6 +196,17 @@ window.closeWidget = function(which, onCloseCallback = function(){}) {
     window.playAudio('close.wav');
 
     onCloseCallback();
+};
+
+window.closeAllWidgets = function() {
+    let widgets = document.querySelectorAll('.column');
+    for (let i = 0; i < widgets.length; i++) {
+        const widget = widgets[i];
+
+        if (!widget.classList.contains('is-hidden')) {
+            widget.classList.add('is-hidden');
+        }
+    }
 };
 
 window.startMenuCallbacks = [];
@@ -491,6 +508,7 @@ window.runCode = function(src, output) {
             elem.innerHTML += ev + "<br/>";
         } catch (err) {
             elem.innerHTML += '<font color="#cc0000">' + err + '</font>' + "<br/>";
+            window.notify('Exception', err, 'error');
         }
 
         console.log = origConLog;
