@@ -144,6 +144,8 @@ window.openWidget = function(which, onOpenCallback = function(){}) {
     window.setWidgetCentered(elem);
     window.setWidgetToTop(which);
 
+    window.playAudio('open.wav');
+
     onOpenCallback();
 };
 
@@ -185,6 +187,8 @@ window.closeWidget = function(which, onCloseCallback = function(){}) {
         elem.classList.add('is-hidden');
     }
 
+    window.playAudio('close.wav');
+
     onCloseCallback();
 };
 
@@ -210,7 +214,7 @@ window.addStartMenuItem = function(title, icon, callback = function() {}) {
         </div>
     `;
 
-    window.startMenuCallbacks.push(function() { callback(); window.closeActiveStartMenu(); });
+    window.startMenuCallbacks.push(function() { callback(); window.closeActiveStartMenu(); window.playAudio('select.wav'); });
 };
 
 window.addStartMenuDelimiter = function() {
@@ -236,6 +240,8 @@ window.toggleStartMenu = function() {
     if (button) {
         button.classList.toggle('set-active');
     }
+
+    window.playAudio('toggle.wav');
 };
 
 window.closeActiveStartMenu = function() {
