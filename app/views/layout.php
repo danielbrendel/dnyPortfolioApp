@@ -24,6 +24,8 @@
 
         <script src="{{ asset('js/fontawesome.js') }}"></script>
         <script src="{{ asset('js/app.js', true) }}"></script>
+
+        {!! Settings::getValue('head_code') ?? '' !!}
     </head>
 
     <body>
@@ -107,6 +109,12 @@
             
             document.addEventListener('DOMContentLoaded', function() {
                 window.publicApiToken = '{{ env('APP_PUBLIC_API_TOKEN') }}';
+
+                window.defaultSettings.text_color = '{{ Settings::getValue('text_color') }}';
+                window.defaultSettings.text_emphasis = '{{ ((Settings::getValue('text_emphasis')) ? '1' : '0') }}';
+                window.defaultSettings.background_color = '{{ Settings::getValue('background_color') }}';
+                window.defaultSettings.background_image = '{{ Settings::getValue('background_image') }}';
+                window.defaultSettings.sound_enable = {{ ((Settings::getValue('sound_enable')) ? '1' : '0') }};
 
                 window.initDesktop();
                 window.setDraggableWindows();

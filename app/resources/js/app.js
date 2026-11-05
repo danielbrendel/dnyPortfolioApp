@@ -16,11 +16,13 @@ window.hljs = hljs;
 
 window.publicApiToken = '';
 
-const SETTINGS_DEFAULT_TEXT_COLOR = '#ffffff';
-const SETTINGS_DEFAULT_TEXT_EMPHASIS = '1';
-const SETTINGS_DEFAULT_BACKGROUND_COLOR = '#82acd7';
-const SETTINGS_DEFAULT_BACKGROUND_IMAGE = 'none';
-const SETTINGS_DEFAULT_SOUND_ENABLE = '1';
+window.defaultSettings = {
+    text_color: null,
+    text_emphasis: null,
+    background_color: null,
+    background_image: null,
+    sound_enable: null
+};
 
 window.ajaxRequest = function (method, url, data = {}, successfunc = function(data){}, finalfunc = function(){}, config = {})
 {
@@ -72,25 +74,25 @@ window.clearSettings = function() {
 };
 
 window.loadSettings = function() {
-    const textcolor = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
+    const textcolor = window.readSetting('style-text-color', window.defaultSettings.text_color);
     document.querySelector('#settings-dialog-style-text-color').value = textcolor;
 
-    const textemphasis = window.readSetting('style-text-emphasis', SETTINGS_DEFAULT_TEXT_EMPHASIS);
+    const textemphasis = window.readSetting('style-text-emphasis', window.defaultSettings.text_emphasis);
     document.querySelector('#settings-dialog-style-text-emphasis').checked = (parseInt(textemphasis)) ? true : false;
 
-    const backgroundcolor = window.readSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
+    const backgroundcolor = window.readSetting('style-background-color', window.defaultSettings.background_color);
     document.querySelector('#settings-dialog-style-background-color').value = backgroundcolor;
     
-    const backgroundimage = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    const backgroundimage = window.readSetting('style-background-image', window.defaultSettings.background_image);
     document.querySelector('#settings-dialog-style-background-image').value = backgroundimage;
 
-    const sndenable = window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE);
+    const sndenable = window.readSetting('sound-enable', window.defaultSettings.sound_enable);
     document.querySelector('#settings-dialog-sound-enable').checked = parseInt(sndenable);
 };
 
 window.applySettings = function() {
-    const colorText = window.readSetting('style-text-color', SETTINGS_DEFAULT_TEXT_COLOR);
-    const emphasisText = window.readSetting('style-text-emphasis', SETTINGS_DEFAULT_TEXT_EMPHASIS);
+    const colorText = window.readSetting('style-text-color', window.defaultSettings.text_color);
+    const emphasisText = window.readSetting('style-text-emphasis', window.defaultSettings.text_emphasis);
     
     let colElems = document.querySelectorAll('.widgets-item-title');
     for (let i = 0; i < colElems.length; i++) {
@@ -103,8 +105,8 @@ window.applySettings = function() {
         }
     }
 
-    const colorBackground = window.readSetting('style-background-color', SETTINGS_DEFAULT_BACKGROUND_COLOR);
-    const backgroundImage = window.readSetting('style-background-image', SETTINGS_DEFAULT_BACKGROUND_IMAGE);
+    const colorBackground = window.readSetting('style-background-color', window.defaultSettings.background_color);
+    const backgroundImage = window.readSetting('style-background-image', window.defaultSettings.background_image);
 
     let bgElem = document.querySelector('.desktop');
     bgElem.style.backgroundColor = colorBackground;
@@ -424,7 +426,7 @@ window.updateAudioIndicator = function(icon, label) {
     const elIcon = document.querySelector(icon);
     const elLabel = document.querySelector(label);
 
-    const sndenable = parseInt(window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE));
+    const sndenable = parseInt(window.readSetting('sound-enable', window.defaultSettings.sound_enable));
     
     if (sndenable) {
         elIcon.src = window.location.origin + '/img/icons/audio_on.png';
@@ -610,7 +612,7 @@ window.runCode = function(src, output) {
 };
 
 window.playAudio = function(soundfile) {
-    const sndEnabled = parseInt(window.readSetting('sound-enable', SETTINGS_DEFAULT_SOUND_ENABLE));
+    const sndEnabled = parseInt(window.readSetting('sound-enable', window.defaultSettings.sound_enable));
     if (!sndEnabled) {
         return;
     }
