@@ -1,0 +1,112 @@
+# Daniel Brendel Portfolio App launcher script
+#
+# This script launches a local web environment and opens the default browser with the URL of the web app.
+# 
+# Requires AquaShell (https://github.com/danielbrendel/dnyAquaShell), Windows and PHP with Apache & MariaDB.
+# On first start you'll be prompted to specify the paths to httpd and mysqld executables.
+#
+# You can run the script from the project's root directory as follows:
+# > aquashell launch.dnys
+#
+
+require "array";
+require "auto";
+require "dialog";
+require "fileio";
+
+const SERVER_PORT int <= 8000;
+
+global script_path string;
+global server_url string;
+
+getscriptpath script_path;
+
+set server_url <= "http://localhost";
+if (%SERVER_PORT, -nt, 80) {
+	set server_url <= "%server_url:%SERVER_PORT";
+};
+
+array arrExecutables string 3 (
+	"php.exe", "mysqld.exe", "httpd.exe"
+);
+
+function create_path_file void()
+{
+	local apache_path string;
+	local mysql_path string;
+	local tmstamp string;
+	local hfile int;
+	
+	input apache_path "Please enter path to your httpd.exe: ";
+	input mysql_path "Please enter path to your mysqld.exe: ";
+	
+	fmtdatetime "%F %T" tmstamp;
+	
+	fopen "%script_path/paths.conf.dnys" false hfile;
+	if (%hfile, -nt, %FIO_INVALID_HANDLE) {
+		fwriteline %hfile "# AquaShell paths config, auto-generated at %tmstamp";
+		fwriteline %hfile "";
+		fwriteline %hfile {const APACHE_PATH string <= "%apache_path";};
+		fwriteline %hfile {const MARIADB_PATH string <= "%mysql_path";};
+		
+		fclose %hfile;
+	};
+};
+
+function setup_path_file void()
+{
+	local flag bool;
+
+	fexists "%script_path/paths.conf.dnys" flag;
+
+	if (%flag, -eq, false) {
+		call create_path_file() => void;
+	};
+
+	exec "%script_path/paths.conf.dnys";
+};
+
+function setup_env void()
+{
+	local flag bool;
+
+	fexists "%script_path/.env" flag;
+
+	if (%flag, -eq, false) {
+		fcopy "%script_path/.env.example" "%script_path/.env" flag;
+	};
+};
+
+function setup_deps void()
+{
+	local flag bool;
+
+	dexists "%script_path/vendor" flag;
+
+	if (%flag, -eq, false) {
+		sys {composer install --ignore-platform-reqs --working-dir "%script_path"};
+	};
+};
+
+function launch_web_service void()
+{
+	aut_run "%APACHE_PATH/httpd.exe" "" "%APACHE_PATH" void;
+	aut_run "%MARIADB_PATH/mysqld.exe" "--defaults-file=%MARIADB_PATH/my.ini --standalone" "%MARIADB_PATH" void;
+
+	aut_run "php" "asatru serve %SERVER_PORT" "%script_path" void;
+	aut_run "%server_url" "" "" void;
+};
+
+call setup_path_file() => void;
+call setup_env() => void;
+call setup_deps() => void;
+call launch_web_service() => void;
+
+print "Daniel Brendel Portfolio App is now running...";
+print "Press any key to shutdown this service";
+
+pause;
+
+for (i, 0, %arrExecutables.length, -inc) {
+	sys { taskkill /F /IM %arrExecutables[%i] };
+};

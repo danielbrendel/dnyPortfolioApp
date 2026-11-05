@@ -5,3 +5,4 @@
 /app/migrations/migrations.list
 .env
 .phpunit.result.cache
+paths.conf.dnys
