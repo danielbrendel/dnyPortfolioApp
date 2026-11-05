@@ -5,7 +5,7 @@
 
 <p align="center">
     A personal portfolio application designed as a web desktop<br/>
-    (C) 2019 - 2025 by Daniel Brendel<br/>
+    (C) 2019 - 2026 by Daniel Brendel<br/>
     Released under the MIT license
 </p>
 
