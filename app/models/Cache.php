@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for Caching
-*/
-
+/**
+ * Class Cache
+ * 
+ * Handle database operations for caching
+ */
 class Cache extends \Asatru\Database\Model {
     /**
      * Obtain value either from cache or from closure

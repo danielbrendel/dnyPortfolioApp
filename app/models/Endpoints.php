@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model
-*/
-
+/**
+ * Class Endpoints
+ * 
+ * Handle database operations for endpoints
+ */
 class Endpoints extends \Asatru\Database\Model {
     /**
      * @return mixed

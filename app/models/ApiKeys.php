@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for ApiKeys
-*/
-
+/**
+ * Class ApiKeys
+ * 
+ * Handle database operations for API keys
+ */
 class ApiKeys extends \Asatru\Database\Model {
     /**
      * @param $token

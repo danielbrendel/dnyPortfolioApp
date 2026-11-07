@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for Shoutbox
-*/
-
+/**
+ * Class Shoutbox
+ * 
+ * Handle database operations for the shoutbox
+ */
 class Shoutbox extends \Asatru\Database\Model {
     /**
      * @param $count

@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for Counter
-*/
-
+/**
+ * Class Counter
+ * 
+ * Handle database operations for visitors
+ */
 class Counter extends \Asatru\Database\Model {
     /**
      * @return void

@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for Settings
-*/
-
+/**
+ * Class Settings
+ * 
+ * Handle database operations for settings
+ */
 class Settings extends \Asatru\Database\Model {
     /**
      * @param $id

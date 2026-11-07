@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for Blog
-*/
-
+/**
+ * Class Blog
+ * 
+ * Handle database operations for the blog
+ */
 class Blog extends \Asatru\Database\Model {
     /**
      * @param $limit

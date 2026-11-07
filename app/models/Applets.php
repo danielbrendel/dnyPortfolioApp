@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model for Applets
-*/
-
+/**
+ * Class Applets
+ * 
+ * Handle database operations for applets
+ */
 class Applets extends \Asatru\Database\Model {
     /**
      * @return mixed

@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Model
-*/
-
+/**
+ * Class Projects
+ * 
+ * Handle database operations for projects
+ */
 class Projects extends \Asatru\Database\Model {
     /**
      * @return mixed
