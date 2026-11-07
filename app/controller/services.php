@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Services Controller
-*/
-
+/**
+ * Class ServicesController
+ * 
+ * Handle services specific operations
+ */
 class ServicesController extends BaseController {
     /**
 	 * Perform base initialization

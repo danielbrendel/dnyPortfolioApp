@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Blog Controller
-*/
-
+/**
+ * Class BlogController
+ * 
+ * Handle blog specific operations
+ */
 class BlogController extends BaseController {
 	const INDEX_LAYOUT = 'layout';
 

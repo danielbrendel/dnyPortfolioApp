@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Projects Controller
-*/
-
+/**
+ * Class ProjectsController
+ * 
+ * Handle projects specific operations
+ */
 class ProjectsController extends BaseController {
     const INDEX_LAYOUT = 'layout';
 

@@ -1,9 +1,10 @@
 <?php
 
-/*
-    Asatru PHP - Shoutbox Controller
-*/
-
+/**
+ * Class ShoutboxController
+ * 
+ * Handle shoutbox specific operations
+ */
 class ShoutboxController extends BaseController {
     /**
 	 * Handles URL: /shoutbox/query
