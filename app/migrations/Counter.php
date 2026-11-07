@@ -1,9 +1,8 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Counter
-*/
-
+/**
+ * Class Counter_Migration
+ */
 class Counter_Migration {
     private $database = null;
     private $connection = null;

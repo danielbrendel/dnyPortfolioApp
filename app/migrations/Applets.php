@@ -1,9 +1,8 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Applets
-*/
-
+/**
+ * Class Applets_Migration
+ */
 class Applets_Migration {
     private $database = null;
     private $connection = null;

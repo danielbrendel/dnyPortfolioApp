@@ -1,9 +1,8 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Endpoints
-*/
-
+/**
+ * Class Endpoints_Migration
+ */
 class Endpoints_Migration {
     private $database = null;
     private $connection = null;

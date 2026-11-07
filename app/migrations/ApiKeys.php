@@ -1,9 +1,8 @@
 <?php
 
-/*
-    Asatru PHP - Migration for ApiKeys
-*/
-
+/**
+ * Class ApiKeys_Migration
+ */
 class ApiKeys_Migration {
     private $database = null;
     private $connection = null;

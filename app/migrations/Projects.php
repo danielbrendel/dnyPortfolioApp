@@ -1,9 +1,8 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Projects
-*/
-
+/**
+ * Class Projects_Migration
+ */
 class Projects_Migration {
     private $database = null;
     private $connection = null;

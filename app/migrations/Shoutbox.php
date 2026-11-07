@@ -1,11 +1,7 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Shoutbox
-*/
-
 /**
- * This class specifies a migration
+ * Class Shoutbox_Migration
  */
 class Shoutbox_Migration {
     private $database = null;

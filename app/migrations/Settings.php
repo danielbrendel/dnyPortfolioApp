@@ -1,11 +1,7 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Settings
-*/
-
 /**
- * This class specifies a migration
+ * Class Settings_Migration
  */
 class Settings_Migration {
     private $database = null;

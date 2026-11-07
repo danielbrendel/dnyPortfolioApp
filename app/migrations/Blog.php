@@ -1,9 +1,8 @@
 <?php
 
-/*
-    Asatru PHP - Migration for Blog
-*/
-
+/**
+ * Class Blog_Migration
+ */
 class Blog_Migration {
     private $database = null;
     private $connection = null;
