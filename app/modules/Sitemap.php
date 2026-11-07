@@ -1,9 +1,10 @@
 <?php
 
 /**
- * A module to handle Sitemap generation
+ * Class Sitemap
+ * 
+ * Sitemap specific implementations
  */
-
 class Sitemap
 {
     /**

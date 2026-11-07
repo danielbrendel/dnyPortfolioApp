@@ -1,9 +1,10 @@
 <?php
 
 /**
- * A module to handle sharing on social media
+ * Class Sharing
+ * 
+ * Social network sharing specific implementations
  */
-
 class Sharing
 {
     /**

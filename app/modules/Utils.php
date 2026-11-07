@@ -1,9 +1,10 @@
 <?php
 
 /**
- * A module to implement various utilities
+ * Class Utils
+ * 
+ * Utility specific implementations
  */
-
 class Utils {
     const COUNT_MILLION = 1000000;
     const COUNT_HUNDREDTHOUSAND = 100000;

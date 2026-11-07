@@ -2,9 +2,10 @@
 
 
 /**
- * A module to handle network requests
+ * Class Network
+ * 
+ * Network specific implementations
  */
-
 class Network
 {
     /**
