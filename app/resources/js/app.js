@@ -1,7 +1,7 @@
 /**
  * app.js
  * 
- * Put here your application specific JavaScript implementations
+ * Client-side app specific implementations
  */
 
 import './../sass/app.scss';
