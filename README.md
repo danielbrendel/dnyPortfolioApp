@@ -41,6 +41,12 @@ You can install the project by following these steps:
 6. Fill in the database tables depending on your needs.
 7. Launch the app via `php asatru serve`. The app will then be available via http://localhost:8000.
 
+Alternatively, you can also use the `launch.dnys` script if you have [AquaShell](https://github.com/danielbrendel/dnyAquaShell) installed.
+
+```sh
+aquashell launch.dnys
+```
+
 ## Tech stack
 
 The following technologies are used for this project.
