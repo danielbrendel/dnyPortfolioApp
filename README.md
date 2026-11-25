@@ -64,3 +64,4 @@ The following technologies are used for this project.
 | Bulma  | A modern CSS framework  | [https://bulma.io](https://bulma.io) |
 | 98.css  | A design system for old UIs   | [https://github.com/jdan/98.css](https://github.com/jdan/98.css) |
 | FontAwesome  | A popular icon library  | [https://fontawesome.com](https://fontawesome.com) |
+| AquaShell | An extendable scripting environment | [https://github.com/danielbrendel/dnyAquaShell](https://github.com/danielbrendel/dnyAquaShell) |
